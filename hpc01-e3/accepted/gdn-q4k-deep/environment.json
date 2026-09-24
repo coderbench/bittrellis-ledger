@@ -1,0 +1,22 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.91.07",
+  "cuda": "Build cuda_13.0.r13.0/compiler.36424714_0",
+  "cpu": "AMD Ryzen 9 5900X 12-Core Processor",
+  "kernel": "6.8.0-138-generic",
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "sparkinfer_commit": "b1ed168e3931d22d66dfa0aed3bcc2684f2b8387",
+  "bittrellis_version": "0.1.0",
+  "bittrellis_commit": "4c39d0e2d533dc0a6492d7d5291041aece48c021",
+  "evaluator_epoch": "hpc01-e3",
+  "effective_env": {
+    "scoring": {
+      "CUDA_HOME": "/usr/local/cuda",
+      "SPARKINFER_DETERMINISTIC": "1"
+    },
+    "benchmark": {
+      "CUDA_HOME": "/usr/local/cuda"
+    }
+  },
+  "time_utc": "2026-09-24T15:00:53Z"
+}

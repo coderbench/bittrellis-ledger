@@ -480,6 +480,29 @@
    ]
   },
   {
+   "id": "7f76cabb7c76951c",
+   "name": "gdn-q4k-deep",
+   "kind": "internal",
+   "rp_kl": 0.1291086944492908,
+   "top1": 0.9111635220125787,
+   "decode_tps": 94.9007,
+   "decode_spread": 0.00018545700927377146,
+   "prefill_tps": 14302.0025,
+   "prefill_spread": 0.008018177874042427,
+   "peak_gpu_gib": 21.826,
+   "resident_after_load_gib": 21.2,
+   "peak_host_gib": 19.905,
+   "checkpoint_gib": 20.39171700924635,
+   "tasks_passed": 578,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0013142784441488309,
+   "dominated_by": []
+  },
+  {
    "id": "280ce16e6b89e18a",
    "name": "mlp-q4k-skip-layer0",
    "kind": "internal",
@@ -499,7 +522,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0012020248665013944,
+   "frontier_gain": 0.0010324919942694133,
    "dominated_by": []
   }
  ],
@@ -560,6 +583,7 @@
   "V0-baseline-rebuild",
   "V1-all-q4k",
   "V4-gdn-q4k",
+  "gdn-q4k-deep",
   "mlp-q4k-skip-layer0"
  ]
 }
