@@ -1,0 +1,58 @@
+{
+ "author": "coderbench",
+ "candidate": "7f76cabb7c76951c",
+ "first_seen": "2026-09-24T14:23:43.637979Z",
+ "gain": 0.0013259411385123654,
+ "head": "661373159c8584812e53afd473c4e14a4714304a",
+ "kind": "manifest",
+ "name": "gdn-q4k-deep",
+ "pr": 5,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 20.39171700924635,
+  "decode_spread": 0.00019490312524530738,
+  "decode_tps": 94.91895,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.0013259411385123654,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "7f76cabb7c76951c",
+  "kind": "internal",
+  "name": "gdn-q4k-deep",
+  "peak_gpu_gib": 21.826,
+  "peak_host_gib": 19.905,
+  "prefill_spread": 0.004629679725730708,
+  "prefill_tps": 14333.561699999998,
+  "resident_after_load_gib": 21.2,
+  "rp_kl": 0.1291086944492908,
+  "tasks_n": 784,
+  "tasks_passed": 573,
+  "top1": 0.9111635220125787,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": null
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "M"
+}
