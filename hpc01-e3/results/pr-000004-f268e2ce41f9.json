@@ -1,0 +1,58 @@
+{
+ "author": "coderbench",
+ "candidate": "280ce16e6b89e18a",
+ "first_seen": "2026-09-24T00:46:34.676777Z",
+ "gain": 0.0012020248665013944,
+ "head": "f268e2ce41f94e94142296e25939197f464c937a",
+ "kind": "manifest",
+ "name": "mlp-q4k-skip-layer0",
+ "pr": 4,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 39.237806759774685,
+  "decode_spread": 0.0005791196131980767,
+  "decode_tps": 96.0078,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.0012020248665013944,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "280ce16e6b89e18a",
+  "kind": "internal",
+  "name": "mlp-q4k-skip-layer0",
+  "peak_gpu_gib": 20.906,
+  "peak_host_gib": 29.939,
+  "prefill_spread": 0.0009621799252265775,
+  "prefill_tps": 9919.246650000001,
+  "resident_after_load_gib": 20.2,
+  "rp_kl": 0.1318212077665415,
+  "tasks_n": 784,
+  "tasks_passed": 563,
+  "top1": 0.9113485016648168,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": null
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "M"
+}
