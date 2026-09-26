@@ -150,9 +150,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
+   "frontier": false,
    "frontier_gain": 0.0,
-   "dominated_by": []
+   "dominated_by": [
+    "gdn-q4k-skip-layer0"
+   ]
   },
   {
    "id": "0093abe3f5d3de50",
@@ -374,9 +376,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
+   "frontier": false,
    "frontier_gain": 0.0,
-   "dominated_by": []
+   "dominated_by": [
+    "gdn-q4k-skip-layer0"
+   ]
   },
   {
    "id": "0093abe3f5d3de50",
@@ -503,7 +507,30 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0012760531018586319,
+   "frontier_gain": 0.0011346186954405424,
+   "dominated_by": []
+  },
+  {
+   "id": "b81c55592e6b8a7b",
+   "name": "gdn-q4k-skip-layer0",
+   "kind": "internal",
+   "rp_kl": 0.13670141310492032,
+   "top1": 0.9129208287088421,
+   "decode_tps": 95.88025,
+   "decode_spread": 0.0006768860114569414,
+   "prefill_tps": 13591.748500000002,
+   "prefill_spread": 0.020247372882157177,
+   "peak_gpu_gib": 21.645,
+   "resident_after_load_gib": 21.0,
+   "peak_host_gib": 23.455,
+   "checkpoint_gib": 23.94332604110241,
+   "tasks_passed": 572,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 9.704564963283757e-05,
    "dominated_by": []
   },
   {
@@ -526,7 +553,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002605404648724774,
+   "frontier_gain": 0.00026054046487244964,
    "dominated_by": []
   },
   {
@@ -549,7 +576,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00031428109136646953,
+   "frontier_gain": 0.00029468627539172565,
    "dominated_by": []
   }
  ],
@@ -606,11 +633,10 @@
  "frontier": [
   "V0-baseline-rebuild",
   "V1-all-q4k",
-  "V4-gdn-q4k",
   "V0-baseline-rebuild",
   "V1-all-q4k",
-  "V4-gdn-q4k",
   "gdn-q4k-deep",
+  "gdn-q4k-skip-layer0",
   "gdn-zo-deep-mlp-skip0",
   "mlp-q4k-skip-layer0"
  ]

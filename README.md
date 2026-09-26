@@ -25,8 +25,8 @@ bittrellis frontier hpc01-e3/accepted <your artifact>
 |   | V9-gdn-q4k-mlp-q4k | 0.1277 | 562/784 | 94.0 | 7,560 | 20.41 | — | 0.000% |
 |   | V7-mlp-q4k-early | 0.1284 | 561/784 | 94.3 | 8,199 | 21.40 | — | 0.000% |
 |   | V7-mlp-q4k-early | 0.1284 | 561/784 | 94.3 | 8,199 | 21.40 | — | 0.000% |
-| ★ | gdn-q4k-deep | 0.1291 | 578/784 | 94.9 | 14,302 | 21.83 | PASS | 0.128% |
-| ★ | mlp-q4k-skip-layer0 | 0.1318 | 563/784 | 96.0 | 9,919 | 20.91 | PASS | 0.031% |
+| ★ | gdn-q4k-deep | 0.1291 | 578/784 | 94.9 | 14,302 | 21.83 | PASS | 0.113% |
+| ★ | mlp-q4k-skip-layer0 | 0.1318 | 563/784 | 96.0 | 9,919 | 20.91 | PASS | 0.029% |
 |   | V6-mlp-q4k | 0.1346 | 563/784 | 94.4 | 8,358 | 20.84 | PASS | 0.000% |
 |   | V6-mlp-q4k | 0.1346 | 563/784 | 94.4 | 8,358 | 20.84 | PASS | 0.000% |
 |   | V5-attn-q4k | 0.1356 | 556/784 | 94.6 | 13,571 | 21.85 | — | 0.000% |
@@ -35,8 +35,9 @@ bittrellis frontier hpc01-e3/accepted <your artifact>
 | | ↳ *not credited: task guard overall: lost 33, gained 19 vs incumbent (p=0.0352 < 0.05)* | | | | | | | |
 | ★ | V0-baseline-rebuild | 0.1357 | 570/784 | 94.9 | 14,760 | 22.02 | — | 0.000% |
 | ★ | V0-baseline-rebuild | 0.1357 | 570/784 | 94.9 | 14,760 | 22.02 | — | 0.000% |
-| ★ | V4-gdn-q4k | 0.1424 | 566/784 | 94.9 | 12,011 | 21.58 | PASS | 0.000% |
-| ★ | V4-gdn-q4k | 0.1424 | 566/784 | 94.9 | 12,011 | 21.58 | PASS | 0.000% |
+| ★ | gdn-q4k-skip-layer0 | 0.1367 | 572/784 | 95.9 | 13,592 | 21.64 | PASS | 0.010% |
+|   | V4-gdn-q4k | 0.1424 | 566/784 | 94.9 | 12,011 | 21.58 | PASS | 0.000% |
+|   | V4-gdn-q4k | 0.1424 | 566/784 | 94.9 | 12,011 | 21.58 | PASS | 0.000% |
 
 Epoch `hpc01-e3` · rules: [bittrellis](https://github.com/coderbench/bittrellis) ([specification](https://github.com/coderbench/bittrellis/blob/main/docs/specification.md)).
 
