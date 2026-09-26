@@ -1,0 +1,32 @@
+{
+ "author": "cleanjunc",
+ "first_seen": "2026-09-26T19:42:53.268990Z",
+ "head": "8520a5e56e2b3fd2d5a3b93b0fc8211a00e36cfc",
+ "kind": "manifest",
+ "name": "gdn-deep-mlp-early-attn-q4k",
+ "pr": 9,
+ "row": null,
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.1111111111111111
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "status": "gate",
+ "tier": "REJECT"
+}
