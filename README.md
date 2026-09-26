@@ -2,6 +2,8 @@
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
 
+![Frontier gain credited to merged pull requests, one column per evaluated pull request](progress.svg)
+
 Written by the evaluator after each pass. Re-derive any score yourself:
 
 ```bash
