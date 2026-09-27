@@ -1,49 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="380" viewBox="0 0 900 380" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Frontier gain credited to merged pull requests: +0.287% from 4 merges, 6 pull requests scored">
 <style>
-.bg{fill:#ffffff;stroke:#d0d7de}.t{fill:#1f2328}.m{fill:#59636e}.rule{stroke:#d0d7de}.hole{fill:#ffffff}
+.bg{fill:#ffffff;stroke:#d0d7de}.t{fill:#1f2328}.m{fill:#59636e}.rule{stroke:#d0d7de}.ring{stroke:#ffffff}
+.acc{fill:#8b5cf6}.accl{stroke:#8b5cf6}.wash{fill:#8b5cf6;fill-opacity:.1}.gry{fill:#8c959f}.rej{fill:#d03b3b}.track{fill:#eaeef2}
 @media (prefers-color-scheme: dark){
-.bg{fill:#0d1117;stroke:#30363d}.t{fill:#e6edf3}.m{fill:#9198a1}.rule{stroke:#30363d}.hole{fill:#0d1117}}
+.bg{fill:#0d1117;stroke:#30363d}.t{fill:#e6edf3}.m{fill:#9198a1}.rule{stroke:#30363d}.ring{stroke:#0d1117}
+.acc{fill:#9a75f8}.accl{stroke:#9a75f8}.wash{fill:#9a75f8;fill-opacity:.14}.gry{fill:#9198a1}.rej{fill:#e5534b}.track{fill:#21262d}}
 </style>
-<rect class="bg" x="0.5" y="0.5" width="899" height="379" rx="12"/>
+<rect class="bg" x="0.5" y="0.5" width="899" height="469" rx="12"/>
 <text x="24.0" y="36.0" class="t" font-size="18" font-weight="600" text-anchor="start">What pull requests have added</text>
-<text x="24.0" y="58.0" class="m" font-size="12" font-weight="400" text-anchor="start">Frontier gain (FG-2) credited to merged pull requests · epoch hpc01-e3</text>
-<text x="876.0" y="36.0" fill="#8b5cf6" font-size="18" font-weight="600" text-anchor="end">+0.287%</text>
-<text x="876.0" y="58.0" class="m" font-size="12" font-weight="400" text-anchor="end">4 merged · 6 scored · 4 authors</text>
-<line class="rule" x1="70" x2="870" y1="300.0" y2="300.0" stroke-width="1"/>
-<text x="62.0" y="304.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.00%</text>
-<line class="rule" x1="70" x2="870" y1="198.0" y2="198.0" stroke-width="1"/>
-<text x="62.0" y="202.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.18%</text>
-<line class="rule" x1="70" x2="870" y1="96.0" y2="96.0" stroke-width="1"/>
-<text x="62.0" y="100.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.36%</text>
-<polyline points="70.0,300.0 136.7,300.0 136.7,231.7 270.0,231.7 270.0,157.1 536.7,157.1 536.7,151.6 670.0,151.6 670.0,136.8 870.0,136.8" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linejoin="round"/>
-<circle cx="136.7" cy="231.7" r="6" fill="#8b5cf6"/>
-<text x="136.7" y="219.7" fill="#8b5cf6" font-size="11" font-weight="600" text-anchor="middle">M</text>
-<text x="136.7" y="322.0" class="t" font-size="12" font-weight="600" text-anchor="middle">#4</text>
-<text x="136.7" y="338.0" class="m" font-size="11" font-weight="400" text-anchor="middle">coderbench</text>
-<circle cx="270.0" cy="157.1" r="6" fill="#8b5cf6"/>
-<text x="270.0" y="145.1" fill="#8b5cf6" font-size="11" font-weight="600" text-anchor="middle">M</text>
-<text x="270.0" y="322.0" class="t" font-size="12" font-weight="600" text-anchor="middle">#5</text>
-<text x="270.0" y="338.0" class="m" font-size="11" font-weight="400" text-anchor="middle">coderbench</text>
-<path d="M398.3,152.1L408.3,162.1M398.3,162.1L408.3,152.1" stroke="#cf222e" stroke-width="2.5" stroke-linecap="round"/>
-<text x="403.3" y="322.0" class="t" font-size="12" font-weight="600" text-anchor="middle">#6</text>
-<text x="403.3" y="338.0" class="m" font-size="11" font-weight="400" text-anchor="middle">harrythomasben</text>
-<circle cx="536.7" cy="151.6" r="6" fill="#8b5cf6"/>
-<text x="536.7" y="139.6" fill="#8b5cf6" font-size="11" font-weight="600" text-anchor="middle">XS</text>
-<text x="536.7" y="322.0" class="t" font-size="12" font-weight="600" text-anchor="middle">#7</text>
-<text x="536.7" y="338.0" class="m" font-size="11" font-weight="400" text-anchor="middle">harrythomasben</text>
-<circle cx="670.0" cy="136.8" r="6" fill="#8b5cf6"/>
-<text x="670.0" y="124.8" fill="#8b5cf6" font-size="11" font-weight="600" text-anchor="middle">XS</text>
-<text x="670.0" y="322.0" class="t" font-size="12" font-weight="600" text-anchor="middle">#8</text>
-<text x="670.0" y="338.0" class="m" font-size="11" font-weight="400" text-anchor="middle">dato-bitar</text>
-<path d="M798.3,131.8L808.3,141.8M798.3,141.8L808.3,131.8" stroke="#cf222e" stroke-width="2.5" stroke-linecap="round"/>
-<text x="803.3" y="322.0" class="t" font-size="12" font-weight="600" text-anchor="middle">#9</text>
-<text x="803.3" y="338.0" class="m" font-size="11" font-weight="400" text-anchor="middle">cleanjunc</text>
-<circle cx="30.0" cy="362.0" r="6" fill="#8b5cf6"/>
-<text x="42.0" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="start">merged, with its tier</text>
-<circle class="hole" cx="196.2" cy="362.0" r="5.5" stroke="#8b5cf6" stroke-width="2.5"/>
-<text x="208.2" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="start">scored, open</text>
-<circle class="hole" cx="306.6" cy="362.0" r="5.5" stroke="#8c959f" stroke-width="2.5"/>
-<text x="318.6" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="start">no new frontier space</text>
-<path d="M467.8,357.0L477.8,367.0M467.8,367.0L477.8,357.0" stroke="#cf222e" stroke-width="2.5" stroke-linecap="round"/>
-<text x="484.8" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="start">rejected</text>
+<text x="24.0" y="57.0" class="m" font-size="12" font-weight="400" text-anchor="start">Epoch hpc01-e3 · redrawn by the evaluator after every pass · first-seen dates, UTC</text>
+<text x="24.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Frontier gain credited</text>
+<text x="24.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">+0.287%</text>
+<text x="237.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Merged pull requests</text>
+<text x="237.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">4</text>
+<text x="450.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Authors</text>
+<text x="450.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">4</text>
+<text x="663.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Pull requests scored</text>
+<text x="663.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">6</text>
+<line class="rule" x1="24" x2="876" y1="140" y2="140" stroke-width="1"/>
+<text x="24.0" y="170.0" class="t" font-size="12" font-weight="600" text-anchor="start">Credited frontier gain over time</text>
+<text x="24.0" y="346.0" class="t" font-size="12" font-weight="600" text-anchor="start">Pull requests scored</text>
+<line class="rule" x1="64" x2="596" y1="318.0" y2="318.0" stroke-width="1"/>
+<text x="56.0" y="322.0" class="m" font-size="11" font-weight="400" text-anchor="end">0%</text>
+<line class="rule" x1="64" x2="596" y1="257.0" y2="257.0" stroke-width="1"/>
+<text x="56.0" y="261.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.25%</text>
+<line class="rule" x1="64" x2="596" y1="196.0" y2="196.0" stroke-width="1"/>
+<text x="56.0" y="200.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.5%</text>
+<polygon class="wash" points="64.0,318.0 370.5,318.0 370.5,288.7 413.6,288.7 413.6,256.6 582.4,256.6 582.4,254.2 582.4,254.2 582.4,247.9 596.0,247.9 596.0,318.0"/>
+<polyline class="accl" points="64.0,318.0 370.5,318.0 370.5,288.7 413.6,288.7 413.6,256.6 582.4,256.6 582.4,254.2 582.4,254.2 582.4,247.9 596.0,247.9" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle class="acc ring" cx="370.5" cy="288.7" r="4.5" stroke-width="2"/>
+<circle class="acc ring" cx="413.6" cy="256.6" r="4.5" stroke-width="2"/>
+<circle class="acc ring" cx="582.4" cy="254.2" r="4.5" stroke-width="2"/>
+<circle class="acc ring" cx="582.4" cy="247.9" r="4.5" stroke-width="2"/>
+<text x="413.6" y="245.6" class="t" font-size="11" font-weight="600" text-anchor="middle">#5 · M</text>
+<text x="582.4" y="236.9" class="t" font-size="11" font-weight="600" text-anchor="middle">#8 · XS</text>
+<path class="acc" d="M394.0,412.0V391.0Q394.0,387.0 398.0,387.0H414.0Q418.0,387.0 418.0,391.0V412.0Z"/>
+<rect class="acc" x="546.0" y="387.0" width="24.0" height="25.0"/>
+<path class="rej" d="M546.0,385.0V366.0Q546.0,362.0 550.0,362.0H566.0Q570.0,362.0 570.0,366.0V385.0Z"/>
+<line class="rule" x1="64" x2="596" y1="412" y2="412" stroke-width="1"/>
+<text x="56.0" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="end">4</text>
+<text x="56.0" y="412.0" class="m" font-size="11" font-weight="400" text-anchor="end">0</text>
+<text x="596.0" y="346.0" class="m" font-size="11" font-weight="400" text-anchor="end">per day</text>
+<text x="64.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Sep 20</text>
+<text x="216.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Sep 22</text>
+<text x="368.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Sep 24</text>
+<text x="520.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Sep 26</text>
+<rect class="acc" x="64" y="446" width="10" height="10" rx="2"/>
+<text x="79.0" y="455.0" class="m" font-size="11" font-weight="400" text-anchor="start">merged or earning a tier</text>
+<rect class="gry" x="242.8" y="446" width="10" height="10" rx="2"/>
+<text x="257.8" y="455.0" class="m" font-size="11" font-weight="400" text-anchor="start">no new frontier space</text>
+<rect class="rej" x="403.0" y="446" width="10" height="10" rx="2"/>
+<text x="418.0" y="455.0" class="m" font-size="11" font-weight="400" text-anchor="start">rejected</text>
+<text x="640.0" y="170.0" class="t" font-size="12" font-weight="600" text-anchor="start">Top authors by credited gain</text>
+<text x="640.0" y="196.0" class="t" font-size="12" font-weight="400" text-anchor="start">coderbench</text>
+<text x="876.0" y="196.0" class="m" font-size="11" font-weight="400" text-anchor="end">+0.252% · 2 merged</text>
+<rect class="track" x="640" y="202" width="236" height="8" rx="4"/>
+<rect class="acc" x="640" y="202" width="236.0" height="8" rx="4"/>
+<text x="640.0" y="230.0" class="t" font-size="12" font-weight="400" text-anchor="start">dato-bitar</text>
+<text x="876.0" y="230.0" class="m" font-size="11" font-weight="400" text-anchor="end">+0.026% · 1 merged</text>
+<rect class="track" x="640" y="236" width="236" height="8" rx="4"/>
+<rect class="acc" x="640" y="236" width="24.4" height="8" rx="4"/>
+<text x="640.0" y="264.0" class="t" font-size="12" font-weight="400" text-anchor="start">harrythomasben</text>
+<text x="876.0" y="264.0" class="m" font-size="11" font-weight="400" text-anchor="end">+0.010% · 1 merged</text>
+<rect class="track" x="640" y="270" width="236" height="8" rx="4"/>
+<rect class="acc" x="640" y="270" width="9.1" height="8" rx="4"/>
 </svg>

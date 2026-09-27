@@ -2,7 +2,7 @@
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
 
-![Frontier gain credited to merged pull requests, one column per evaluated pull request](progress.svg)
+![Frontier gain credited to merged pull requests over time, pull requests scored per day by outcome, and the authors with the most credited gain.](progress.svg)
 
 Written by the evaluator after each pass. Re-derive any score yourself:
 
