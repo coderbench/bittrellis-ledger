@@ -231,6 +231,7 @@
    "dominated_by": [
     "V6-mlp-q4k",
     "V6-mlp-q4k",
+    "gdn-mlp-deep-q4k",
     "gdn-zo-deep-mlp-skip0",
     "mlp-q4k-skip-layer0"
    ]
@@ -457,6 +458,7 @@
    "dominated_by": [
     "V6-mlp-q4k",
     "V6-mlp-q4k",
+    "gdn-mlp-deep-q4k",
     "gdn-zo-deep-mlp-skip0",
     "mlp-q4k-skip-layer0"
    ]
@@ -488,6 +490,29 @@
    ]
   },
   {
+   "id": "efd97ae71c01ccf1",
+   "name": "gdn-mlp-deep-q4k",
+   "kind": "internal",
+   "rp_kl": 0.1300232384333038,
+   "top1": 0.9137994820569737,
+   "decode_tps": 96.1061,
+   "decode_spread": 0.0004224497716585914,
+   "prefill_tps": 11320.13425,
+   "prefill_spread": 0.00919567716257422,
+   "peak_gpu_gib": 21.264,
+   "resident_after_load_gib": 20.6,
+   "peak_host_gib": 31.358,
+   "checkpoint_gib": 31.84676030278206,
+   "tasks_passed": 567,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0002442392981893693,
+   "dominated_by": []
+  },
+  {
    "id": "7f76cabb7c76951c",
    "name": "gdn-q4k-deep",
    "kind": "internal",
@@ -507,7 +532,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0011346186954405424,
+   "frontier_gain": 0.0007193982776467212,
    "dominated_by": []
   },
   {
@@ -530,7 +555,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 9.704564963283757e-05,
+   "frontier_gain": 9.451796687079406e-05,
    "dominated_by": []
   },
   {
@@ -553,7 +578,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00026054046487244964,
+   "frontier_gain": 0.00024920817495058256,
    "dominated_by": []
   },
   {
@@ -576,7 +601,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00029468627539172565,
+   "frontier_gain": 0.00013077209776998777,
    "dominated_by": []
   }
  ],
@@ -635,6 +660,7 @@
   "V1-all-q4k",
   "V0-baseline-rebuild",
   "V1-all-q4k",
+  "gdn-mlp-deep-q4k",
   "gdn-q4k-deep",
   "gdn-q4k-skip-layer0",
   "gdn-zo-deep-mlp-skip0",

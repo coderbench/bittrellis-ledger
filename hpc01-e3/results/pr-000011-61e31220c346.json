@@ -1,0 +1,62 @@
+{
+ "author": "cleanjunc",
+ "candidate": "9940db999ceae10c",
+ "first_seen": "2026-09-27T02:07:19.533829Z",
+ "gain": 0.0,
+ "head": "61e31220c346d666ab2580bed47afc973cf0c6ec",
+ "kind": "manifest",
+ "name": "gdn-state-fp8-skip0",
+ "pr": 11,
+ "references": [
+  "10-32cc10996b07"
+ ],
+ "row": {
+  "checkpoint_gib": 18.29354614019394,
+  "decode_spread": 0.0007176994846872037,
+  "decode_tps": 86.66579999999999,
+  "dominated_by": [],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [
+   "private holdout FAIL"
+  ],
+  "holdout": "FAIL",
+  "id": "9940db999ceae10c",
+  "kind": "internal",
+  "name": "gdn-state-fp8-skip0",
+  "peak_gpu_gib": 23.393,
+  "peak_host_gib": 17.806,
+  "prefill_spread": 0.02868790493507164,
+  "prefill_tps": 14033.78535,
+  "resident_after_load_gib": 22.8,
+  "rp_kl": 0.12235700574488488,
+  "tasks_n": 784,
+  "tasks_passed": 576,
+  "top1": 0.9159729929707732,
+  "valid": false
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.18351254480286738
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 24.37
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "gate",
+ "tier": "REJECT"
+}
