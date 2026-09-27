@@ -2,7 +2,30 @@
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
 
+## Which checkpoint to use
+
+Every merged recipe trades a little of one thing for another. Pick by what you need; each change is against today's shipped checkpoint (V0).
+
+![The trade-off each merged recipe makes: prompt speed against closeness to the original model, with peak GPU memory](tradeoffs.svg)
+
+| Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
+|---|---|---|---|---|
+| **Closest to the original model · Least GPU memory** | `gdn-zo-deep-mlp-skip0`<br>#8 by @dato-bitar ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | **0.1242 · 8.5% closer** | 9,114 tok/s · 38% slower | **20.81 GiB · 1.20 GiB less** |
+| **Fastest prompt reading** | `gdn-q4k-deep`<br>#5 by @coderbench ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | 0.1291 · 4.9% closer | **14,302 tok/s · 3% slower** | 21.83 GiB · 0.19 GiB less |
+| *for reference* | V0, today's shipped checkpoint | 0.1357 | 14,760 tok/s | 22.02 GiB |
+
+Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
+
+```bash
+bittrellis build manifests/gdn-zo-deep-mlp-skip0.yaml --out models/gdn-zo-deep-mlp-skip0
+bittrellis build manifests/gdn-q4k-deep.yaml --out models/gdn-q4k-deep
+```
+
+## Progress
+
 ![Frontier gain credited to merged pull requests over time, pull requests scored per day by outcome, and the authors with the most credited gain.](progress.svg)
+
+## Every measured result
 
 Written by the evaluator after each pass. Re-derive any score yourself:
 
