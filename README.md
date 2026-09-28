@@ -1,25 +1,6 @@
-# BitTrellis score records (hpc01-e4)
+# BitTrellis score records (hpc01-e5)
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
-
-## Which checkpoint to use
-
-Every merged recipe trades a little of one thing for another. Pick by what you need; each change is against today's shipped checkpoint (V0).
-
-![The trade-off each merged recipe makes: prompt speed against closeness to the original model, with peak GPU memory](tradeoffs.svg)
-
-| Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
-|---|---|---|---|---|
-| **Closest to the original model · Least GPU memory** | `gdn-mlp-q4k-skip-layer0`<br>#15 by @K-3-LT ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.1029 · 24.2% closer** | 8,294 tok/s · 44% slower | **20.54 GiB · 1.48 GiB less** |
-| **Fastest prompt reading** | `gdn-state-fp8-skip0`<br>#11 by @cleanjunc ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.1115 · 17.9% closer | **13,263 tok/s · 10% slower** | 23.39 GiB · 1.38 GiB more |
-| *for reference* | V0, today's shipped checkpoint | 0.1357 | 14,760 tok/s | 22.02 GiB |
-
-Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
-
-```bash
-bittrellis build manifests/gdn-mlp-q4k-skip-layer0.yaml --out models/gdn-mlp-q4k-skip-layer0
-bittrellis build manifests/gdn-state-fp8-skip0.yaml --out models/gdn-state-fp8-skip0
-```
 
 ## Progress
 
@@ -30,30 +11,30 @@ bittrellis build manifests/gdn-state-fp8-skip0.yaml --out models/gdn-state-fp8-s
 Written by the evaluator after each pass. Re-derive any score yourself:
 
 ```bash
-bittrellis frontier hpc01-e4/accepted <your artifact>
+bittrellis frontier hpc01-e5/accepted <your artifact>
 ```
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | V3-gdn-fp8 | 0.1024 | 573/784 | 83.0 | 11,848 | 23.93 | PASS | 0.069% |
-| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 94.7 | 8,294 | 20.54 | PASS | 0.196% |
-| ★ | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 85.6 | 13,263 | 23.39 | PASS | 0.038% |
-| ★ | V1-all-q4k | 0.1142 | 575/784 | 94.8 | 7,537 | 20.25 | PASS | 0.035% |
-| ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.1 | 9,114 | 20.81 | PASS | 0.003% |
-|   | V9-gdn-q4k-mlp-q4k | 0.1179 | 562/784 | 94.0 | 7,560 | 20.41 | — | 0.000% |
-| ★ | gdn-q4k-skip-layer0 | 0.1210 | 572/784 | 95.9 | 13,592 | 21.64 | PASS | 0.047% |
-|   | gdn-q4k-deep | 0.1238 | 578/784 | 94.9 | 14,302 | 21.83 | FAIL | 0.000% |
+| ★ | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,764 | 23.93 | PASS | 0.102% |
+| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,811 | 20.54 | PASS | 0.208% |
+| ★ | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.8 | 14,525 | 23.39 | PASS | 0.031% |
+| ★ | V1-all-q4k | 0.1142 | 575/784 | 96.4 | 8,480 | 20.25 | PASS | 0.043% |
+| ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.3 | 9,243 | 20.81 | PASS | 0.001% |
+|   | V9-gdn-q4k-mlp-q4k | 0.1179 | 562/784 | 96.4 | 8,740 | 20.41 | — | 0.000% |
+| ★ | gdn-q4k-skip-layer0 | 0.1210 | 572/784 | 96.0 | 13,885 | 21.64 | PASS | 0.000% |
+|   | gdn-q4k-deep | 0.1238 | 578/784 | 95.9 | 15,158 | 21.95 | FAIL | 0.000% |
 | | ↳ *not credited: private holdout FAIL* | | | | | | | |
-|   | V7-mlp-q4k-early | 0.1247 | 561/784 | 94.3 | 8,199 | 21.40 | — | 0.000% |
-| ★ | mlp-q4k-skip-layer0 | 0.1249 | 563/784 | 96.0 | 9,919 | 20.91 | PASS | 0.014% |
-|   | V13-mlp-unsloth-bytes | 0.1258 | 566/784 | 94.4 | 14,110 | 22.02 | FAIL | 0.000% |
+|   | V7-mlp-q4k-early | 0.1247 | 561/784 | 96.2 | 9,753 | 21.40 | — | 0.000% |
+| ★ | mlp-q4k-skip-layer0 | 0.1249 | 563/784 | 96.5 | 9,806 | 20.91 | PASS | 0.000% |
+|   | V13-mlp-unsloth-bytes | 0.1258 | 566/784 | 95.7 | 16,734 | 22.02 | FAIL | 0.000% |
 | | ↳ *not credited: private holdout FAIL* | | | | | | | |
-| ★ | gdn-mlp-deep-q4k | 0.1258 | 567/784 | 96.1 | 11,320 | 21.26 | PASS | 0.024% |
-|   | V4-gdn-q4k | 0.1265 | 566/784 | 94.9 | 12,011 | 21.58 | PASS | 0.000% |
-|   | V5-attn-q4k | 0.1282 | 556/784 | 94.6 | 13,571 | 21.85 | — | 0.000% |
-|   | V6-mlp-q4k | 0.1294 | 563/784 | 94.4 | 8,358 | 20.84 | PASS | 0.000% |
-| ★ | V0-baseline-rebuild | 0.1357 | 564/784 | 94.9 | 14,760 | 22.02 | — | 0.678% |
+| ★ | gdn-mlp-deep-q4k | 0.1258 | 567/784 | 96.2 | 11,490 | 21.26 | PASS | 0.031% |
+| ★ | V4-gdn-q4k | 0.1265 | 566/784 | 96.0 | 13,865 | 21.58 | PASS | 0.000% |
+| ★ | V5-attn-q4k | 0.1282 | 556/784 | 95.5 | 15,685 | 21.85 | — | 0.038% |
+| ★ | V6-mlp-q4k | 0.1294 | 563/784 | 96.6 | 9,742 | 20.84 | PASS | 0.000% |
+| ★ | V0-baseline-rebuild | 0.1357 | 564/784 | 95.8 | 16,932 | 22.02 | — | 0.707% |
 
-Epoch `hpc01-e4` · rules: [bittrellis](https://github.com/coderbench/bittrellis) ([specification](https://github.com/coderbench/bittrellis/blob/main/docs/specification.md)).
+Epoch `hpc01-e5` · rules: [bittrellis](https://github.com/coderbench/bittrellis) ([specification](https://github.com/coderbench/bittrellis/blob/main/docs/specification.md)).
 
 `results/` holds one record per evaluated pull-request head -- never rewritten, with any re-measurement published beside it as `.remeasured-N` -- `observations/` the first-seen record that decides who submitted a recipe first, and `accepted/` the artifacts of merged results. The private holdout never appears here: records carry PASS or FAIL only.
