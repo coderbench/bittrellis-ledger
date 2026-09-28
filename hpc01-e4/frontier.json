@@ -80,7 +80,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003461936946702604,
+   "frontier_gain": 0.00034619369467028815,
    "dominated_by": []
   },
   {
@@ -130,7 +130,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0015303992330599203,
+   "frontier_gain": 0.000688478221266331,
    "dominated_by": []
   },
   {
@@ -290,7 +290,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00023824864172397597,
+   "frontier_gain": 0.00023824864172400373,
    "dominated_by": []
   },
   {
@@ -314,7 +314,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0020667670215654133,
+   "frontier_gain": 0.0019575433174760237,
    "dominated_by": []
   },
   {
@@ -364,7 +364,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0007682573835276207,
+   "frontier_gain": 0.00047330508644075064,
+   "dominated_by": []
+  },
+  {
+   "id": "9940db999ceae10c",
+   "name": "gdn-state-fp8-skip0",
+   "kind": "internal",
+   "rp_kl": 0.11147834627422824,
+   "rp_kl_raw": 0.12235700574488488,
+   "top1": 0.9159729929707732,
+   "decode_tps": 85.55935,
+   "decode_spread": 0.0012611128999928212,
+   "prefill_tps": 13263.0281,
+   "prefill_spread": 0.01964910260576159,
+   "peak_gpu_gib": 23.393,
+   "resident_after_load_gib": 23.0,
+   "peak_host_gib": 17.807,
+   "checkpoint_gib": 18.29354614019394,
+   "tasks_passed": 573,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0003761740744719355,
    "dominated_by": []
   },
   {
@@ -388,7 +412,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.812799269237166e-05,
+   "frontier_gain": 3.44780712341064e-05,
    "dominated_by": []
   },
   {
@@ -412,7 +436,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0001362570582614797,
+   "frontier_gain": 0.00013625705826150747,
    "dominated_by": []
   }
  ],
@@ -475,6 +499,7 @@
   "gdn-mlp-deep-q4k",
   "gdn-mlp-q4k-skip-layer0",
   "gdn-q4k-skip-layer0",
+  "gdn-state-fp8-skip0",
   "gdn-zo-deep-mlp-skip0",
   "mlp-q4k-skip-layer0"
  ]
