@@ -34,9 +34,8 @@
 <text x="450.7" y="297.0" class="t" font-size="11" font-weight="600" text-anchor="middle">#11 · S</text>
 <path class="rej" d="M394.0,412.0V409.8Q394.0,405.8 398.0,405.8H414.0Q418.0,405.8 418.0,409.8V412.0Z"/>
 <path class="acc" d="M470.0,412.0V409.8Q470.0,405.8 474.0,405.8H490.0Q494.0,405.8 494.0,409.8V412.0Z"/>
-<rect class="acc" x="546.0" y="405.8" width="24.0" height="6.2"/>
-<rect class="gry" x="546.0" y="368.2" width="24.0" height="35.5"/>
-<rect class="rej" x="546.0" y="362.0" width="24.0" height="4.2"/>
+<rect class="acc" x="546.0" y="399.5" width="24.0" height="12.5"/>
+<path class="gry" d="M546.0,397.5V366.0Q546.0,362.0 550.0,362.0H566.0Q570.0,362.0 570.0,366.0V397.5Z"/>
 <line class="rule" x1="64" x2="596" y1="412" y2="412" stroke-width="1"/>
 <text x="56.0" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="end">8</text>
 <text x="56.0" y="412.0" class="m" font-size="11" font-weight="400" text-anchor="end">0</text>
