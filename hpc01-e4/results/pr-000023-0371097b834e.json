@@ -1,0 +1,31 @@
+{
+ "author": "cleanjunc",
+ "first_seen": "2026-09-28T15:31:59.813293Z",
+ "head": "0371097b834e984d46d435d092b86e5399055517",
+ "kind": "manifest",
+ "pr": 23,
+ "row": null,
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.12452636968766001
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 24.06
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "status": "build",
+ "tier": "REJECT"
+}
