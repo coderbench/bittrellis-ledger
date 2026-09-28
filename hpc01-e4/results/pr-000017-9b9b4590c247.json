@@ -1,0 +1,66 @@
+{
+ "author": "harrythomasben",
+ "candidate": "6f63fdc01cef0469",
+ "first_seen": "2026-09-28T06:24:32.761765Z",
+ "gain": 0.0,
+ "head": "9b9b4590c247470efe4499c55d15a9cfc7fc47f8",
+ "kind": "manifest",
+ "name": "gdn-q4k-deep-mlp-q4k-1-19",
+ "pr": 17,
+ "references": [
+  "11-61e31220c346",
+  "13-2f6a5973b466",
+  "15-076ef69b5cf1"
+ ],
+ "row": {
+  "checkpoint_gib": 27.19314903765917,
+  "decode_spread": 0.002519181572176297,
+  "decode_tps": 94.7133,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "6f63fdc01cef0469",
+  "kind": "internal",
+  "name": "gdn-q4k-deep-mlp-q4k-1-19",
+  "peak_gpu_gib": 21.492,
+  "peak_host_gib": 26.706,
+  "prefill_spread": 0.018414381204610253,
+  "prefill_tps": 11858.05255,
+  "resident_after_load_gib": 21.0,
+  "rp_kl": 0.11682072724110062,
+  "rp_kl_raw": 0.12446357975624645,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9136145024047355,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.19846390168970815
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
