@@ -1,0 +1,32 @@
+{
+ "author": "carlo171112",
+ "first_seen": "2026-09-28T18:32:46.148623Z",
+ "head": "7cef1c6eee55072f9c80aa7248295ab5b59aac61",
+ "kind": "manifest",
+ "name": "gdn-q4k-deep-mlp-high",
+ "pr": 25,
+ "row": null,
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.16712749615975422
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "status": "gate",
+ "tier": "REJECT"
+}
