@@ -2,6 +2,23 @@
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
 
+## Which checkpoint to use
+
+Every merged recipe trades a little of one thing for another. Pick by what you need; each change is against today's shipped checkpoint (V0).
+
+![The trade-off each merged recipe makes: prompt speed against closeness to the original model, with peak GPU memory](tradeoffs.svg)
+
+| Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
+|---|---|---|---|---|
+| **Closest to the original model · Fastest prompt reading · Least GPU memory** | `gdn-mlp-q4k-skip-layer0`<br>#15 by @K-3-LT ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.1029 · 24.2% closer** | **8,294 tok/s · 44% slower** | **20.54 GiB · 1.48 GiB less** |
+| *for reference* | V0, today's shipped checkpoint | 0.1357 | 14,760 tok/s | 22.02 GiB |
+
+Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
+
+```bash
+bittrellis build manifests/gdn-mlp-q4k-skip-layer0.yaml --out models/gdn-mlp-q4k-skip-layer0
+```
+
 ## Progress
 
 ![Frontier gain credited to merged pull requests over time, pull requests scored per day by outcome, and the authors with the most credited gain.](progress.svg)
@@ -16,9 +33,10 @@ bittrellis frontier hpc01-e4/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | V3-gdn-fp8 | 0.1024 | 573/784 | 83.0 | 11,848 | 23.93 | PASS | 0.349% |
-| ★ | V1-all-q4k | 0.1142 | 575/784 | 94.8 | 7,537 | 20.25 | PASS | 0.064% |
-| ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.1 | 9,114 | 20.81 | PASS | 0.008% |
+| ★ | V3-gdn-fp8 | 0.1024 | 573/784 | 83.0 | 11,848 | 23.93 | PASS | 0.153% |
+| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 94.7 | 8,294 | 20.54 | PASS | 0.207% |
+| ★ | V1-all-q4k | 0.1142 | 575/784 | 94.8 | 7,537 | 20.25 | PASS | 0.035% |
+| ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.1 | 9,114 | 20.81 | PASS | 0.004% |
 |   | V9-gdn-q4k-mlp-q4k | 0.1179 | 562/784 | 94.0 | 7,560 | 20.41 | — | 0.000% |
 | ★ | gdn-q4k-skip-layer0 | 0.1210 | 572/784 | 95.9 | 13,592 | 21.64 | PASS | 0.077% |
 |   | gdn-q4k-deep | 0.1238 | 578/784 | 94.9 | 14,302 | 21.83 | FAIL | 0.000% |
