@@ -56,7 +56,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.007070000741331156,
+   "frontier_gain": 0.007070000741331128,
    "dominated_by": []
   },
   {
@@ -80,7 +80,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0004250574388603434,
+   "frontier_gain": 0.00042505743886039893,
    "dominated_by": []
   },
   {
@@ -130,7 +130,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.001021349462749871,
+   "frontier_gain": 0.0010213494627498987,
    "dominated_by": []
   },
   {
@@ -178,7 +178,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003814153661286235,
+   "frontier_gain": 0.00038141536612856797,
    "dominated_by": []
   },
   {
@@ -229,6 +229,7 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "V6-mlp-q4k",
+    "gdn-attn-q4k-mlp-mid",
     "gdn-mlp-deep-q4k",
     "mlp-q4k-skip-layer0"
    ]
@@ -260,6 +261,30 @@
    ]
   },
   {
+   "id": "6fc9dcb3262d01b4",
+   "name": "gdn-attn-q4k-mlp-mid",
+   "kind": "internal",
+   "rp_kl": 0.11359760669152458,
+   "rp_kl_raw": 0.12358708792034141,
+   "top1": 0.9155567887532371,
+   "decode_tps": 96.06625,
+   "decode_spread": 0.0008025711423106606,
+   "prefill_tps": 10671.2085,
+   "prefill_spread": 0.011737358519421676,
+   "peak_gpu_gib": 21.062,
+   "resident_after_load_gib": 20.4,
+   "peak_host_gib": 34.293,
+   "checkpoint_gib": 34.780678026378155,
+   "tasks_passed": 566,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.00025059750214528886,
+   "dominated_by": []
+  },
+  {
    "id": "efd97ae71c01ccf1",
    "name": "gdn-mlp-deep-q4k",
    "kind": "internal",
@@ -280,7 +305,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003066831224199651,
+   "frontier_gain": 0.00010856188891630869,
    "dominated_by": []
   },
   {
@@ -304,7 +329,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0020753460865309548,
+   "frontier_gain": 0.0019561561172948827,
    "dominated_by": []
   },
   {
@@ -378,7 +403,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00031026714596513183,
+   "frontier_gain": 0.0002540406831413877,
    "dominated_by": []
   },
   {
@@ -402,7 +427,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 7.473545223901645e-06,
+   "frontier_gain": 7.043482817548075e-07,
    "dominated_by": []
   },
   {
@@ -489,6 +514,7 @@
   "V4-gdn-q4k",
   "V5-attn-q4k",
   "V6-mlp-q4k",
+  "gdn-attn-q4k-mlp-mid",
   "gdn-mlp-deep-q4k",
   "gdn-mlp-q4k-skip-layer0",
   "gdn-q4k-skip-layer0",
