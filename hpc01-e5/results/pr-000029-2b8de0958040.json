@@ -1,0 +1,62 @@
+{
+ "author": "carlo171112",
+ "candidate": "3bcf535c66e288bf",
+ "first_seen": "2026-09-29T03:21:29.796310Z",
+ "gain": 4.4288006443155004e-05,
+ "head": "2b8de09580404a9023a23df8095b09af4fbdb83b",
+ "kind": "manifest",
+ "name": "gdn-q4k-skip0-mlp-1-47",
+ "pr": 29,
+ "references": [
+  "23-0371097b834e",
+  "24-187ef6bd8d52"
+ ],
+ "row": {
+  "checkpoint_gib": 40.767919942736626,
+  "decode_spread": 0.001050778807942915,
+  "decode_tps": 96.21435,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 4.4288006443155004e-05,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "3bcf535c66e288bf",
+  "kind": "internal",
+  "name": "gdn-q4k-skip0-mlp-1-47",
+  "peak_gpu_gib": 20.818,
+  "peak_host_gib": 40.278,
+  "prefill_spread": 0.006270156472208386,
+  "prefill_tps": 9584.5455,
+  "resident_after_load_gib": 20.1,
+  "rp_kl": 0.10783957958585974,
+  "rp_kl_raw": 0.1188024524590371,
+  "tasks_n": 784,
+  "tasks_passed": 565,
+  "top1": 0.9125971143174251,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.16712749615975422
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "none"
+}
