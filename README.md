@@ -2,6 +2,23 @@
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
 
+## Which checkpoint to use
+
+Every merged recipe trades a little of one thing for another. Pick by what you need; each change is against today's shipped checkpoint (V0).
+
+![The trade-off each merged recipe makes: prompt speed against closeness to the original model, with peak GPU memory](tradeoffs.svg)
+
+| Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
+|---|---|---|---|---|
+| **Closest to the original model · Fastest prompt reading · Least GPU memory** | `gdn-fp8-mlp-q4k-skip0`<br>#33 by @cleanjunc ![eval:L](https://img.shields.io/badge/eval%3AL-2da44e?style=flat-square) | **0.0853 · 37.2% closer** | **8,609 tok/s · 49% slower** | **22.82 GiB · 0.80 GiB more** |
+| *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,932 tok/s | 22.02 GiB |
+
+Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
+
+```bash
+bittrellis build manifests/gdn-fp8-mlp-q4k-skip0.yaml --out models/gdn-fp8-mlp-q4k-skip0
+```
+
 ## Progress
 
 ![Frontier gain credited to merged pull requests over time, pull requests scored per day by outcome, and the authors with the most credited gain.](progress.svg)
@@ -16,8 +33,9 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
+| ★ | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.1 | 8,609 | 22.82 | PASS | 0.350% |
 | ★ | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,764 | 23.93 | PASS | 0.057% |
-| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,811 | 20.54 | PASS | 0.167% |
+| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,811 | 20.54 | PASS | 0.154% |
 | ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,289 | 23.02 | PASS | 0.014% |
 |   | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.8 | 14,525 | 23.39 | PASS | 0.000% |
 | ★ | gdn-attn-q4k-mlp-mid | 0.1136 | 566/784 | 96.3 | 11,004 | 21.06 | PASS | 0.030% |

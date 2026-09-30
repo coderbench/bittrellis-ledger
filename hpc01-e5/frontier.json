@@ -56,7 +56,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.007070000741331128,
+   "frontier_gain": 0.007070000741331184,
    "dominated_by": []
   },
   {
@@ -80,7 +80,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00042505743886031566,
+   "frontier_gain": 0.0004250574388603434,
    "dominated_by": []
   },
   {
@@ -178,7 +178,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003714184005755572,
+   "frontier_gain": 0.00037141840057552944,
    "dominated_by": []
   },
   {
@@ -281,7 +281,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003001998881065615,
+   "frontier_gain": 0.000300199888106506,
+   "dominated_by": []
+  },
+  {
+   "id": "5e8195422ceb67b7",
+   "name": "gdn-fp8-mlp-q4k-skip0",
+   "kind": "internal",
+   "rp_kl": 0.08525247707503729,
+   "rp_kl_raw": 0.10065820961957765,
+   "top1": 0.9273954864964854,
+   "decode_tps": 84.1395,
+   "decode_spread": 0.0007297404904948557,
+   "prefill_tps": 8608.5455,
+   "prefill_spread": 0.006012444262506227,
+   "peak_gpu_gib": 22.82,
+   "resident_after_load_gib": 21.5,
+   "peak_host_gib": 42.707,
+   "checkpoint_gib": 43.19766929745674,
+   "tasks_passed": 566,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0034966259232801777,
    "dominated_by": []
   },
   {
@@ -305,7 +329,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0001373412609080582,
+   "frontier_gain": 0.00013734126090808596,
    "dominated_by": []
   },
   {
@@ -353,7 +377,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0016743015628132019,
+   "frontier_gain": 0.0015394202796444323,
    "dominated_by": []
   },
   {
@@ -541,6 +565,7 @@
   "V5-attn-q4k",
   "V6-mlp-q4k",
   "gdn-attn-q4k-mlp-mid",
+  "gdn-fp8-mlp-q4k-skip0",
   "gdn-fp8-qkv-all-zo-split",
   "gdn-mlp-deep-q4k",
   "gdn-mlp-q4k-skip-layer0",
