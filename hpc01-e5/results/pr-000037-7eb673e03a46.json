@@ -1,0 +1,62 @@
+{
+ "author": "dato-bitar",
+ "candidate": "288e109b0a877633",
+ "first_seen": "2026-09-30T22:06:48.004160Z",
+ "gain": 6.0144586715771275e-05,
+ "head": "7eb673e03a4613076589033677596acefb4e8c21",
+ "kind": "manifest",
+ "name": "gdn-attn-q4k-mlp-early8-mid24-skip0",
+ "pr": 37,
+ "references": [
+  "23-0371097b834e",
+  "33-ae9c002c4a64"
+ ],
+ "row": {
+  "checkpoint_gib": 37.64443875104189,
+  "decode_spread": 0.0009226344490067936,
+  "decode_tps": 96.13775000000001,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 6.0144586715771275e-05,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "288e109b0a877633",
+  "kind": "internal",
+  "name": "gdn-attn-q4k-mlp-early8-mid24-skip0",
+  "peak_gpu_gib": 20.922,
+  "peak_host_gib": 37.149,
+  "prefill_spread": 0.007676663909458079,
+  "prefill_tps": 10128.7227,
+  "resident_after_load_gib": 20.3,
+  "rp_kl": 0.10907529765257835,
+  "rp_kl_raw": 0.11848513104995173,
+  "tasks_n": 784,
+  "tasks_passed": 572,
+  "top1": 0.9173140954495006,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.38934971838197646
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "XS"
+}
