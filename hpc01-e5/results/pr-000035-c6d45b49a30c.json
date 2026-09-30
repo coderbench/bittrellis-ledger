@@ -1,0 +1,68 @@
+{
+ "author": "SurvivorAI0817",
+ "candidate": "4dd6173cabf907e6",
+ "first_seen": "2026-09-30T20:47:11.713409Z",
+ "gain": 0.0,
+ "head": "c6d45b49a30cb05355bdbabd47e47e876bea3bcb",
+ "kind": "manifest",
+ "name": "mlp-q4k-deep-quarter",
+ "pr": 35,
+ "references": [
+  "23-0371097b834e",
+  "24-187ef6bd8d52",
+  "33-ae9c002c4a64"
+ ],
+ "row": {
+  "checkpoint_gib": 22.41321225464344,
+  "decode_spread": 0.000483672407844307,
+  "decode_tps": 95.9327,
+  "dominated_by": [
+   "V4-gdn-q4k"
+  ],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "4dd6173cabf907e6",
+  "kind": "internal",
+  "name": "mlp-q4k-deep-quarter",
+  "peak_gpu_gib": 21.734,
+  "peak_host_gib": 21.916,
+  "prefill_spread": 0.007259538366960587,
+  "prefill_tps": 14166.17625,
+  "resident_after_load_gib": 21.1,
+  "rp_kl": 0.12783425074856655,
+  "rp_kl_raw": 0.1284739999760053,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9150480947095819,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.2752688172043011
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
