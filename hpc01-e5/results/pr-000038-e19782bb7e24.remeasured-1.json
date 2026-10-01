@@ -1,0 +1,60 @@
+{
+ "author": "carlo171112",
+ "candidate": "0434956a07789961",
+ "first_seen": "2026-09-30T23:34:43.423092Z",
+ "gain": 0.0004685040851122313,
+ "head": "e19782bb7e24e466ad099cff83f51ec4dadeeecb",
+ "kind": "manifest",
+ "name": "gdn-fp8-lmhead-q4k",
+ "pr": 38,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 20.64555288851261,
+  "decode_spread": 0.0007663954087790166,
+  "decode_tps": 83.89925,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.0004685040851122313,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "0434956a07789961",
+  "kind": "internal",
+  "name": "gdn-fp8-lmhead-q4k",
+  "peak_gpu_gib": 23.93,
+  "peak_host_gib": 20.157,
+  "prefill_spread": 0.034412225809422936,
+  "prefill_tps": 13307.11075,
+  "resident_after_load_gib": 22.7,
+  "rp_kl": 0.09673191098039972,
+  "rp_kl_raw": 0.11025301115979379,
+  "tasks_n": 784,
+  "tasks_passed": 576,
+  "top1": 0.9243895671476138,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.11193036354326677
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 25.02
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "supersedes": "pr-000038-e19782bb7e24.json",
+ "tier": "S"
+}
