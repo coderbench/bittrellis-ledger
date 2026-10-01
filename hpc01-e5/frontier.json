@@ -56,7 +56,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.003964366406369602,
+   "frontier_gain": 0.003964366406369574,
    "dominated_by": []
   },
   {
@@ -284,7 +284,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 9.602369679190259e-05,
+   "frontier_gain": 9.602369679193035e-05,
    "dominated_by": []
   },
   {
@@ -334,7 +334,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0005419446066740052,
+   "frontier_gain": 0.000538370937110455,
    "dominated_by": []
   },
   {
@@ -411,7 +411,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00010900270851990634,
+   "frontier_gain": 0.0001090027085199341,
    "dominated_by": []
   },
   {
@@ -421,13 +421,13 @@
    "rp_kl": 0.08722651293061157,
    "rp_kl_raw": 0.09804681730940948,
    "top1": 0.9267018128005919,
-   "decode_tps": 88.52015,
-   "decode_spread": 0.0005727509499250305,
-   "prefill_tps": 8677.852449999998,
-   "prefill_spread": 0.00628373210010043,
+   "decode_tps": 88.6472,
+   "decode_spread": 0.0006903771354312316,
+   "prefill_tps": 8766.5945,
+   "prefill_spread": 0.00775938706871865,
    "peak_gpu_gib": 21.85,
    "resident_after_load_gib": 20.5,
-   "peak_host_gib": 44.786,
+   "peak_host_gib": 44.785,
    "checkpoint_gib": 45.27701459079981,
    "tasks_passed": 573,
    "tasks_n": 784,
@@ -435,7 +435,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00016510766723784598,
+   "frontier_gain": 0.00018662800665236734,
    "dominated_by": []
   },
   {
@@ -483,7 +483,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0005897689948591578,
+   "frontier_gain": 0.0005837375687171575,
    "dominated_by": []
   },
   {
@@ -583,7 +583,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.6370968403698356e-08,
+   "frontier_gain": 3.637096843145393e-08,
    "dominated_by": []
   },
   {
