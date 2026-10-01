@@ -25,29 +25,29 @@
 <text x="477.0" y="420.0" class="m" font-size="12" font-weight="400" text-anchor="middle">Prompt reading speed, 4K prefill tok/s →</text>
 <text x="22" y="236.0" class="m" font-size="12" text-anchor="middle" transform="rotate(-90 22 236.0)">Drift from the original, RP-KL (closer ↑)</text>
 <text x="866.0" y="108.0" class="m" font-size="12" font-weight="600" text-anchor="end">better ↗</text>
-<circle class="gry" cx="154.5" cy="256.3" r="4" opacity=".55"/>
-<circle class="gry" cx="571.7" cy="199.4" r="4" opacity=".55"/>
-<circle class="gry" cx="580.8" cy="315.2" r="4" opacity=".55"/>
-<circle class="gry" cx="722.8" cy="323.2" r="4" opacity=".55"/>
-<circle class="gry" cx="264.1" cy="329.2" r="4" opacity=".55"/>
-<circle class="gry" cx="255.5" cy="306.4" r="4" opacity=".55"/>
-<circle class="gry" cx="180.9" cy="273.9" r="4" opacity=".55"/>
-<circle class="gry" cx="342.1" cy="253.3" r="4" opacity=".55"/>
-<circle class="gry" cx="608.3" cy="228.0" r="4" opacity=".55"/>
-<circle class="gry" cx="395.4" cy="312.0" r="4" opacity=".55"/>
-<circle class="gry" cx="186.0" cy="202.0" r="4" opacity=".55"/>
-<circle class="gry" cx="584.1" cy="288.7" r="4" opacity=".55"/>
-<circle class="gry" cx="634.3" cy="243.1" r="4" opacity=".55"/>
-<circle class="gry" cx="219.2" cy="273.6" r="4" opacity=".55"/>
-<circle class="gry" cx="266.6" cy="307.3" r="4" opacity=".55"/>
-<circle class="tk" cx="796.4" cy="359.6" r="5" fill="none" stroke-width="2"/>
-<circle class="acc ring" cx="309.7" cy="231.6" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="176.9" cy="117.2" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="184.3" cy="115.8" r="5.5" stroke-width="2"/>
-<text x="787.4" y="363.6" class="t" font-size="11" font-weight="600" text-anchor="end">V0 shipped · 22.0 GiB</text>
-<text x="193.3" y="119.8" class="t" font-size="11" font-weight="600" text-anchor="start">#40 · 22.2 GiB</text>
-<text x="176.9" y="136.2" class="t" font-size="11" font-weight="600" text-anchor="middle">#33 · 22.8 GiB</text>
-<text x="318.7" y="235.6" class="t" font-size="11" font-weight="600" text-anchor="start">#37 · 20.9 GiB</text>
+<circle class="gry" cx="159.3" cy="256.3" r="4" opacity=".55"/>
+<circle class="gry" cx="575.8" cy="199.4" r="4" opacity=".55"/>
+<circle class="gry" cx="584.6" cy="315.2" r="4" opacity=".55"/>
+<circle class="gry" cx="727.6" cy="323.2" r="4" opacity=".55"/>
+<circle class="gry" cx="263.7" cy="329.2" r="4" opacity=".55"/>
+<circle class="gry" cx="263.0" cy="306.4" r="4" opacity=".55"/>
+<circle class="gry" cx="182.1" cy="273.9" r="4" opacity=".55"/>
+<circle class="gry" cx="346.6" cy="253.3" r="4" opacity=".55"/>
+<circle class="gry" cx="612.2" cy="228.0" r="4" opacity=".55"/>
+<circle class="gry" cx="400.6" cy="312.0" r="4" opacity=".55"/>
+<circle class="gry" cx="189.4" cy="202.0" r="4" opacity=".55"/>
+<circle class="gry" cx="588.1" cy="288.7" r="4" opacity=".55"/>
+<circle class="gry" cx="638.0" cy="243.1" r="4" opacity=".55"/>
+<circle class="gry" cx="224.5" cy="273.6" r="4" opacity=".55"/>
+<circle class="gry" cx="267.3" cy="307.3" r="4" opacity=".55"/>
+<circle class="tk" cx="800.3" cy="359.6" r="5" fill="none" stroke-width="2"/>
+<circle class="acc ring" cx="302.3" cy="231.6" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="180.8" cy="117.2" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="182.6" cy="115.8" r="5.5" stroke-width="2"/>
+<text x="791.3" y="363.6" class="t" font-size="11" font-weight="600" text-anchor="end">V0 shipped · 22.0 GiB</text>
+<text x="191.6" y="119.8" class="t" font-size="11" font-weight="600" text-anchor="start">#40 · 22.2 GiB</text>
+<text x="180.8" y="136.2" class="t" font-size="11" font-weight="600" text-anchor="middle">#33 · 22.8 GiB</text>
+<text x="311.3" y="235.6" class="t" font-size="11" font-weight="600" text-anchor="start">#37 · 20.9 GiB</text>
 <circle class="acc" cx="29" cy="450" r="5"/>
 <text x="39.0" y="454.0" class="m" font-size="11" font-weight="400" text-anchor="start">merged pull request</text>
 <circle class="tk" cx="199" cy="450" r="5" fill="none" stroke-width="2"/>
