@@ -1,0 +1,72 @@
+{
+ "author": "SurvivorAI0817",
+ "candidate": "ad668a0b8b286095",
+ "first_seen": "2026-10-01T07:34:04.100939Z",
+ "gain": 0.0,
+ "head": "d704c19aba7dd85e8782f866a17f82438144f9b3",
+ "kind": "manifest",
+ "name": "mlp-q4k-shallow-three-quarter",
+ "pr": 45,
+ "references": [
+  "23-0371097b834e",
+  "24-187ef6bd8d52",
+  "33-ae9c002c4a64",
+  "37-7eb673e03a46",
+  "38-e19782bb7e24",
+  "40-bb75a503f11e"
+ ],
+ "row": {
+  "checkpoint_gib": 24.919003047049046,
+  "decode_spread": 0.0006498842393698277,
+  "decode_tps": 96.0171,
+  "dominated_by": [
+   "V4-gdn-q4k",
+   "gdn-q4k-skip-layer0"
+  ],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "ad668a0b8b286095",
+  "kind": "internal",
+  "name": "mlp-q4k-shallow-three-quarter",
+  "peak_gpu_gib": 21.611,
+  "peak_host_gib": 24.432,
+  "prefill_spread": 0.010941749003520566,
+  "prefill_tps": 13273.718850000001,
+  "resident_after_load_gib": 20.9,
+  "rp_kl": 0.12407493597887966,
+  "rp_kl_raw": 0.12561716182281302,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9134295227524972,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.34838709677419355
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
