@@ -1,0 +1,73 @@
+{
+ "author": "SurvivorAI0817",
+ "candidate": "253bf62cbe0486a7",
+ "first_seen": "2026-10-01T12:35:47.776775Z",
+ "gain": 0.0,
+ "head": "abe42dfd967e5ab8f0c94f3e384f6ed9afd2bbc1",
+ "kind": "manifest",
+ "name": "gdn-attn-q4k-mlp-early8-mid32-skip0",
+ "pr": 52,
+ "references": [
+  "23-0371097b834e",
+  "24-187ef6bd8d52",
+  "33-ae9c002c4a64",
+  "37-7eb673e03a46",
+  "38-e19782bb7e24",
+  "40-bb75a503f11e",
+  "49-1764d860ee5c"
+ ],
+ "row": {
+  "checkpoint_gib": 37.64443872869015,
+  "decode_spread": 0.00025473614274377127,
+  "decode_tps": 96.17795000000001,
+  "dominated_by": [
+   "gdn-attn-q4k-mlp-early8-mid24-skip0",
+   "gdn-attn-q4k-mlp-early8-mid24-skip0"
+  ],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "253bf62cbe0486a7",
+  "kind": "internal",
+  "name": "gdn-attn-q4k-mlp-early8-mid32-skip0",
+  "peak_gpu_gib": 20.922,
+  "peak_host_gib": 36.993,
+  "prefill_spread": 0.0053743347683622945,
+  "prefill_tps": 10186.4142,
+  "resident_after_load_gib": 20.3,
+  "rp_kl": 0.11590718683131891,
+  "rp_kl_raw": 0.1284555214618662,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9131058083610802,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.16712749615975422
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
