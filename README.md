@@ -10,14 +10,14 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
-| **Closest to the original model** | `gdn-fp8-mlp-q4k-skip0`<br>#33 by @cleanjunc ![eval:L](https://img.shields.io/badge/eval%3AL-2da44e?style=flat-square) | **0.0853 · 37.2% closer** | 8,681 tok/s · 48% slower | 22.82 GiB · 0.80 GiB more |
+| **Closest to the original model** | `gdn-fp8-mlp-q4k-zo-deep-q4k`<br>#40 by @milosde111 ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | **0.0850 · 37.4% closer** | 8,651 tok/s · 48% slower | 22.16 GiB · 0.15 GiB more |
 | **Fastest prompt reading · Least GPU memory** | `gdn-attn-q4k-mlp-early8-mid24-skip0`<br>#37 by @dato-bitar ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.1091 · 19.6% closer | **10,371 tok/s · 37% slower** | **20.92 GiB · 1.09 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,564 tok/s | 22.02 GiB |
 
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
-bittrellis build manifests/gdn-fp8-mlp-q4k-skip0.yaml --out models/gdn-fp8-mlp-q4k-skip0
+bittrellis build manifests/gdn-fp8-mlp-q4k-zo-deep-q4k.yaml --out models/gdn-fp8-mlp-q4k-zo-deep-q4k
 bittrellis build manifests/gdn-attn-q4k-mlp-early8-mid24-skip0.yaml --out models/gdn-attn-q4k-mlp-early8-mid24-skip0
 ```
 
@@ -35,9 +35,10 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.2 | 8,681 | 22.82 | PASS | 0.354% |
+| ★ | gdn-fp8-mlp-q4k-zo-deep-q4k | 0.0850 | 568/784 | 87.0 | 8,651 | 22.16 | PASS | 0.057% |
+|   | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.2 | 8,681 | 22.82 | PASS | 0.000% |
 | ★ | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,705 | 23.93 | PASS | 0.056% |
-| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,798 | 20.54 | PASS | 0.087% |
+| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,798 | 20.54 | PASS | 0.068% |
 | ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,170 | 23.02 | PASS | 0.011% |
 | ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.3 | 10,371 | 20.92 | PASS | 0.009% |
 |   | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.7 | 14,501 | 23.39 | PASS | 0.000% |
