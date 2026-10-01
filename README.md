@@ -43,9 +43,10 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 | ★ | gdn-fp8-lmhead-q4k | 0.0967 | 576/784 | 84.0 | 13,839 | 23.93 | PASS | 0.054% |
 |   | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,726 | 24.05 | PASS | 0.000% |
 | ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,832 | 20.54 | PASS | 0.058% |
-| ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,191 | 23.02 | PASS | 0.011% |
-| ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.2 | 10,272 | 20.92 | PASS | 0.010% |
+| ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,191 | 23.02 | PASS | 0.008% |
+| ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.2 | 10,272 | 20.92 | PASS | 0.009% |
 |   | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.8 | 14,531 | 23.39 | PASS | 0.000% |
+| ★ | gdn-attn-q4k-mlp-early3-mid28-skip0 | 0.1134 | 560/784 | 96.0 | 12,201 | 21.36 | PASS | 0.016% |
 |   | gdn-attn-q4k-mlp-mid | 0.1136 | 566/784 | 96.2 | 10,835 | 21.18 | PASS | 0.000% |
 | ★ | V1-all-q4k | 0.1142 | 575/784 | 96.3 | 8,433 | 20.25 | PASS | 0.042% |
 | ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.3 | 9,229 | 20.81 | PASS | 0.000% |
@@ -57,7 +58,7 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 |   | mlp-q4k-skip-layer0 | 0.1249 | 563/784 | 96.6 | 9,833 | 20.91 | PASS | 0.000% |
 |   | V13-mlp-unsloth-bytes | 0.1258 | 566/784 | 95.7 | 16,537 | 22.02 | FAIL | 0.000% |
 | | ↳ *not credited: private holdout FAIL* | | | | | | | |
-| ★ | gdn-mlp-deep-q4k | 0.1258 | 567/784 | 96.2 | 11,495 | 21.26 | PASS | 0.007% |
+|   | gdn-mlp-deep-q4k | 0.1258 | 567/784 | 96.2 | 11,495 | 21.26 | PASS | 0.000% |
 | ★ | V4-gdn-q4k | 0.1265 | 566/784 | 96.0 | 13,843 | 21.58 | PASS | 0.000% |
 | ★ | V5-attn-q4k | 0.1282 | 556/784 | 95.5 | 15,649 | 21.85 | — | 0.036% |
 |   | V6-mlp-q4k | 0.1294 | 563/784 | 96.6 | 9,786 | 20.84 | PASS | 0.000% |

@@ -56,7 +56,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.003964366406369574,
+   "frontier_gain": 0.003964366406369629,
    "dominated_by": []
   },
   {
@@ -180,7 +180,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00035762760669530436,
+   "frontier_gain": 0.0003576276066952766,
    "dominated_by": []
   },
   {
@@ -233,6 +233,7 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "V6-mlp-q4k",
+    "gdn-attn-q4k-mlp-early3-mid28-skip0",
     "gdn-attn-q4k-mlp-early8-mid24-skip0",
     "gdn-attn-q4k-mlp-mid",
     "gdn-mlp-deep-q4k",
@@ -260,7 +261,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 9.99030794229805e-07,
+   "frontier_gain": 9.99030794285316e-07,
+   "dominated_by": []
+  },
+  {
+   "id": "4fae142889a7606f",
+   "name": "gdn-attn-q4k-mlp-early3-mid28-skip0",
+   "kind": "internal",
+   "rp_kl": 0.11342186471961045,
+   "rp_kl_raw": 0.11891502190822272,
+   "top1": 0.9167129115797262,
+   "decode_tps": 95.99325,
+   "decode_spread": 0.00039065246775157956,
+   "prefill_tps": 12200.7153,
+   "prefill_spread": 0.012608801715092896,
+   "peak_gpu_gib": 21.361,
+   "resident_after_load_gib": 20.7,
+   "peak_host_gib": 28.202,
+   "checkpoint_gib": 28.695186354219913,
+   "tasks_passed": 560,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.00015705049209133182,
    "dominated_by": []
   },
   {
@@ -284,7 +309,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 9.602369679193035e-05,
+   "frontier_gain": 9.195705449854819e-05,
    "dominated_by": []
   },
   {
@@ -334,7 +359,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.000538370937110455,
+   "frontier_gain": 0.0005383709371104828,
    "dominated_by": []
   },
   {
@@ -411,7 +436,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0001090027085199341,
+   "frontier_gain": 8.255871120696479e-05,
    "dominated_by": []
   },
   {
@@ -435,7 +460,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00018662800665236734,
+   "frontier_gain": 0.00018662800665233958,
    "dominated_by": []
   },
   {
@@ -458,9 +483,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 7.226149999359222e-05,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "gdn-attn-q4k-mlp-early3-mid28-skip0"
+   ]
   },
   {
    "id": "ca4ecf7a5223f8f1",
@@ -583,7 +610,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.637096843145393e-08,
+   "frontier_gain": 3.6370968403698356e-08,
    "dominated_by": []
   },
   {
@@ -671,11 +698,11 @@
   "V4-gdn-q4k",
   "V5-attn-q4k",
   "V9-gdn-q4k-mlp-q4k",
+  "gdn-attn-q4k-mlp-early3-mid28-skip0",
   "gdn-attn-q4k-mlp-early8-mid24-skip0",
   "gdn-fp8-lmhead-q4k",
   "gdn-fp8-qkv-all-zo-split",
   "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
-  "gdn-mlp-deep-q4k",
   "gdn-mlp-q4k-skip-layer0",
   "gdn-q4k-skip-layer0",
   "gdn-zo-deep-mlp-skip0"
