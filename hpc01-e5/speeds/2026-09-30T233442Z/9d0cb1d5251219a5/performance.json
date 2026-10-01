@@ -1,0 +1,64 @@
+{
+  "protocol": {
+    "runs": 2,
+    "contexts": [
+      128,
+      4096,
+      16384
+    ],
+    "decode_tokens": 512,
+    "primary_context": 4096,
+    "memory_workload": "peak device memory over one process that loads the model with max_seq 16,384 and runs prefill + 512-token decode at 128, 4,096 and 16,384 context"
+  },
+  "decode_tps": 96.37039999999999,
+  "decode_spread": 0.0009920058441181584,
+  "prefill_tps": 8732.227350000001,
+  "prefill_spread": 0.00821738797261165,
+  "peak_gpu_gib": 20.41,
+  "resident_after_load_gib": 19.8,
+  "peak_host_gib": 46.398,
+  "runs": [
+    {
+      "sweep": {
+        "128": {
+          "decode_tps": 98.1713,
+          "prefill_pp": 3316.8108
+        },
+        "4096": {
+          "decode_tps": 96.4182,
+          "prefill_pp": 8768.1054
+        },
+        "16384": {
+          "decode_tps": 92.5764,
+          "prefill_pp": 8245.194
+        }
+      },
+      "peak_gpu_gib": 20.41,
+      "resident_after_load_gib": 19.8,
+      "peak_host_gib": 45.526,
+      "idle_gpu_mib": 2,
+      "wall_seconds": 33.3
+    },
+    {
+      "sweep": {
+        "128": {
+          "decode_tps": 98.1042,
+          "prefill_pp": 3293.6038
+        },
+        "4096": {
+          "decode_tps": 96.3226,
+          "prefill_pp": 8696.3493
+        },
+        "16384": {
+          "decode_tps": 92.5273,
+          "prefill_pp": 8176.1318
+        }
+      },
+      "peak_gpu_gib": 20.41,
+      "resident_after_load_gib": 19.8,
+      "peak_host_gib": 46.398,
+      "idle_gpu_mib": 2,
+      "wall_seconds": 27.2
+    }
+  ]
+}

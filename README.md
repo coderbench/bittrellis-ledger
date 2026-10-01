@@ -11,7 +11,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
 | **Closest to the original model** | `gdn-fp8-mlp-q4k-skip0`<br>#33 by @cleanjunc ![eval:L](https://img.shields.io/badge/eval%3AL-2da44e?style=flat-square) | **0.0853 · 37.2% closer** | 8,681 tok/s · 48% slower | 22.82 GiB · 0.80 GiB more |
-| **Fastest prompt reading · Least GPU memory** | `gdn-attn-q4k-mlp-early8-mid24-skip0`<br>#37 by @dato-bitar ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.1091 · 19.6% closer | **10,129 tok/s · 39% slower** | **20.92 GiB · 1.09 GiB less** |
+| **Fastest prompt reading · Least GPU memory** | `gdn-attn-q4k-mlp-early8-mid24-skip0`<br>#37 by @dato-bitar ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.1091 · 19.6% closer | **10,371 tok/s · 37% slower** | **20.92 GiB · 1.09 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,564 tok/s | 22.02 GiB |
 
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
@@ -39,9 +39,9 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 | ★ | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,705 | 23.93 | PASS | 0.056% |
 | ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,798 | 20.54 | PASS | 0.087% |
 | ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,170 | 23.02 | PASS | 0.011% |
-| ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.1 | 10,129 | 20.92 | PASS | 0.006% |
+| ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.3 | 10,371 | 20.92 | PASS | 0.009% |
 |   | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.7 | 14,501 | 23.39 | PASS | 0.000% |
-| ★ | gdn-attn-q4k-mlp-mid | 0.1136 | 566/784 | 96.2 | 10,783 | 21.06 | PASS | 0.008% |
+| ★ | gdn-attn-q4k-mlp-mid | 0.1136 | 566/784 | 96.2 | 10,783 | 21.06 | PASS | 0.002% |
 | ★ | V1-all-q4k | 0.1142 | 575/784 | 96.4 | 8,397 | 20.25 | PASS | 0.042% |
 | ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.3 | 9,219 | 20.81 | PASS | 0.000% |
 | ★ | V9-gdn-q4k-mlp-q4k | 0.1179 | 562/784 | 96.4 | 8,732 | 20.41 | — | 0.000% |
