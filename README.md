@@ -46,7 +46,7 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 | ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,191 | 23.02 | PASS | 0.008% |
 | ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.2 | 10,272 | 20.92 | PASS | 0.009% |
 |   | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.8 | 14,531 | 23.39 | PASS | 0.000% |
-| ★ | gdn-attn-q4k-mlp-early3-mid28-skip0 | 0.1134 | 560/784 | 96.0 | 12,201 | 21.36 | PASS | 0.016% |
+| ★ | gdn-attn-q4k-mlp-early3-mid28-skip0 | 0.1134 | 560/784 | 96.2 | 12,575 | 21.36 | PASS | 0.025% |
 |   | gdn-attn-q4k-mlp-mid | 0.1136 | 566/784 | 96.2 | 10,835 | 21.18 | PASS | 0.000% |
 | ★ | V1-all-q4k | 0.1142 | 575/784 | 96.3 | 8,433 | 20.25 | PASS | 0.042% |
 | ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.3 | 9,229 | 20.81 | PASS | 0.000% |
