@@ -1,0 +1,2834 @@
+{
+  "id": "41c87e5a0af69496",
+  "name": "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
+  "kind": "internal",
+  "manifest": {
+    "schema": "bittrellis/manifest@2",
+    "track": "HPC-01",
+    "name": "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
+    "description": "The FP8 recurrent recipe with MLP Q4_K after layer 0 (gdn-fp8-mlp-q4k-skip0, gdn-fp8-mlp-q4k-zo-deep-q4k), with every recurrent out projection after layer 0 moved to Q4_K. FP8 stays where it protects the recurrent state: qkv at every depth and z in layers 0-31, as in the shallow-z finding of gdn-fp8-qkv-all-zo-split; z in layers 32-63 is Q4_K as in gdn-fp8-mlp-q4k-zo-deep-q4k. The shallow out projections were the remaining FP8 units whose 8 bits buy little fidelity, so turning them to Q4_K cuts decode traffic and peak memory below every FP8 recipe on the frontier, at a small drift cost. Layer 0 and attention stay as they are, so the batched-prefill paths stay on. lm_head is stored BF16, so its batch-1 Q4_K is fitted once from the original weights.\n",
+    "authors": [
+      "cleanjunc"
+    ],
+    "default": "NVFP4",
+    "rules": [
+      {
+        "match": "L*.gdn.*",
+        "format": "FP8"
+      },
+      {
+        "match": "L*.gdn.z",
+        "layers": "32-63",
+        "format": "Q4_K"
+      },
+      {
+        "match": "L*.gdn.out",
+        "layers": "1-63",
+        "format": "Q4_K"
+      },
+      {
+        "match": "L*.mlp",
+        "layers": "1-63",
+        "format": "Q4_K"
+      }
+    ],
+    "modules": {
+      "lm_head": "Q4_K"
+    },
+    "quantizers": {
+      "NVFP4": "baseline",
+      "FP8": "rtn",
+      "Q4_K": "runtime"
+    },
+    "expanded": {
+      "L0.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L0.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L0.gdn.out": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L0.mlp": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L1.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L1.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L1.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L1.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L2.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L2.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L2.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L2.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L3.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L3.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L3.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L3.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L3.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L4.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L4.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L4.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L4.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L5.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L5.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L5.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L5.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L6.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L6.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L6.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L6.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L7.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L7.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L7.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L7.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L7.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L8.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L8.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L8.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L8.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L9.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L9.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L9.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L9.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L10.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L10.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L10.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L10.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L11.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L11.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L11.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L11.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L11.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L12.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L12.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L12.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L12.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L13.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L13.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L13.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L13.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L14.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L14.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L14.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L14.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L15.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L15.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L15.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L15.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L15.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L16.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L16.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L16.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L16.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L17.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L17.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L17.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L17.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L18.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L18.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L18.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L18.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L19.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L19.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L19.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L19.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L19.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L20.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L20.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L20.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L20.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L21.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L21.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L21.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L21.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L22.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L22.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L22.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L22.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L23.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L23.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L23.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L23.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L23.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L24.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L24.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L24.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L24.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L25.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L25.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L25.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L25.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L26.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L26.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L26.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L26.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L27.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L27.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L27.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L27.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L27.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L28.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L28.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L28.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L28.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L29.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L29.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L29.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L29.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L30.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L30.gdn.z": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L30.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L30.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L31.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L31.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L31.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L31.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L31.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L32.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L32.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L32.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L32.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L33.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L33.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L33.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L33.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L34.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L34.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L34.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L34.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L35.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L35.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L35.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L35.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L35.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L36.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L36.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L36.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L36.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L37.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L37.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L37.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L37.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L38.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L38.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L38.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L38.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L39.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L39.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L39.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L39.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L39.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L40.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L40.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L40.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L40.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L41.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L41.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L41.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L41.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L42.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L42.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L42.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L42.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L43.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L43.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L43.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L43.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L43.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L44.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L44.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L44.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L44.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L45.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L45.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L45.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L45.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L46.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L46.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L46.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L46.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L47.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L47.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L47.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L47.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L47.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L48.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L48.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L48.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L48.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L49.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L49.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L49.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L49.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L50.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L50.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L50.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L50.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L51.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L51.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L51.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L51.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L51.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L52.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L52.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L52.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L52.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L53.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L53.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L53.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L53.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L54.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L54.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L54.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L54.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L55.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L55.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L55.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L55.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L55.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L56.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L56.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L56.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L56.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L57.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L57.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L57.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L57.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L58.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L58.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L58.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L58.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L59.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L59.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L59.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L59.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L59.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L60.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L60.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L60.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L60.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L61.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L61.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L61.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L61.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L62.gdn.qkv": {
+        "source_format": "FP8",
+        "quantizer": "rtn@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "FP8",
+          "packed_wide": "FP8"
+        }
+      },
+      "L62.gdn.z": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L62.gdn.out": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L62.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "L63.attn.q": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L63.attn.k": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L63.attn.v": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L63.attn.o": {
+        "source_format": "NVFP4",
+        "quantizer": "baseline@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "NVFP4",
+          "packed_wide": "NVFP4"
+        }
+      },
+      "L63.mlp": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      },
+      "lm_head": {
+        "source_format": "Q4_K",
+        "quantizer": "runtime@v1",
+        "params": {},
+        "execution": {
+          "decode_b1": "Q4_K",
+          "packed_wide": "Q4_K"
+        }
+      }
+    }
+  },
+  "build": {
+    "candidate_id": "41c87e5a0af69496",
+    "name": "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
+    "track": "HPC-01",
+    "bittrellis_version": "0.1.0",
+    "quantizers": {
+      "baseline@v1": {
+        "lineage": "attested",
+        "replay_mode": "none",
+        "source": "gittensor_nvfp4"
+      },
+      "rtn@v1": {
+        "lineage": "regenerable",
+        "replay_mode": "independent",
+        "source": null
+      },
+      "runtime@v1": {
+        "lineage": "runtime",
+        "replay_mode": "none",
+        "source": null
+      }
+    },
+    "sources_verified": true,
+    "summary": {
+      "gdn": {
+        "FP8": 73,
+        "Q4_K": 71
+      },
+      "mlp": {
+        "NVFP4": 1,
+        "Q4_K": 63
+      },
+      "attn": {
+        "NVFP4": 64
+      },
+      "lm_head": {
+        "Q4_K": 1
+      }
+    },
+    "checkpoint_bytes": 48615824232,
+    "files": {
+      "model-00001-of-00010.safetensors": "cb1cda971ab0d5c1845274af5b0038ccc0f4eab30e8c5e8aeb0a0fc2f3d48669",
+      "model-00002-of-00010.safetensors": "be9d0597d57e32b525737168ac6887d3f2dde81facfff16e1bcc41920cee8392",
+      "model-00003-of-00010.safetensors": "acd44b15dc26b1afc4f086a14f3413e6a7fe78458b98eb2dc9da608e2397a016",
+      "model-00004-of-00010.safetensors": "3404bb3d279682706abdc5cf429a079a2f7ca69baec8d61004571920ae7e3114",
+      "model-00005-of-00010.safetensors": "2b5aca1eb2cc76de615849ee0e5ecb48705ae1775d9da27d254ee570d14aa26d",
+      "model-00006-of-00010.safetensors": "cb26e8ab0fdd2ccbf0e9a3d5b8515b779f491caddc78edacc4cd1fbb9d98dce6",
+      "model-00007-of-00010.safetensors": "1d60fe7f3ce3932f23fa2960c30eb2bfe2eacc8a58771f715c7329e8416e1769",
+      "model-00008-of-00010.safetensors": "99837eeff8a25b9bcce4f7c4f8785912e9f309632016ed642b44b898bf087de5",
+      "model-00009-of-00010.safetensors": "4de15b4062ef3a07940e508b281d4b70775e8185f717996f90b437599f0ba630",
+      "model-00010-of-00010.safetensors": "ed3ac60d0ea1cccbadb2147afa22561e101fbd0ff087860512741c2e0bc8f527"
+    },
+    "build_seconds": 174.0
+  },
+  "audit_ok": true,
+  "executed_formats": {
+    "L0.gdn.qkv": "FP8",
+    "L0.gdn.z": "FP8",
+    "L0.gdn.out": "FP8",
+    "L0.mlp": "NVFP4",
+    "L1.gdn.qkv": "FP8",
+    "L1.gdn.z": "FP8",
+    "L1.gdn.out": "Q4_K",
+    "L1.mlp": "Q4_K",
+    "L2.gdn.qkv": "FP8",
+    "L2.gdn.z": "FP8",
+    "L2.gdn.out": "Q4_K",
+    "L2.mlp": "Q4_K",
+    "L3.attn.q": "NVFP4",
+    "L3.attn.k": "NVFP4",
+    "L3.attn.v": "NVFP4",
+    "L3.attn.o": "NVFP4",
+    "L3.mlp": "Q4_K",
+    "L4.gdn.qkv": "FP8",
+    "L4.gdn.z": "FP8",
+    "L4.gdn.out": "Q4_K",
+    "L4.mlp": "Q4_K",
+    "L5.gdn.qkv": "FP8",
+    "L5.gdn.z": "FP8",
+    "L5.gdn.out": "Q4_K",
+    "L5.mlp": "Q4_K",
+    "L6.gdn.qkv": "FP8",
+    "L6.gdn.z": "FP8",
+    "L6.gdn.out": "Q4_K",
+    "L6.mlp": "Q4_K",
+    "L7.attn.q": "NVFP4",
+    "L7.attn.k": "NVFP4",
+    "L7.attn.v": "NVFP4",
+    "L7.attn.o": "NVFP4",
+    "L7.mlp": "Q4_K",
+    "L8.gdn.qkv": "FP8",
+    "L8.gdn.z": "FP8",
+    "L8.gdn.out": "Q4_K",
+    "L8.mlp": "Q4_K",
+    "L9.gdn.qkv": "FP8",
+    "L9.gdn.z": "FP8",
+    "L9.gdn.out": "Q4_K",
+    "L9.mlp": "Q4_K",
+    "L10.gdn.qkv": "FP8",
+    "L10.gdn.z": "FP8",
+    "L10.gdn.out": "Q4_K",
+    "L10.mlp": "Q4_K",
+    "L11.attn.q": "NVFP4",
+    "L11.attn.k": "NVFP4",
+    "L11.attn.v": "NVFP4",
+    "L11.attn.o": "NVFP4",
+    "L11.mlp": "Q4_K",
+    "L12.gdn.qkv": "FP8",
+    "L12.gdn.z": "FP8",
+    "L12.gdn.out": "Q4_K",
+    "L12.mlp": "Q4_K",
+    "L13.gdn.qkv": "FP8",
+    "L13.gdn.z": "FP8",
+    "L13.gdn.out": "Q4_K",
+    "L13.mlp": "Q4_K",
+    "L14.gdn.qkv": "FP8",
+    "L14.gdn.z": "FP8",
+    "L14.gdn.out": "Q4_K",
+    "L14.mlp": "Q4_K",
+    "L15.attn.q": "NVFP4",
+    "L15.attn.k": "NVFP4",
+    "L15.attn.v": "NVFP4",
+    "L15.attn.o": "NVFP4",
+    "L15.mlp": "Q4_K",
+    "L16.gdn.qkv": "FP8",
+    "L16.gdn.z": "FP8",
+    "L16.gdn.out": "Q4_K",
+    "L16.mlp": "Q4_K",
+    "L17.gdn.qkv": "FP8",
+    "L17.gdn.z": "FP8",
+    "L17.gdn.out": "Q4_K",
+    "L17.mlp": "Q4_K",
+    "L18.gdn.qkv": "FP8",
+    "L18.gdn.z": "FP8",
+    "L18.gdn.out": "Q4_K",
+    "L18.mlp": "Q4_K",
+    "L19.attn.q": "NVFP4",
+    "L19.attn.k": "NVFP4",
+    "L19.attn.v": "NVFP4",
+    "L19.attn.o": "NVFP4",
+    "L19.mlp": "Q4_K",
+    "L20.gdn.qkv": "FP8",
+    "L20.gdn.z": "FP8",
+    "L20.gdn.out": "Q4_K",
+    "L20.mlp": "Q4_K",
+    "L21.gdn.qkv": "FP8",
+    "L21.gdn.z": "FP8",
+    "L21.gdn.out": "Q4_K",
+    "L21.mlp": "Q4_K",
+    "L22.gdn.qkv": "FP8",
+    "L22.gdn.z": "FP8",
+    "L22.gdn.out": "Q4_K",
+    "L22.mlp": "Q4_K",
+    "L23.attn.q": "NVFP4",
+    "L23.attn.k": "NVFP4",
+    "L23.attn.v": "NVFP4",
+    "L23.attn.o": "NVFP4",
+    "L23.mlp": "Q4_K",
+    "L24.gdn.qkv": "FP8",
+    "L24.gdn.z": "FP8",
+    "L24.gdn.out": "Q4_K",
+    "L24.mlp": "Q4_K",
+    "L25.gdn.qkv": "FP8",
+    "L25.gdn.z": "FP8",
+    "L25.gdn.out": "Q4_K",
+    "L25.mlp": "Q4_K",
+    "L26.gdn.qkv": "FP8",
+    "L26.gdn.z": "FP8",
+    "L26.gdn.out": "Q4_K",
+    "L26.mlp": "Q4_K",
+    "L27.attn.q": "NVFP4",
+    "L27.attn.k": "NVFP4",
+    "L27.attn.v": "NVFP4",
+    "L27.attn.o": "NVFP4",
+    "L27.mlp": "Q4_K",
+    "L28.gdn.qkv": "FP8",
+    "L28.gdn.z": "FP8",
+    "L28.gdn.out": "Q4_K",
+    "L28.mlp": "Q4_K",
+    "L29.gdn.qkv": "FP8",
+    "L29.gdn.z": "FP8",
+    "L29.gdn.out": "Q4_K",
+    "L29.mlp": "Q4_K",
+    "L30.gdn.qkv": "FP8",
+    "L30.gdn.z": "FP8",
+    "L30.gdn.out": "Q4_K",
+    "L30.mlp": "Q4_K",
+    "L31.attn.q": "NVFP4",
+    "L31.attn.k": "NVFP4",
+    "L31.attn.v": "NVFP4",
+    "L31.attn.o": "NVFP4",
+    "L31.mlp": "Q4_K",
+    "L32.gdn.qkv": "FP8",
+    "L32.gdn.z": "Q4_K",
+    "L32.gdn.out": "Q4_K",
+    "L32.mlp": "Q4_K",
+    "L33.gdn.qkv": "FP8",
+    "L33.gdn.z": "Q4_K",
+    "L33.gdn.out": "Q4_K",
+    "L33.mlp": "Q4_K",
+    "L34.gdn.qkv": "FP8",
+    "L34.gdn.z": "Q4_K",
+    "L34.gdn.out": "Q4_K",
+    "L34.mlp": "Q4_K",
+    "L35.attn.q": "NVFP4",
+    "L35.attn.k": "NVFP4",
+    "L35.attn.v": "NVFP4",
+    "L35.attn.o": "NVFP4",
+    "L35.mlp": "Q4_K",
+    "L36.gdn.qkv": "FP8",
+    "L36.gdn.z": "Q4_K",
+    "L36.gdn.out": "Q4_K",
+    "L36.mlp": "Q4_K",
+    "L37.gdn.qkv": "FP8",
+    "L37.gdn.z": "Q4_K",
+    "L37.gdn.out": "Q4_K",
+    "L37.mlp": "Q4_K",
+    "L38.gdn.qkv": "FP8",
+    "L38.gdn.z": "Q4_K",
+    "L38.gdn.out": "Q4_K",
+    "L38.mlp": "Q4_K",
+    "L39.attn.q": "NVFP4",
+    "L39.attn.k": "NVFP4",
+    "L39.attn.v": "NVFP4",
+    "L39.attn.o": "NVFP4",
+    "L39.mlp": "Q4_K",
+    "L40.gdn.qkv": "FP8",
+    "L40.gdn.z": "Q4_K",
+    "L40.gdn.out": "Q4_K",
+    "L40.mlp": "Q4_K",
+    "L41.gdn.qkv": "FP8",
+    "L41.gdn.z": "Q4_K",
+    "L41.gdn.out": "Q4_K",
+    "L41.mlp": "Q4_K",
+    "L42.gdn.qkv": "FP8",
+    "L42.gdn.z": "Q4_K",
+    "L42.gdn.out": "Q4_K",
+    "L42.mlp": "Q4_K",
+    "L43.attn.q": "NVFP4",
+    "L43.attn.k": "NVFP4",
+    "L43.attn.v": "NVFP4",
+    "L43.attn.o": "NVFP4",
+    "L43.mlp": "Q4_K",
+    "L44.gdn.qkv": "FP8",
+    "L44.gdn.z": "Q4_K",
+    "L44.gdn.out": "Q4_K",
+    "L44.mlp": "Q4_K",
+    "L45.gdn.qkv": "FP8",
+    "L45.gdn.z": "Q4_K",
+    "L45.gdn.out": "Q4_K",
+    "L45.mlp": "Q4_K",
+    "L46.gdn.qkv": "FP8",
+    "L46.gdn.z": "Q4_K",
+    "L46.gdn.out": "Q4_K",
+    "L46.mlp": "Q4_K",
+    "L47.attn.q": "NVFP4",
+    "L47.attn.k": "NVFP4",
+    "L47.attn.v": "NVFP4",
+    "L47.attn.o": "NVFP4",
+    "L47.mlp": "Q4_K",
+    "L48.gdn.qkv": "FP8",
+    "L48.gdn.z": "Q4_K",
+    "L48.gdn.out": "Q4_K",
+    "L48.mlp": "Q4_K",
+    "L49.gdn.qkv": "FP8",
+    "L49.gdn.z": "Q4_K",
+    "L49.gdn.out": "Q4_K",
+    "L49.mlp": "Q4_K",
+    "L50.gdn.qkv": "FP8",
+    "L50.gdn.z": "Q4_K",
+    "L50.gdn.out": "Q4_K",
+    "L50.mlp": "Q4_K",
+    "L51.attn.q": "NVFP4",
+    "L51.attn.k": "NVFP4",
+    "L51.attn.v": "NVFP4",
+    "L51.attn.o": "NVFP4",
+    "L51.mlp": "Q4_K",
+    "L52.gdn.qkv": "FP8",
+    "L52.gdn.z": "Q4_K",
+    "L52.gdn.out": "Q4_K",
+    "L52.mlp": "Q4_K",
+    "L53.gdn.qkv": "FP8",
+    "L53.gdn.z": "Q4_K",
+    "L53.gdn.out": "Q4_K",
+    "L53.mlp": "Q4_K",
+    "L54.gdn.qkv": "FP8",
+    "L54.gdn.z": "Q4_K",
+    "L54.gdn.out": "Q4_K",
+    "L54.mlp": "Q4_K",
+    "L55.attn.q": "NVFP4",
+    "L55.attn.k": "NVFP4",
+    "L55.attn.v": "NVFP4",
+    "L55.attn.o": "NVFP4",
+    "L55.mlp": "Q4_K",
+    "L56.gdn.qkv": "FP8",
+    "L56.gdn.z": "Q4_K",
+    "L56.gdn.out": "Q4_K",
+    "L56.mlp": "Q4_K",
+    "L57.gdn.qkv": "FP8",
+    "L57.gdn.z": "Q4_K",
+    "L57.gdn.out": "Q4_K",
+    "L57.mlp": "Q4_K",
+    "L58.gdn.qkv": "FP8",
+    "L58.gdn.z": "Q4_K",
+    "L58.gdn.out": "Q4_K",
+    "L58.mlp": "Q4_K",
+    "L59.attn.q": "NVFP4",
+    "L59.attn.k": "NVFP4",
+    "L59.attn.v": "NVFP4",
+    "L59.attn.o": "NVFP4",
+    "L59.mlp": "Q4_K",
+    "L60.gdn.qkv": "FP8",
+    "L60.gdn.z": "Q4_K",
+    "L60.gdn.out": "Q4_K",
+    "L60.mlp": "Q4_K",
+    "L61.gdn.qkv": "FP8",
+    "L61.gdn.z": "Q4_K",
+    "L61.gdn.out": "Q4_K",
+    "L61.mlp": "Q4_K",
+    "L62.gdn.qkv": "FP8",
+    "L62.gdn.z": "Q4_K",
+    "L62.gdn.out": "Q4_K",
+    "L62.mlp": "Q4_K",
+    "L63.attn.q": "NVFP4",
+    "L63.attn.k": "NVFP4",
+    "L63.attn.v": "NVFP4",
+    "L63.attn.o": "NVFP4",
+    "L63.mlp": "Q4_K",
+    "lm_head": "Q4_K"
+  },
+  "checkpoint_bytes": 48615824232
+}
