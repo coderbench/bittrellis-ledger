@@ -1,0 +1,32 @@
+{
+ "author": "SurvivorAI0817",
+ "first_seen": "2026-10-01T06:08:50.353244Z",
+ "head": "1ed5d35f2310455650ef30689ad162a3bfb3db85",
+ "kind": "manifest",
+ "name": "mlp-q4k-deep",
+ "pr": 42,
+ "row": null,
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.10814132104454685
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "status": "gate",
+ "tier": "REJECT"
+}
