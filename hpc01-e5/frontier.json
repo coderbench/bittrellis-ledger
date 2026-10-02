@@ -140,7 +140,8 @@
     "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "gdn-fp8-state-blockfit",
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
   {
@@ -188,7 +189,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 8.090378427699774e-05,
+   "frontier_gain": 8.090378427705325e-05,
    "dominated_by": []
   },
   {
@@ -269,7 +270,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.399851211145389e-07,
+   "frontier_gain": 4.399851211422945e-07,
    "dominated_by": []
   },
   {
@@ -317,7 +318,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.429150687863202e-05,
+   "frontier_gain": 2.4291506878659774e-05,
    "dominated_by": []
   },
   {
@@ -341,7 +342,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.090723211987556e-05,
+   "frontier_gain": 3.090723211993107e-05,
    "dominated_by": []
   },
   {
@@ -369,7 +370,8 @@
    "dominated_by": [
     "gdn-fp8-state-blockfit",
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
   {
@@ -396,7 +398,8 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
   {
@@ -422,7 +425,8 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
   {
@@ -450,7 +454,8 @@
    "dominated_by": [
     "gdn-fp8-mlp-q4k-zo-deep-q4k",
     "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
-    "gdn-q4k-fp8-mid24-35-mlp-q4k"
+    "gdn-q4k-fp8-mid24-35-mlp-q4k",
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
   {
@@ -505,7 +510,8 @@
    "dominated_by": [
     "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
   {
@@ -568,13 +574,13 @@
    "rp_kl": 0.07601493425755732,
    "rp_kl_raw": 0.08864466114374167,
    "top1": 0.9362745098039216,
-   "decode_tps": 86.64365000000001,
-   "decode_spread": 5.424517549756623e-05,
-   "prefill_tps": 13880.8837,
-   "prefill_spread": 0.010645763136823935,
+   "decode_tps": 86.8166,
+   "decode_spread": 0.0007579195683775923,
+   "prefill_tps": 14681.5406,
+   "prefill_spread": 0.006768880917033993,
    "peak_gpu_gib": 23.393,
    "resident_after_load_gib": 22.1,
-   "peak_host_gib": 19.509,
+   "peak_host_gib": 19.507,
    "checkpoint_gib": 19.99562682211399,
    "tasks_passed": 572,
    "tasks_n": 784,
@@ -582,7 +588,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.004288159983912743,
+   "frontier_gain": 0.004138217009242717,
    "dominated_by": []
   },
   {
@@ -609,7 +615,8 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "gdn-fp8-state-blockfit",
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
   {
@@ -709,7 +716,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0007517415648219949,
+   "frontier_gain": 0.0003655148730963842,
    "dominated_by": []
   },
   {
@@ -788,7 +795,9 @@
     "gdn-fp8-mid24-35-lmhead-q4k",
     "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "gdn-fp8-qkv-all-zo-split",
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "gdn-fp8-state-blockfit",
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
   {
@@ -812,7 +821,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.567789885223661e-08,
+   "frontier_gain": 4.5677898879992185e-08,
    "dominated_by": []
   },
   {
@@ -862,7 +871,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.002067640834004375,
+   "frontier_gain": 0.0012640346565105376,
+   "dominated_by": []
+  },
+  {
+   "id": "d23e420c72367d5d",
+   "name": "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+   "kind": "internal",
+   "rp_kl": 0.08955693535480526,
+   "rp_kl_raw": 0.09623345865998441,
+   "top1": 0.9305863854975953,
+   "decode_tps": 93.27035,
+   "decode_spread": 0.00011900888117176573,
+   "prefill_tps": 15828.26665,
+   "prefill_spread": 0.0036606472004310974,
+   "peak_gpu_gib": 22.385,
+   "resident_after_load_gib": 21.0,
+   "peak_host_gib": 18.324,
+   "checkpoint_gib": 18.81109005585313,
+   "tasks_passed": 575,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0008166657652106946,
    "dominated_by": []
   }
  ],
@@ -930,6 +963,7 @@
   "gdn-q4k-fp8-mid24-35-mlp-q4k",
   "gdn-q4k-skip-layer0",
   "gdn-zo-deep-mlp-skip0",
-  "nvfp4-blockfit-all-lmhead-q4k"
+  "nvfp4-blockfit-all-lmhead-q4k",
+  "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
  ]
 }
