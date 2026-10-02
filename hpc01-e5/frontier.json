@@ -56,7 +56,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00026460393639962665,
+   "frontier_gain": 0.0002646039363996544,
    "dominated_by": []
   },
   {
@@ -264,7 +264,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.399851211145389e-07,
+   "frontier_gain": 4.3998512108678334e-07,
    "dominated_by": []
   },
   {
@@ -336,7 +336,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.0907232119903316e-05,
+   "frontier_gain": 3.090723211993107e-05,
    "dominated_by": []
   },
   {
@@ -360,7 +360,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00037493352706347016,
+   "frontier_gain": 0.00022623845359942552,
    "dominated_by": []
   },
   {
@@ -515,7 +515,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00018303537251454505,
+   "frontier_gain": 0.00013657570975450506,
    "dominated_by": []
   },
   {
@@ -543,6 +543,30 @@
    "dominated_by": [
     "gdn-q4k-fp8-mid24-35-mlp-q4k"
    ]
+  },
+  {
+   "id": "433d17b18eb86baa",
+   "name": "gdn-fp8-unsloth-mlp0-27-q4k-mlp46-63-lmhead",
+   "kind": "internal",
+   "rp_kl": 0.08920080289389869,
+   "rp_kl_raw": 0.09592921207268654,
+   "top1": 0.9294765075841658,
+   "decode_tps": 83.92035,
+   "decode_spread": 0.000580312165046936,
+   "prefill_tps": 11383.75425,
+   "prefill_spread": 0.006411443746688443,
+   "peak_gpu_gib": 23.613,
+   "resident_after_load_gib": 22.3,
+   "peak_host_gib": 26.599,
+   "checkpoint_gib": 27.089016631245613,
+   "tasks_passed": 572,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0002972607743613742,
+   "dominated_by": []
   },
   {
    "id": "efd97ae71c01ccf1",
@@ -591,7 +615,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00019067715697099197,
+   "frontier_gain": 0.00019067715697101972,
    "dominated_by": []
   },
   {
@@ -641,7 +665,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0009330430245144405,
+   "frontier_gain": 0.0009330430245144128,
    "dominated_by": []
   },
   {
@@ -717,7 +741,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.5677898879992185e-08,
+   "frontier_gain": 4.567789890774776e-08,
    "dominated_by": []
   },
   {
@@ -810,6 +834,7 @@
   "gdn-fp8-lmhead-q4k",
   "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
   "gdn-fp8-qkv-out-q4k-mlp-early8-mid55",
+  "gdn-fp8-unsloth-mlp0-27-q4k-mlp46-63-lmhead",
   "gdn-mlp-q4k-skip-layer0",
   "gdn-q4k-fp8-mid24-35-mlp-q4k",
   "gdn-q4k-skip-layer0",
