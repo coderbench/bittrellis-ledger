@@ -1,0 +1,73 @@
+{
+ "author": "kaivexa",
+ "candidate": "1fce5f9a926ba443",
+ "first_seen": "2026-10-02T10:23:45.401042Z",
+ "gain": 0.0,
+ "head": "2f67bdb22efc83a07f4ca4de773c15bf2935d97d",
+ "kind": "manifest",
+ "name": "gdn-fp8-mid24-35-gdn-q4k-rest-mlp-q4k-24-31",
+ "pr": 69,
+ "references": [
+  "38-e19782bb7e24",
+  "49-1764d860ee5c",
+  "54-2a767612e327",
+  "59-8e6bcdf84e74",
+  "62-d603612c5c62",
+  "63-6891f8d7be3a",
+  "65-dd0d4f212ad4"
+ ],
+ "row": {
+  "checkpoint_gib": 27.542771562933922,
+  "decode_spread": 0.0008227102257318839,
+  "decode_tps": 93.47155000000001,
+  "dominated_by": [
+   "gdn-attn-q4k-mlp-early3-mid28-skip0",
+   "gdn-attn-q4k-mlp-early3-mid28-skip0"
+  ],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "1fce5f9a926ba443",
+  "kind": "internal",
+  "name": "gdn-fp8-mid24-35-gdn-q4k-rest-mlp-q4k-24-31",
+  "peak_gpu_gib": 21.943,
+  "peak_host_gib": 27.055,
+  "prefill_spread": 0.01187921824304003,
+  "prefill_tps": 12603.69975,
+  "resident_after_load_gib": 20.5,
+  "rp_kl": 0.10573683972609592,
+  "rp_kl_raw": 0.118286261403163,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9255456899741028,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.17378392217101896
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 23.19
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
