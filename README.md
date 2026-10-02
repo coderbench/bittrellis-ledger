@@ -11,7 +11,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
 | **Closest to the original model** | `gdn-q4k-fp8-mid24-35-mlp-q4k`<br>#62 by @milosde111 ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | **0.0889 · 34.5% closer** | 8,826 tok/s · 47% slower | 20.98 GiB · 1.04 GiB less |
-| **Fastest prompt reading** | `gdn-fp8-mid24-35-lmhead-q4k`<br>#63 by @milosde111 ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.1167 · 14.0% closer | **16,287 tok/s · 2% slower** | 22.39 GiB · 0.37 GiB more |
+| **Fastest prompt reading** | `gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead`<br>#65 by @cleanjunc ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.1078 · 20.5% closer | **15,933 tok/s · 4% slower** | 22.39 GiB · 0.37 GiB more |
 | **Least GPU memory** | `gdn-attn-q4k-mlp-early8-mid24-skip0`<br>#37 by @dato-bitar ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.1091 · 19.6% closer | 10,272 tok/s · 38% slower | **20.92 GiB · 1.09 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,561 tok/s | 22.02 GiB |
 
@@ -19,7 +19,7 @@ Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://gith
 
 ```bash
 bittrellis build manifests/gdn-q4k-fp8-mid24-35-mlp-q4k.yaml --out models/gdn-q4k-fp8-mid24-35-mlp-q4k
-bittrellis build manifests/gdn-fp8-mid24-35-lmhead-q4k.yaml --out models/gdn-fp8-mid24-35-lmhead-q4k
+bittrellis build manifests/gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead.yaml --out models/gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead
 bittrellis build manifests/gdn-attn-q4k-mlp-early8-mid24-skip0.yaml --out models/gdn-attn-q4k-mlp-early8-mid24-skip0
 ```
 
@@ -41,17 +41,18 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 |   | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.2 | 8,711 | 22.82 | PASS | 0.000% |
 |   | gdn-fp8-qkv-z-out-q4k-mlp-q4k | 0.0872 | 573/784 | 88.6 | 8,767 | 21.85 | PASS | 0.000% |
 | ★ | gdn-q4k-fp8-mid24-35-mlp-q4k | 0.0889 | 568/784 | 94.0 | 8,826 | 20.98 | PASS | 0.095% |
-| ★ | gdn-fp8-qkv-out-q4k-mlp-early8-mid55 | 0.0938 | 570/784 | 88.5 | 10,119 | 22.25 | PASS | 0.019% |
+| ★ | gdn-fp8-qkv-out-q4k-mlp-early8-mid55 | 0.0938 | 570/784 | 88.5 | 10,119 | 22.25 | PASS | 0.018% |
 | ★ | gdn-fp8-lmhead-q4k | 0.0967 | 576/784 | 84.0 | 13,839 | 23.93 | PASS | 0.038% |
 |   | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,726 | 24.05 | PASS | 0.000% |
 | ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,832 | 20.54 | PASS | 0.019% |
-| ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,191 | 23.02 | PASS | 0.006% |
-| ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.2 | 10,272 | 20.92 | PASS | 0.008% |
+| ★ | gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead | 0.1078 | 575/784 | 93.3 | 15,933 | 22.39 | PASS | 0.056% |
+|   | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,191 | 23.02 | PASS | 0.000% |
+| ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.2 | 10,272 | 20.92 | PASS | 0.006% |
 |   | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.8 | 14,531 | 23.39 | PASS | 0.000% |
-| ★ | gdn-attn-q4k-mlp-early3-mid28-skip0 | 0.1134 | 560/784 | 96.2 | 12,575 | 21.36 | PASS | 0.018% |
+| ★ | gdn-attn-q4k-mlp-early3-mid28-skip0 | 0.1134 | 560/784 | 96.2 | 12,575 | 21.36 | PASS | 0.016% |
 |   | gdn-attn-q4k-mlp-mid | 0.1136 | 566/784 | 96.2 | 10,835 | 21.18 | PASS | 0.000% |
 | ★ | V1-all-q4k | 0.1142 | 575/784 | 96.3 | 8,433 | 20.25 | PASS | 0.042% |
-| ★ | gdn-fp8-mid24-35-lmhead-q4k | 0.1167 | 567/784 | 93.4 | 16,287 | 22.39 | PASS | 0.079% |
+|   | gdn-fp8-mid24-35-lmhead-q4k | 0.1167 | 567/784 | 93.4 | 16,287 | 22.39 | PASS | 0.000% |
 | ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.3 | 9,229 | 20.81 | PASS | 0.000% |
 | ★ | V9-gdn-q4k-mlp-q4k | 0.1179 | 562/784 | 96.5 | 8,728 | 20.41 | — | 0.000% |
 | ★ | gdn-q4k-skip-layer0 | 0.1210 | 572/784 | 96.0 | 13,893 | 21.64 | PASS | 0.000% |
