@@ -285,7 +285,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002476278845241209,
+   "frontier_gain": 0.0002476278845241764,
    "dominated_by": []
   },
   {
@@ -386,7 +386,8 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "gdn-fp8-mlp-q4k-zo-deep-q4k",
-    "gdn-fp8-qkv-z-out-q4k-mlp-q4k"
+    "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
+    "gdn-q4k-fp8-mid24-35-mlp-q4k"
    ]
   },
   {
@@ -412,7 +413,8 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "gdn-fp8-qkv-z-out-q4k-mlp-q4k"
+    "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
+    "gdn-q4k-fp8-mid24-35-mlp-q4k"
    ]
   },
   {
@@ -459,9 +461,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.00018662800665236734,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "gdn-q4k-fp8-mid24-35-mlp-q4k"
+   ]
   },
   {
    "id": "efd97ae71c01ccf1",
@@ -510,7 +514,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0005837375687171575,
+   "frontier_gain": 0.00019800845065487405,
    "dominated_by": []
   },
   {
@@ -537,6 +541,30 @@
    ],
    "frontier": false,
    "frontier_gain": 0.0,
+   "dominated_by": []
+  },
+  {
+   "id": "ed7ac28d2b1cb6c6",
+   "name": "gdn-q4k-fp8-mid24-35-mlp-q4k",
+   "kind": "internal",
+   "rp_kl": 0.08890620764026609,
+   "rp_kl_raw": 0.09971509771224207,
+   "top1": 0.9279504254532002,
+   "decode_tps": 93.86015,
+   "decode_spread": 0.0007425941680254871,
+   "prefill_tps": 8702.35135,
+   "prefill_spread": 0.003056013131439592,
+   "peak_gpu_gib": 20.977,
+   "resident_after_load_gib": 19.5,
+   "peak_host_gib": 46.394,
+   "checkpoint_gib": 47.231126837432384,
+   "tasks_passed": 568,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0009134809927883736,
    "dominated_by": []
   },
   {
@@ -702,8 +730,8 @@
   "gdn-attn-q4k-mlp-early8-mid24-skip0",
   "gdn-fp8-lmhead-q4k",
   "gdn-fp8-qkv-all-zo-split",
-  "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
   "gdn-mlp-q4k-skip-layer0",
+  "gdn-q4k-fp8-mid24-35-mlp-q4k",
   "gdn-q4k-skip-layer0",
   "gdn-zo-deep-mlp-skip0"
  ]
