@@ -192,7 +192,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 8.0903784277081e-05,
+   "frontier_gain": 6.940181033268655e-05,
    "dominated_by": []
   },
   {
@@ -273,7 +273,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.399851211145389e-07,
+   "frontier_gain": 4.3998512105902776e-07,
    "dominated_by": []
   },
   {
@@ -297,7 +297,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 8.937271894213228e-05,
+   "frontier_gain": 8.937271894204901e-05,
    "dominated_by": []
   },
   {
@@ -321,7 +321,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 1.8240062806984536e-05,
+   "frontier_gain": 1.8240062807040047e-05,
    "dominated_by": []
   },
   {
@@ -345,7 +345,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.090723211987556e-05,
+   "frontier_gain": 3.090723211995883e-05,
    "dominated_by": []
   },
   {
@@ -514,6 +514,7 @@
    "dominated_by": [
     "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
+    "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
     "nvfp4-blockfit-all-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
    ]
@@ -721,7 +722,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00035344481603083455,
+   "frontier_gain": 0.0003534448160308068,
    "dominated_by": []
   },
   {
@@ -747,6 +748,7 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
     "nvfp4-blockfit-all-lmhead-q4k"
    ]
   },
@@ -783,10 +785,10 @@
    "rp_kl": 0.10147329979867266,
    "rp_kl_raw": 0.11167504339533171,
    "top1": 0.9279041805401406,
-   "decode_tps": 95.87549999999999,
-   "decode_spread": 0.000450584351580944,
-   "prefill_tps": 13597.147799999999,
-   "prefill_spread": 0.021174205372688475,
+   "decode_tps": 96.04075,
+   "decode_spread": 0.0005362307145665181,
+   "prefill_tps": 14071.61105,
+   "prefill_spread": 0.008104409622663681,
    "peak_gpu_gib": 21.645,
    "resident_after_load_gib": 20.2,
    "peak_host_gib": 25.157,
@@ -797,7 +799,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 6.953633519662938e-05,
+   "frontier_gain": 8.299052498930704e-05,
    "dominated_by": []
   },
   {
@@ -852,7 +854,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.567789885223661e-08,
+   "frontier_gain": 4.5677898879992185e-08,
    "dominated_by": []
   },
   {
@@ -902,7 +904,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0007109815069326064,
+   "frontier_gain": 0.0006865292632621256,
    "dominated_by": []
   },
   {
