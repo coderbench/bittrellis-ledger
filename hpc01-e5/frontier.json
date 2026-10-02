@@ -138,6 +138,7 @@
    "dominated_by": [
     "gdn-fp8-lmhead-q4k",
     "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
+    "gdn-fp8-state-blockfit",
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "nvfp4-blockfit-all-lmhead-q4k"
    ]
@@ -268,7 +269,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.3998512108678334e-07,
+   "frontier_gain": 4.399851211145389e-07,
    "dominated_by": []
   },
   {
@@ -292,7 +293,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00010476256158134523,
+   "frontier_gain": 0.00010476256158140074,
    "dominated_by": []
   },
   {
@@ -316,7 +317,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.429150687868753e-05,
+   "frontier_gain": 2.429150687863202e-05,
    "dominated_by": []
   },
   {
@@ -340,7 +341,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.090723211998658e-05,
+   "frontier_gain": 3.090723211987556e-05,
    "dominated_by": []
   },
   {
@@ -366,6 +367,7 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "gdn-fp8-state-blockfit",
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "nvfp4-blockfit-all-lmhead-q4k"
    ]
@@ -560,6 +562,30 @@
    ]
   },
   {
+   "id": "1a784a8b587731e1",
+   "name": "gdn-fp8-state-blockfit",
+   "kind": "internal",
+   "rp_kl": 0.07601493425755732,
+   "rp_kl_raw": 0.08864466114374167,
+   "top1": 0.9362745098039216,
+   "decode_tps": 86.64365000000001,
+   "decode_spread": 5.424517549756623e-05,
+   "prefill_tps": 13880.8837,
+   "prefill_spread": 0.010645763136823935,
+   "peak_gpu_gib": 23.393,
+   "resident_after_load_gib": 22.1,
+   "peak_host_gib": 19.509,
+   "checkpoint_gib": 19.99562682211399,
+   "tasks_passed": 572,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.004288159983912743,
+   "dominated_by": []
+  },
+  {
    "id": "433d17b18eb86baa",
    "name": "gdn-fp8-unsloth-mlp0-27-q4k-mlp46-63-lmhead",
    "kind": "internal",
@@ -582,6 +608,7 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "gdn-fp8-state-blockfit",
     "nvfp4-blockfit-all-lmhead-q4k"
    ]
   },
@@ -785,7 +812,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.5677898879992185e-08,
+   "frontier_gain": 4.567789885223661e-08,
    "dominated_by": []
   },
   {
@@ -821,10 +848,10 @@
    "rp_kl": 0.09918107786548237,
    "rp_kl_raw": 0.10303905100273908,
    "top1": 0.9266093229744728,
-   "decode_tps": 95.6098,
-   "decode_spread": 0.00023846927825394159,
-   "prefill_tps": 16432.309549999998,
-   "prefill_spread": 0.0008439045015435281,
+   "decode_tps": 95.72965,
+   "decode_spread": 0.0007510734657444105,
+   "prefill_tps": 16998.24355,
+   "prefill_spread": 0.009386693368092164,
    "peak_gpu_gib": 22.016,
    "resident_after_load_gib": 20.6,
    "peak_host_gib": 17.9,
@@ -835,7 +862,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0012576326540248428,
+   "frontier_gain": 0.002067640834004375,
    "dominated_by": []
   }
  ],
@@ -898,6 +925,7 @@
   "gdn-attn-q4k-mlp-early3-mid28-skip0",
   "gdn-attn-q4k-mlp-early8-mid24-skip0",
   "gdn-attn-q4k-mlp-mid",
+  "gdn-fp8-state-blockfit",
   "gdn-mlp-q4k-skip-layer0",
   "gdn-q4k-fp8-mid24-35-mlp-q4k",
   "gdn-q4k-skip-layer0",

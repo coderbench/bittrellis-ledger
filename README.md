@@ -10,15 +10,15 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
-| **Closest to the original model** | `gdn-q4k-fp8-mid24-35-mlp-q4k`<br>#62 by @milosde111 ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | **0.0889 · 34.5% closer** | 8,754 tok/s · 47% slower | 20.98 GiB · 1.04 GiB less |
-| **Fastest prompt reading** | `nvfp4-blockfit-all-lmhead-q4k`<br>#28 by @cleanjunc ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | 0.0992 · 26.9% closer | **16,432 tok/s · 1% slower** | 22.02 GiB · 0.00 GiB less |
+| **Closest to the original model** | `gdn-fp8-state-blockfit`<br>#32 by @cleanjunc ![eval:L](https://img.shields.io/badge/eval%3AL-2da44e?style=flat-square) | **0.0760 · 44.0% closer** | 13,881 tok/s · 16% slower | 23.39 GiB · 1.38 GiB more |
+| **Fastest prompt reading** | `nvfp4-blockfit-all-lmhead-q4k`<br>#28 by @cleanjunc ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | 0.0992 · 26.9% closer | **16,998 tok/s · 3% faster** | 22.02 GiB · 0.00 GiB less |
 | **Least GPU memory** | `gdn-attn-q4k-mlp-early8-mid24-skip0`<br>#37 by @dato-bitar ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.1091 · 19.6% closer | 10,258 tok/s · 38% slower | **20.92 GiB · 1.09 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,571 tok/s | 22.02 GiB |
 
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
-bittrellis build manifests/gdn-q4k-fp8-mid24-35-mlp-q4k.yaml --out models/gdn-q4k-fp8-mid24-35-mlp-q4k
+bittrellis build manifests/gdn-fp8-state-blockfit.yaml --out models/gdn-fp8-state-blockfit
 bittrellis build manifests/nvfp4-blockfit-all-lmhead-q4k.yaml --out models/nvfp4-blockfit-all-lmhead-q4k
 bittrellis build manifests/gdn-attn-q4k-mlp-early8-mid24-skip0.yaml --out models/gdn-attn-q4k-mlp-early8-mid24-skip0
 ```
@@ -37,6 +37,7 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
+| ★ | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.6 | 13,881 | 23.39 | PASS | 0.429% |
 |   | gdn-fp8-mlp-q4k-zo-deep-q4k | 0.0850 | 568/784 | 87.1 | 8,735 | 22.16 | PASS | 0.000% |
 |   | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.2 | 8,715 | 22.82 | PASS | 0.000% |
 |   | gdn-fp8-qkv-z-out-q4k-mlp-q4k | 0.0872 | 573/784 | 88.6 | 8,735 | 21.85 | PASS | 0.000% |
@@ -44,7 +45,7 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 |   | gdn-fp8-unsloth-mlp0-27-q4k-mlp46-63-lmhead | 0.0892 | 572/784 | 84.1 | 11,869 | 23.61 | PASS | 0.000% |
 |   | gdn-fp8-qkv-out-q4k-mlp-early8-mid55 | 0.0938 | 570/784 | 88.5 | 10,091 | 22.25 | PASS | 0.000% |
 |   | gdn-fp8-lmhead-q4k | 0.0967 | 576/784 | 84.0 | 13,763 | 23.93 | PASS | 0.000% |
-| ★ | nvfp4-blockfit-all-lmhead-q4k | 0.0992 | 567/784 | 95.6 | 16,432 | 22.02 | PASS | 0.126% |
+| ★ | nvfp4-blockfit-all-lmhead-q4k | 0.0992 | 567/784 | 95.7 | 16,998 | 22.02 | PASS | 0.207% |
 |   | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,701 | 23.93 | PASS | 0.000% |
 | ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,801 | 20.54 | PASS | 0.012% |
 |   | gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead | 0.1031 | 574/784 | 93.6 | 14,036 | 22.08 | PASS | 0.000% |
