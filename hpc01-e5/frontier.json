@@ -189,7 +189,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 8.090378427705325e-05,
+   "frontier_gain": 8.0903784277081e-05,
    "dominated_by": []
   },
   {
@@ -270,7 +270,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.399851211422945e-07,
+   "frontier_gain": 4.399851211145389e-07,
    "dominated_by": []
   },
   {
@@ -294,7 +294,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00010476256158140074,
+   "frontier_gain": 0.00010476256158142849,
    "dominated_by": []
   },
   {
@@ -342,7 +342,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.090723211993107e-05,
+   "frontier_gain": 3.0907232119903316e-05,
    "dominated_by": []
   },
   {
@@ -588,7 +588,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.004138217009242717,
+   "frontier_gain": 0.004138217009242745,
    "dominated_by": []
   },
   {
@@ -871,7 +871,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0012640346565105376,
+   "frontier_gain": 0.0008585772450720452,
    "dominated_by": []
   },
   {
@@ -881,13 +881,13 @@
    "rp_kl": 0.08955693535480526,
    "rp_kl_raw": 0.09623345865998441,
    "top1": 0.9305863854975953,
-   "decode_tps": 93.27035,
-   "decode_spread": 0.00011900888117176573,
-   "prefill_tps": 15828.26665,
-   "prefill_spread": 0.0036606472004310974,
+   "decode_tps": 93.36305,
+   "decode_spread": 0.0007122732172951792,
+   "prefill_tps": 16279.52455,
+   "prefill_spread": 0.010578644325334417,
    "peak_gpu_gib": 22.385,
    "resident_after_load_gib": 21.0,
-   "peak_host_gib": 18.324,
+   "peak_host_gib": 18.323,
    "checkpoint_gib": 18.81109005585313,
    "tasks_passed": 575,
    "tasks_n": 784,
@@ -895,7 +895,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0008166657652106946,
+   "frontier_gain": 0.0010007698834585965,
    "dominated_by": []
   }
  ],
