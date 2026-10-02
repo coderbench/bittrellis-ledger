@@ -50,12 +50,12 @@
 <circle class="acc ring" cx="181.1" cy="115.8" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="287.7" cy="158.4" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="181.1" cy="126.7" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="389.3" cy="136.2" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="427.4" cy="136.2" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="182.6" cy="134.7" r="5.5" stroke-width="2"/>
 <text x="788.0" y="363.6" class="t" font-size="11" font-weight="600" text-anchor="end">V0 shipped · 22.0 GiB</text>
 <text x="190.1" y="119.8" class="t" font-size="11" font-weight="600" text-anchor="start">#40 · 22.2 GiB</text>
 <text x="191.6" y="138.7" class="t" font-size="11" font-weight="600" text-anchor="start">#62 · 21.0 GiB</text>
-<text x="398.3" y="140.2" class="t" font-size="11" font-weight="600" text-anchor="start">#70 · 23.6 GiB</text>
+<text x="436.4" y="140.2" class="t" font-size="11" font-weight="600" text-anchor="start">#70 · 23.6 GiB</text>
 <text x="296.7" y="162.4" class="t" font-size="11" font-weight="600" text-anchor="start">#59 · 22.3 GiB</text>
 <text x="585.3" y="176.3" class="t" font-size="11" font-weight="600" text-anchor="start">#38 · 23.9 GiB</text>
 <text x="771.2" y="229.7" class="t" font-size="11" font-weight="600" text-anchor="start">#65 · 22.4 GiB</text>

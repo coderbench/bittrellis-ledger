@@ -1,0 +1,74 @@
+{
+ "author": "kaivexa",
+ "candidate": "5980cf2ba3e9d57c",
+ "first_seen": "2026-10-02T13:11:48.522684Z",
+ "gain": 0.0,
+ "head": "d8769be7f0e7c631afde5d1fd6c27299d81f7e8a",
+ "kind": "manifest",
+ "name": "gdn-fp8-unsloth-mlp0-27-lmhead-native-mlp-rest",
+ "pr": 72,
+ "references": [
+  "38-e19782bb7e24",
+  "49-1764d860ee5c",
+  "54-2a767612e327",
+  "59-8e6bcdf84e74",
+  "62-d603612c5c62",
+  "63-6891f8d7be3a",
+  "65-dd0d4f212ad4",
+  "70-34e139e3a86f"
+ ],
+ "row": {
+  "checkpoint_gib": 20.645554535090923,
+  "decode_spread": 0.00045433704057253646,
+  "decode_tps": 83.85845,
+  "dominated_by": [
+   "gdn-fp8-lmhead-q4k",
+   "gdn-fp8-lmhead-q4k"
+  ],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "5980cf2ba3e9d57c",
+  "kind": "internal",
+  "name": "gdn-fp8-unsloth-mlp0-27-lmhead-native-mlp-rest",
+  "peak_gpu_gib": 23.93,
+  "peak_host_gib": 20.157,
+  "prefill_spread": 0.02230319511340896,
+  "prefill_tps": 13192.7555,
+  "resident_after_load_gib": 22.7,
+  "rp_kl": 0.0925000157354657,
+  "rp_kl_raw": 0.10119072838221346,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9269330373658897,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.17572964669738864
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 25.02
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}

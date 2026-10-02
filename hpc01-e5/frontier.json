@@ -56,7 +56,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002646039363996544,
+   "frontier_gain": 0.00026460393639962665,
    "dominated_by": []
   },
   {
@@ -183,7 +183,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00011172874561793389,
+   "frontier_gain": 0.00011172874561796164,
    "dominated_by": []
   },
   {
@@ -264,7 +264,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.3998512108678334e-07,
+   "frontier_gain": 4.399851211145389e-07,
    "dominated_by": []
   },
   {
@@ -336,7 +336,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.090723211993107e-05,
+   "frontier_gain": 3.0907232119903316e-05,
    "dominated_by": []
   },
   {
@@ -360,7 +360,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00022623845359942552,
+   "frontier_gain": 0.0001703580317043707,
    "dominated_by": []
   },
   {
@@ -515,7 +515,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00013657570975450506,
+   "frontier_gain": 0.00013424255611305114,
    "dominated_by": []
   },
   {
@@ -551,13 +551,13 @@
    "rp_kl": 0.08920080289389869,
    "rp_kl_raw": 0.09592921207268654,
    "top1": 0.9294765075841658,
-   "decode_tps": 83.92035,
-   "decode_spread": 0.000580312165046936,
-   "prefill_tps": 11383.75425,
-   "prefill_spread": 0.006411443746688443,
+   "decode_tps": 84.10745,
+   "decode_spread": 0.000778765733594181,
+   "prefill_tps": 11869.409650000001,
+   "prefill_spread": 0.023922984240416674,
    "peak_gpu_gib": 23.613,
    "resident_after_load_gib": 22.3,
-   "peak_host_gib": 26.599,
+   "peak_host_gib": 26.601,
    "checkpoint_gib": 27.089016631245613,
    "tasks_passed": 572,
    "tasks_n": 784,
@@ -565,7 +565,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002972607743613742,
+   "frontier_gain": 0.00039032342076605886,
    "dominated_by": []
   },
   {
@@ -615,7 +615,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00019067715697101972,
+   "frontier_gain": 0.00019067715697099197,
    "dominated_by": []
   },
   {
@@ -741,7 +741,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.567789890774776e-08,
+   "frontier_gain": 4.5677898879992185e-08,
    "dominated_by": []
   },
   {
