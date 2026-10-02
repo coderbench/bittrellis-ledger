@@ -41,8 +41,8 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 |   | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.2 | 8,711 | 22.82 | PASS | 0.000% |
 |   | gdn-fp8-qkv-z-out-q4k-mlp-q4k | 0.0872 | 573/784 | 88.6 | 8,767 | 21.85 | PASS | 0.000% |
 | ★ | gdn-q4k-fp8-mid24-35-mlp-q4k | 0.0889 | 568/784 | 94.0 | 8,826 | 20.98 | PASS | 0.095% |
-| ★ | gdn-fp8-qkv-out-q4k-mlp-early8-mid55 | 0.0938 | 570/784 | 88.4 | 9,924 | 22.25 | PASS | 0.015% |
-| ★ | gdn-fp8-lmhead-q4k | 0.0967 | 576/784 | 84.0 | 13,839 | 23.93 | PASS | 0.040% |
+| ★ | gdn-fp8-qkv-out-q4k-mlp-early8-mid55 | 0.0938 | 570/784 | 88.5 | 10,119 | 22.25 | PASS | 0.019% |
+| ★ | gdn-fp8-lmhead-q4k | 0.0967 | 576/784 | 84.0 | 13,839 | 23.93 | PASS | 0.038% |
 |   | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,726 | 24.05 | PASS | 0.000% |
 | ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,832 | 20.54 | PASS | 0.019% |
 | ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,191 | 23.02 | PASS | 0.008% |
