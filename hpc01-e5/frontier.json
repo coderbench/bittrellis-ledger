@@ -55,9 +55,11 @@
    "holdout": null,
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.0002646039363995989,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "nvfp4-blockfit-all-lmhead-q4k"
+   ]
   },
   {
    "id": "761abdfe22f7be0d",
@@ -136,7 +138,8 @@
    "dominated_by": [
     "gdn-fp8-lmhead-q4k",
     "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
-    "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead"
+    "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
+    "nvfp4-blockfit-all-lmhead-q4k"
    ]
   },
   {
@@ -184,7 +187,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00011172874561793389,
+   "frontier_gain": 8.090378427699774e-05,
    "dominated_by": []
   },
   {
@@ -265,7 +268,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.399851211145389e-07,
+   "frontier_gain": 4.3998512108678334e-07,
    "dominated_by": []
   },
   {
@@ -289,7 +292,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00012760507503792318,
+   "frontier_gain": 0.00010476256158134523,
    "dominated_by": []
   },
   {
@@ -313,7 +316,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.390115848458941e-05,
+   "frontier_gain": 2.429150687868753e-05,
    "dominated_by": []
   },
   {
@@ -337,7 +340,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.090723211993107e-05,
+   "frontier_gain": 3.090723211998658e-05,
    "dominated_by": []
   },
   {
@@ -363,7 +366,8 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead"
+    "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
+    "nvfp4-blockfit-all-lmhead-q4k"
    ]
   },
   {
@@ -389,7 +393,8 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead"
+    "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
+    "nvfp4-blockfit-all-lmhead-q4k"
    ]
   },
   {
@@ -412,9 +417,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.0005061726142483736,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "nvfp4-blockfit-all-lmhead-q4k"
+   ]
   },
   {
    "id": "5e8195422ceb67b7",
@@ -494,7 +501,9 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead"
+    "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
+    "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
+    "nvfp4-blockfit-all-lmhead-q4k"
    ]
   },
   {
@@ -520,7 +529,8 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead"
+    "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
+    "nvfp4-blockfit-all-lmhead-q4k"
    ]
   },
   {
@@ -569,9 +579,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.0003844552722971073,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "nvfp4-blockfit-all-lmhead-q4k"
+   ]
   },
   {
    "id": "efd97ae71c01ccf1",
@@ -620,7 +632,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00019067715697099197,
+   "frontier_gain": 0.0001219522115980809,
    "dominated_by": []
   },
   {
@@ -670,7 +682,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0009330430245144128,
+   "frontier_gain": 0.0007517415648219949,
    "dominated_by": []
   },
   {
@@ -680,22 +692,24 @@
    "rp_kl": 0.10308215584094085,
    "rp_kl_raw": 0.11354130234346105,
    "top1": 0.9261931187569368,
-   "decode_tps": 93.4175,
-   "decode_spread": 0.0006337142398373339,
-   "prefill_tps": 13472.40555,
-   "prefill_spread": 0.023642823014632317,
+   "decode_tps": 93.58545000000001,
+   "decode_spread": 0.0005054204473023615,
+   "prefill_tps": 14035.90985,
+   "prefill_spread": 0.008448807470788923,
    "peak_gpu_gib": 22.084,
    "resident_after_load_gib": 20.7,
-   "peak_host_gib": 24.192,
+   "peak_host_gib": 24.191,
    "checkpoint_gib": 24.679012544453144,
    "tasks_passed": 574,
    "tasks_n": 784,
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.00021859436726215375,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "nvfp4-blockfit-all-lmhead-q4k"
+   ]
   },
   {
    "id": "b81c55592e6b8a7b",
@@ -746,7 +760,8 @@
    "dominated_by": [
     "gdn-fp8-mid24-35-lmhead-q4k",
     "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
-    "gdn-fp8-qkv-all-zo-split"
+    "gdn-fp8-qkv-all-zo-split",
+    "nvfp4-blockfit-all-lmhead-q4k"
    ]
   },
   {
@@ -798,6 +813,30 @@
    "dominated_by": [
     "gdn-attn-q4k-mlp-early8-mid24-skip0"
    ]
+  },
+  {
+   "id": "b19e2864122ebce4",
+   "name": "nvfp4-blockfit-all-lmhead-q4k",
+   "kind": "internal",
+   "rp_kl": 0.09918107786548237,
+   "rp_kl_raw": 0.10303905100273908,
+   "top1": 0.9266093229744728,
+   "decode_tps": 95.6098,
+   "decode_spread": 0.00023846927825394159,
+   "prefill_tps": 16432.309549999998,
+   "prefill_spread": 0.0008439045015435281,
+   "peak_gpu_gib": 22.016,
+   "resident_after_load_gib": 20.6,
+   "peak_host_gib": 17.9,
+   "checkpoint_gib": 18.387759439647198,
+   "tasks_passed": 567,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0012576326540248428,
+   "dominated_by": []
   }
  ],
  "external": [
@@ -853,19 +892,16 @@
   }
  ],
  "frontier": [
-  "V0-baseline-rebuild",
   "V4-gdn-q4k",
   "V5-attn-q4k",
   "V9-gdn-q4k-mlp-q4k",
   "gdn-attn-q4k-mlp-early3-mid28-skip0",
   "gdn-attn-q4k-mlp-early8-mid24-skip0",
   "gdn-attn-q4k-mlp-mid",
-  "gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead",
-  "gdn-fp8-unsloth-mlp0-27-q4k-mlp46-63-lmhead",
   "gdn-mlp-q4k-skip-layer0",
   "gdn-q4k-fp8-mid24-35-mlp-q4k",
-  "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
   "gdn-q4k-skip-layer0",
-  "gdn-zo-deep-mlp-skip0"
+  "gdn-zo-deep-mlp-skip0",
+  "nvfp4-blockfit-all-lmhead-q4k"
  ]
 }

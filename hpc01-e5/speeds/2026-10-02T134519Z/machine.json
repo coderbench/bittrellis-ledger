@@ -1,0 +1,9 @@
+{
+  "machine": {
+    "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.71.05",
+    "cuda": "Build cuda_13.0.r13.0/compiler.36424714_0",
+    "cpu": "AMD Ryzen 9 9950X 16-Core Processor",
+    "sparkinfer_commit": "b1ed168e3931d22d66dfa0aed3bcc2684f2b8387"
+  },
+  "measured_utc": "2026-10-02T13:45:19Z"
+}
