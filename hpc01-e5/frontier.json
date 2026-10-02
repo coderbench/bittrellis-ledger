@@ -56,7 +56,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.003964366406369602,
+   "frontier_gain": 0.001126272877211898,
    "dominated_by": []
   },
   {
@@ -180,7 +180,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003576276066952766,
+   "frontier_gain": 0.00011625662637670953,
    "dominated_by": []
   },
   {
@@ -285,7 +285,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002476278845241764,
+   "frontier_gain": 0.00018780656329608902,
    "dominated_by": []
   },
   {
@@ -309,7 +309,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 8.186494521886245e-05,
+   "frontier_gain": 8.18649452188347e-05,
    "dominated_by": []
   },
   {
@@ -359,7 +359,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003820577182178375,
+   "frontier_gain": 0.00038205771821786527,
+   "dominated_by": []
+  },
+  {
+   "id": "8f6943f4b71653a9",
+   "name": "gdn-fp8-mid24-35-lmhead-q4k",
+   "kind": "internal",
+   "rp_kl": 0.11672210574653202,
+   "rp_kl_raw": 0.1246466210490655,
+   "top1": 0.9203200147983722,
+   "decode_tps": 93.28190000000001,
+   "decode_spread": 8.147346912971015e-05,
+   "prefill_tps": 15971.3923,
+   "prefill_spread": 0.004336754034900215,
+   "peak_gpu_gib": 22.504,
+   "resident_after_load_gib": 21.0,
+   "peak_host_gib": 18.321,
+   "checkpoint_gib": 18.81113564223051,
+   "tasks_passed": 567,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0005612465129894995,
    "dominated_by": []
   },
   {
@@ -438,7 +462,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 7.538875949864021e-05,
+   "frontier_gain": 6.253316201701442e-05,
    "dominated_by": []
   },
   {
@@ -462,7 +486,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00018578150313369735,
+   "frontier_gain": 0.0001857815031337251,
    "dominated_by": []
   },
   {
@@ -538,7 +562,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0001924249372075304,
+   "frontier_gain": 0.00019242493720755816,
    "dominated_by": []
   },
   {
@@ -638,6 +662,7 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "gdn-fp8-mid24-35-lmhead-q4k",
     "gdn-fp8-qkv-all-zo-split"
    ]
   },
@@ -662,7 +687,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.637096843145393e-08,
+   "frontier_gain": 3.6370968403698356e-08,
    "dominated_by": []
   },
   {
@@ -753,6 +778,7 @@
   "gdn-attn-q4k-mlp-early3-mid28-skip0",
   "gdn-attn-q4k-mlp-early8-mid24-skip0",
   "gdn-fp8-lmhead-q4k",
+  "gdn-fp8-mid24-35-lmhead-q4k",
   "gdn-fp8-qkv-all-zo-split",
   "gdn-fp8-qkv-out-q4k-mlp-early8-mid55",
   "gdn-mlp-q4k-skip-layer0",

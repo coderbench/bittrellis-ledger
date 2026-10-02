@@ -11,7 +11,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
 | **Closest to the original model** | `gdn-q4k-fp8-mid24-35-mlp-q4k`<br>#62 by @milosde111 ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | **0.0889 · 34.5% closer** | 8,826 tok/s · 47% slower | 20.98 GiB · 1.04 GiB less |
-| **Fastest prompt reading** | `gdn-fp8-lmhead-q4k`<br>#38 by @carlo171112 ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.0967 · 28.7% closer | **13,839 tok/s · 16% slower** | 23.93 GiB · 1.91 GiB more |
+| **Fastest prompt reading** | `gdn-fp8-mid24-35-lmhead-q4k`<br>#63 by @milosde111 ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.1167 · 14.0% closer | **15,971 tok/s · 4% slower** | 22.50 GiB · 0.49 GiB more |
 | **Least GPU memory** | `gdn-attn-q4k-mlp-early8-mid24-skip0`<br>#37 by @dato-bitar ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.1091 · 19.6% closer | 10,272 tok/s · 38% slower | **20.92 GiB · 1.09 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,561 tok/s | 22.02 GiB |
 
@@ -19,7 +19,7 @@ Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://gith
 
 ```bash
 bittrellis build manifests/gdn-q4k-fp8-mid24-35-mlp-q4k.yaml --out models/gdn-q4k-fp8-mid24-35-mlp-q4k
-bittrellis build manifests/gdn-fp8-lmhead-q4k.yaml --out models/gdn-fp8-lmhead-q4k
+bittrellis build manifests/gdn-fp8-mid24-35-lmhead-q4k.yaml --out models/gdn-fp8-mid24-35-lmhead-q4k
 bittrellis build manifests/gdn-attn-q4k-mlp-early8-mid24-skip0.yaml --out models/gdn-attn-q4k-mlp-early8-mid24-skip0
 ```
 
@@ -45,12 +45,13 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 | ★ | gdn-fp8-lmhead-q4k | 0.0967 | 576/784 | 84.0 | 13,839 | 23.93 | PASS | 0.038% |
 |   | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,726 | 24.05 | PASS | 0.000% |
 | ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,832 | 20.54 | PASS | 0.019% |
-| ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,191 | 23.02 | PASS | 0.008% |
+| ★ | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,191 | 23.02 | PASS | 0.006% |
 | ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 96.2 | 10,272 | 20.92 | PASS | 0.008% |
 |   | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.8 | 14,531 | 23.39 | PASS | 0.000% |
-| ★ | gdn-attn-q4k-mlp-early3-mid28-skip0 | 0.1134 | 560/784 | 96.2 | 12,575 | 21.36 | PASS | 0.025% |
+| ★ | gdn-attn-q4k-mlp-early3-mid28-skip0 | 0.1134 | 560/784 | 96.2 | 12,575 | 21.36 | PASS | 0.019% |
 |   | gdn-attn-q4k-mlp-mid | 0.1136 | 566/784 | 96.2 | 10,835 | 21.18 | PASS | 0.000% |
 | ★ | V1-all-q4k | 0.1142 | 575/784 | 96.3 | 8,433 | 20.25 | PASS | 0.042% |
+| ★ | gdn-fp8-mid24-35-lmhead-q4k | 0.1167 | 567/784 | 93.3 | 15,971 | 22.50 | PASS | 0.056% |
 | ★ | gdn-zo-deep-mlp-skip0 | 0.1178 | 563/784 | 96.3 | 9,229 | 20.81 | PASS | 0.000% |
 | ★ | V9-gdn-q4k-mlp-q4k | 0.1179 | 562/784 | 96.5 | 8,728 | 20.41 | — | 0.000% |
 | ★ | gdn-q4k-skip-layer0 | 0.1210 | 572/784 | 96.0 | 13,893 | 21.64 | PASS | 0.000% |
@@ -62,9 +63,9 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 | | ↳ *not credited: private holdout FAIL* | | | | | | | |
 |   | gdn-mlp-deep-q4k | 0.1258 | 567/784 | 96.2 | 11,495 | 21.26 | PASS | 0.000% |
 | ★ | V4-gdn-q4k | 0.1265 | 566/784 | 96.0 | 13,843 | 21.58 | PASS | 0.000% |
-| ★ | V5-attn-q4k | 0.1282 | 556/784 | 95.5 | 15,649 | 21.85 | — | 0.036% |
+| ★ | V5-attn-q4k | 0.1282 | 556/784 | 95.5 | 15,649 | 21.85 | — | 0.012% |
 |   | V6-mlp-q4k | 0.1294 | 563/784 | 96.6 | 9,786 | 20.84 | PASS | 0.000% |
-| ★ | V0-baseline-rebuild | 0.1357 | 564/784 | 95.7 | 16,561 | 22.02 | — | 0.396% |
+| ★ | V0-baseline-rebuild | 0.1357 | 564/784 | 95.7 | 16,561 | 22.02 | — | 0.113% |
 
 Epoch `hpc01-e5` · rules: [bittrellis](https://github.com/coderbench/bittrellis) ([specification](https://github.com/coderbench/bittrellis/blob/main/docs/specification.md)).
 
