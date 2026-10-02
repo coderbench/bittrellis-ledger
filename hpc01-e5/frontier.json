@@ -56,7 +56,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.001126272877211898,
+   "frontier_gain": 0.0002566228785981506,
    "dominated_by": []
   },
   {
@@ -80,7 +80,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0004212810390830102,
+   "frontier_gain": 0.00042128103908303793,
    "dominated_by": []
   },
   {
@@ -180,7 +180,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00011625662637670953,
+   "frontier_gain": 0.0001104022938235305,
    "dominated_by": []
   },
   {
@@ -261,7 +261,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 9.99030794229805e-07,
+   "frontier_gain": 9.990307942575605e-07,
    "dominated_by": []
   },
   {
@@ -285,7 +285,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00018780656329608902,
+   "frontier_gain": 0.00018308647999712435,
    "dominated_by": []
   },
   {
@@ -309,7 +309,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 8.18649452188347e-05,
+   "frontier_gain": 8.186494521886245e-05,
    "dominated_by": []
   },
   {
@@ -369,13 +369,13 @@
    "rp_kl": 0.11672210574653202,
    "rp_kl_raw": 0.1246466210490655,
    "top1": 0.9203200147983722,
-   "decode_tps": 93.28190000000001,
-   "decode_spread": 8.147346912971015e-05,
-   "prefill_tps": 15971.3923,
-   "prefill_spread": 0.004336754034900215,
-   "peak_gpu_gib": 22.504,
+   "decode_tps": 93.3644,
+   "decode_spread": 0.0006683489638448561,
+   "prefill_tps": 16287.0918,
+   "prefill_spread": 0.007318531844954635,
+   "peak_gpu_gib": 22.385,
    "resident_after_load_gib": 21.0,
-   "peak_host_gib": 18.321,
+   "peak_host_gib": 18.323,
    "checkpoint_gib": 18.81113564223051,
    "tasks_passed": 567,
    "tasks_n": 784,
@@ -383,7 +383,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0005612465129894995,
+   "frontier_gain": 0.0007886351486811605,
    "dominated_by": []
   },
   {
@@ -687,7 +687,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.6370968403698356e-08,
+   "frontier_gain": 3.637096843145393e-08,
    "dominated_by": []
   },
   {
