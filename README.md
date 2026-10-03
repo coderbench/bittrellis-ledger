@@ -37,14 +37,15 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.8 | 14,682 | 23.39 | PASS | 0.015% |
-| ★ | nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k | 0.0782 | 575/784 | 89.5 | 14,151 | 22.84 | PASS | 0.041% |
+| ★ | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.8 | 14,682 | 23.39 | PASS | 0.013% |
+| ★ | nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k | 0.0782 | 575/784 | 89.5 | 14,151 | 22.84 | PASS | 0.027% |
+| ★ | nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k | 0.0849 | 573/784 | 91.3 | 15,061 | 22.65 | PASS | 0.006% |
 |   | gdn-fp8-mlp-q4k-zo-deep-q4k | 0.0850 | 568/784 | 87.1 | 8,735 | 22.16 | PASS | 0.000% |
 |   | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.2 | 8,715 | 22.82 | PASS | 0.000% |
 |   | gdn-fp8-qkv-z-out-q4k-mlp-q4k | 0.0872 | 573/784 | 88.6 | 8,735 | 21.85 | PASS | 0.000% |
 | ★ | gdn-q4k-fp8-mid24-35-mlp-q4k | 0.0889 | 568/784 | 93.9 | 8,754 | 20.98 | PASS | 0.011% |
 |   | gdn-fp8-unsloth-mlp0-27-q4k-mlp46-63-lmhead | 0.0892 | 572/784 | 84.1 | 11,869 | 23.61 | PASS | 0.000% |
-| ★ | nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k | 0.0896 | 575/784 | 93.4 | 16,280 | 22.39 | PASS | 0.072% |
+| ★ | nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k | 0.0896 | 575/784 | 93.4 | 16,280 | 22.39 | PASS | 0.040% |
 |   | gdn-fp8-qkv-out-q4k-mlp-early8-mid55 | 0.0938 | 570/784 | 88.5 | 10,091 | 22.25 | PASS | 0.000% |
 | ★ | gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead | 0.0946 | 566/784 | 96.1 | 10,591 | 21.08 | PASS | 0.013% |
 |   | gdn-fp8-lmhead-q4k | 0.0967 | 576/784 | 84.0 | 13,763 | 23.93 | PASS | 0.000% |
