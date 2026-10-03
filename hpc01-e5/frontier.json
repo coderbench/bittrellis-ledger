@@ -142,7 +142,8 @@
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
     "nvfp4-blockfit-all-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k"
    ]
   },
   {
@@ -273,7 +274,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.3998512105902776e-07,
+   "frontier_gain": 4.3998512108678334e-07,
    "dominated_by": []
   },
   {
@@ -345,7 +346,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.090723211995883e-05,
+   "frontier_gain": 3.090723211993107e-05,
    "dominated_by": []
   },
   {
@@ -375,7 +376,8 @@
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
     "nvfp4-blockfit-all-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k"
    ]
   },
   {
@@ -459,7 +461,8 @@
     "gdn-fp8-mlp-q4k-zo-deep-q4k",
     "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
     "gdn-q4k-fp8-mid24-35-mlp-q4k",
-    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k"
    ]
   },
   {
@@ -516,7 +519,8 @@
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
     "nvfp4-blockfit-all-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k"
    ]
   },
   {
@@ -594,7 +598,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.004138217009242717,
+   "frontier_gain": 0.000145661650077622,
    "dominated_by": []
   },
   {
@@ -622,7 +626,8 @@
    "dominated_by": [
     "gdn-fp8-state-blockfit",
     "nvfp4-blockfit-all-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k"
    ]
   },
   {
@@ -722,7 +727,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003534448160308068,
+   "frontier_gain": 0.0003534448160308623,
    "dominated_by": []
   },
   {
@@ -830,7 +835,8 @@
     "gdn-fp8-qkv-all-zo-split",
     "gdn-fp8-state-blockfit",
     "nvfp4-blockfit-all-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k"
    ]
   },
   {
@@ -928,7 +934,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0010007698834585965,
+   "frontier_gain": 0.0007601511760604862,
+   "dominated_by": []
+  },
+  {
+   "id": "589731263b25716e",
+   "name": "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
+   "kind": "internal",
+   "rp_kl": 0.07824640477796578,
+   "rp_kl_raw": 0.08844447429057205,
+   "top1": 0.9343784683684795,
+   "decode_tps": 89.49785,
+   "decode_spread": 5.028053746550645e-05,
+   "prefill_tps": 14151.3636,
+   "prefill_spread": 0.0023366511478795236,
+   "peak_gpu_gib": 22.842,
+   "resident_after_load_gib": 21.5,
+   "peak_host_gib": 18.905,
+   "checkpoint_gib": 19.392678003758192,
+   "tasks_passed": 575,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0004144728484337945,
    "dominated_by": []
   }
  ],
@@ -996,6 +1026,7 @@
   "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
   "gdn-zo-deep-mlp-skip0",
   "nvfp4-blockfit-all-lmhead-q4k",
-  "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k"
+  "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+  "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k"
  ]
 }
