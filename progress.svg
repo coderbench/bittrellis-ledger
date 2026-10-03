@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Frontier gain credited to merged pull requests: +1.47% from 17 merges, 51 pull requests scored">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Frontier gain credited to merged pull requests: +1.48% from 18 merges, 53 pull requests scored">
 <style>
 .bg{fill:#ffffff;stroke:#d0d7de}.t{fill:#1f2328}.m{fill:#59636e}.rule{stroke:#d0d7de}.ring{stroke:#ffffff}
 .acc{fill:#8b5cf6}.accl{stroke:#8b5cf6}.wash{fill:#8b5cf6;fill-opacity:.1}.gry{fill:#8c959f}.rej{fill:#d03b3b}.track{fill:#eaeef2}.tk{stroke:#1f2328}
@@ -10,13 +10,13 @@
 <text x="24.0" y="36.0" class="t" font-size="18" font-weight="600" text-anchor="start">What pull requests have added</text>
 <text x="24.0" y="57.0" class="m" font-size="12" font-weight="400" text-anchor="start">Epoch hpc01-e5 · redrawn by the evaluator after every pass · first-seen dates, UTC</text>
 <text x="24.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Frontier gain credited</text>
-<text x="24.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">+1.47%</text>
+<text x="24.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">+1.48%</text>
 <text x="237.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Merged pull requests</text>
-<text x="237.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">17</text>
+<text x="237.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">18</text>
 <text x="450.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Authors</text>
-<text x="450.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">7</text>
+<text x="450.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">8</text>
 <text x="663.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Pull requests scored</text>
-<text x="663.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">51</text>
+<text x="663.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">53</text>
 <line class="rule" x1="24" x2="876" y1="140" y2="140" stroke-width="1"/>
 <text x="24.0" y="170.0" class="t" font-size="12" font-weight="600" text-anchor="start">Credited frontier gain over time</text>
 <text x="24.0" y="346.0" class="t" font-size="12" font-weight="600" text-anchor="start">Pull requests scored</text>
@@ -26,8 +26,8 @@
 <text x="56.0" y="261.0" class="m" font-size="11" font-weight="400" text-anchor="end">1%</text>
 <line class="rule" x1="64" x2="596" y1="196.0" y2="196.0" stroke-width="1"/>
 <text x="56.0" y="200.0" class="m" font-size="11" font-weight="400" text-anchor="end">2%</text>
-<polygon class="wash" points="64.0,318.0 220.3,318.0 220.3,310.3 313.7,310.3 313.7,284.2 321.1,284.2 321.1,262.8 362.0,262.8 362.0,262.5 366.7,262.5 366.7,259.6 377.4,259.6 377.4,256.1 401.8,256.1 401.8,255.2 413.8,255.2 413.8,254.2 429.7,254.2 429.7,253.3 449.2,253.3 449.2,247.7 458.6,247.7 458.6,244.3 471.1,244.3 471.1,240.8 482.2,240.8 482.2,239.0 482.2,239.0 482.2,237.7 496.6,237.7 496.6,231.2 496.6,231.2 496.6,230.8 535.7,230.8 535.7,228.2 596.0,228.2 596.0,318.0"/>
-<polyline class="accl" points="64.0,318.0 220.3,318.0 220.3,310.3 313.7,310.3 313.7,284.2 321.1,284.2 321.1,262.8 362.0,262.8 362.0,262.5 366.7,262.5 366.7,259.6 377.4,259.6 377.4,256.1 401.8,256.1 401.8,255.2 413.8,255.2 413.8,254.2 429.7,254.2 429.7,253.3 449.2,253.3 449.2,247.7 458.6,247.7 458.6,244.3 471.1,244.3 471.1,240.8 482.2,240.8 482.2,239.0 482.2,239.0 482.2,237.7 496.6,237.7 496.6,231.2 496.6,231.2 496.6,230.8 535.7,230.8 535.7,228.2 596.0,228.2" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon class="wash" points="64.0,318.0 220.3,318.0 220.3,310.3 313.7,310.3 313.7,284.2 321.1,284.2 321.1,262.8 362.0,262.8 362.0,262.5 366.7,262.5 366.7,259.6 377.4,259.6 377.4,256.1 401.8,256.1 401.8,255.2 413.8,255.2 413.8,254.2 429.7,254.2 429.7,253.3 449.2,253.3 449.2,247.7 458.6,247.7 458.6,244.3 471.1,244.3 471.1,240.8 482.2,240.8 482.2,239.0 482.2,239.0 482.2,237.7 496.6,237.7 496.6,231.2 496.6,231.2 496.6,230.8 535.7,230.8 535.7,228.2 544.2,228.2 544.2,227.4 596.0,227.4 596.0,318.0"/>
+<polyline class="accl" points="64.0,318.0 220.3,318.0 220.3,310.3 313.7,310.3 313.7,284.2 321.1,284.2 321.1,262.8 362.0,262.8 362.0,262.5 366.7,262.5 366.7,259.6 377.4,259.6 377.4,256.1 401.8,256.1 401.8,255.2 413.8,255.2 413.8,254.2 429.7,254.2 429.7,253.3 449.2,253.3 449.2,247.7 458.6,247.7 458.6,244.3 471.1,244.3 471.1,240.8 482.2,240.8 482.2,239.0 482.2,239.0 482.2,237.7 496.6,237.7 496.6,231.2 496.6,231.2 496.6,230.8 535.7,230.8 535.7,228.2 544.2,228.2 544.2,227.4 596.0,227.4" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
 <circle class="acc ring" cx="220.3" cy="310.3" r="4.5" stroke-width="2"/>
 <circle class="acc ring" cx="313.7" cy="284.2" r="4.5" stroke-width="2"/>
 <circle class="acc ring" cx="321.1" cy="262.8" r="4.5" stroke-width="2"/>
@@ -45,6 +45,7 @@
 <circle class="acc ring" cx="496.6" cy="231.2" r="4.5" stroke-width="2"/>
 <circle class="acc ring" cx="496.6" cy="230.8" r="4.5" stroke-width="2"/>
 <circle class="acc ring" cx="535.7" cy="228.2" r="4.5" stroke-width="2"/>
+<circle class="acc ring" cx="544.2" cy="227.4" r="4.5" stroke-width="2"/>
 <text x="313.7" y="273.2" class="t" font-size="11" font-weight="600" text-anchor="middle">#32 · L</text>
 <text x="220.3" y="299.3" class="t" font-size="11" font-weight="600" text-anchor="middle">#28 · M</text>
 <rect class="acc" x="242.0" y="409.7" width="24.0" height="2.3"/>
@@ -57,8 +58,8 @@
 <rect class="rej" x="394.0" y="362.0" width="24.0" height="4.8"/>
 <rect class="acc" x="470.0" y="396.1" width="24.0" height="15.9"/>
 <path class="gry" d="M470.0,394.1V381.9Q470.0,377.9 474.0,377.9H490.0Q494.0,377.9 494.0,381.9V394.1Z"/>
-<rect class="acc" x="546.0" y="409.7" width="24.0" height="2.3"/>
-<rect class="gry" x="546.0" y="405.2" width="24.0" height="2.5"/>
+<rect class="acc" x="546.0" y="405.2" width="24.0" height="6.8"/>
+<rect class="gry" x="546.0" y="400.6" width="24.0" height="2.5"/>
 <line class="rule" x1="64" x2="596" y1="412" y2="412" stroke-width="1"/>
 <text x="56.0" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="end">22</text>
 <text x="56.0" y="412.0" class="m" font-size="11" font-weight="400" text-anchor="end">0</text>
@@ -98,4 +99,8 @@
 <text x="876.0" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="end">+0.015% · 1 merged</text>
 <rect class="track" x="640" y="372" width="236" height="8" rx="4"/>
 <rect class="acc" x="640" y="372" width="8.0" height="8" rx="4"/>
+<text x="640.0" y="400.0" class="t" font-size="12" font-weight="400" text-anchor="start">gold-tree-tech</text>
+<text x="876.0" y="400.0" class="m" font-size="11" font-weight="400" text-anchor="end">+0.013% · 1 merged</text>
+<rect class="track" x="640" y="406" width="236" height="8" rx="4"/>
+<rect class="acc" x="640" y="406" width="8.0" height="8" rx="4"/>
 </svg>

@@ -1,0 +1,59 @@
+{
+ "author": "gold-tree-tech",
+ "candidate": "b77086006fc7d68c",
+ "first_seen": "2026-10-03T07:38:42.981871Z",
+ "gain": 0.00013157427903673358,
+ "head": "508a604ae26703fef70cf72bfe9fbeb478892d99",
+ "kind": "manifest",
+ "name": "gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead",
+ "pr": 82,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 37.10046702250838,
+  "decode_spread": 0.00018310140488715974,
+  "decode_tps": 96.1216,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.00013157427903673358,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "b77086006fc7d68c",
+  "kind": "internal",
+  "name": "gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead",
+  "peak_gpu_gib": 21.082,
+  "peak_host_gib": 36.579,
+  "prefill_spread": 0.007303556827170406,
+  "prefill_tps": 10590.5933,
+  "resident_after_load_gib": 19.6,
+  "rp_kl": 0.09456777760398155,
+  "rp_kl_raw": 0.10362178322477304,
+  "tasks_n": 784,
+  "tasks_passed": 566,
+  "top1": 0.9284128745837957,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.33425499231950845
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "XS"
+}
