@@ -12,7 +12,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 |---|---|---|---|---|
 | **Closest to the original model** | `gdn-fp8-state-blockfit`<br>#32 by @cleanjunc ![eval:L](https://img.shields.io/badge/eval%3AL-2da44e?style=flat-square) | **0.0760 · 44.0% closer** | 14,682 tok/s · 11% slower | 23.39 GiB · 1.38 GiB more |
 | **Fastest prompt reading** | `nvfp4-blockfit-all-lmhead-q4k`<br>#28 by @cleanjunc ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | 0.0992 · 26.9% closer | **16,998 tok/s · 3% faster** | 22.02 GiB · 0.00 GiB less |
-| **Least GPU memory** | `gdn-attn-q4k-mlp-early8-mid24-skip0`<br>#37 by @dato-bitar ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.1091 · 19.6% closer | 10,258 tok/s · 38% slower | **20.92 GiB · 1.09 GiB less** |
+| **Least GPU memory** | `q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead`<br>#87 by @cleanjunc ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.0899 · 33.7% closer | 8,710 tok/s · 47% slower | **20.56 GiB · 1.45 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,571 tok/s | 22.02 GiB |
 
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
@@ -20,7 +20,7 @@ Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://gith
 ```bash
 bittrellis build manifests/gdn-fp8-state-blockfit.yaml --out models/gdn-fp8-state-blockfit
 bittrellis build manifests/nvfp4-blockfit-all-lmhead-q4k.yaml --out models/nvfp4-blockfit-all-lmhead-q4k
-bittrellis build manifests/gdn-attn-q4k-mlp-early8-mid24-skip0.yaml --out models/gdn-attn-q4k-mlp-early8-mid24-skip0
+bittrellis build manifests/q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead.yaml --out models/q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead
 ```
 
 ## Progress
@@ -42,11 +42,12 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 | ★ | nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k | 0.0849 | 573/784 | 91.3 | 15,061 | 22.65 | PASS | 0.001% |
 |   | gdn-fp8-mlp-q4k-zo-deep-q4k | 0.0850 | 568/784 | 87.1 | 8,735 | 22.16 | PASS | 0.000% |
 |   | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.2 | 8,715 | 22.82 | PASS | 0.000% |
-| ★ | nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k | 0.0858 | 569/784 | 95.1 | 13,627 | 21.67 | PASS | 0.022% |
+| ★ | nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k | 0.0858 | 569/784 | 95.1 | 13,627 | 21.67 | PASS | 0.021% |
 |   | gdn-fp8-qkv-z-out-q4k-mlp-q4k | 0.0872 | 573/784 | 88.6 | 8,735 | 21.85 | PASS | 0.000% |
-| ★ | gdn-q4k-fp8-mid24-35-mlp-q4k | 0.0889 | 568/784 | 93.9 | 8,754 | 20.98 | PASS | 0.005% |
+|   | gdn-q4k-fp8-mid24-35-mlp-q4k | 0.0889 | 568/784 | 93.9 | 8,754 | 20.98 | PASS | 0.000% |
 |   | gdn-fp8-unsloth-mlp0-27-q4k-mlp46-63-lmhead | 0.0892 | 572/784 | 84.1 | 11,869 | 23.61 | PASS | 0.000% |
 | ★ | nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k | 0.0896 | 575/784 | 93.4 | 16,280 | 22.39 | PASS | 0.032% |
+| ★ | q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead | 0.0899 | 565/784 | 95.2 | 8,710 | 20.56 | PASS | 0.013% |
 | ★ | gdn-attn-q4k-early3-mid28-blockfit-rest-lmhead | 0.0921 | 572/784 | 95.9 | 12,186 | 21.36 | PASS | 0.003% |
 |   | gdn-fp8-qkv-out-q4k-mlp-early8-mid55 | 0.0938 | 570/784 | 88.5 | 10,091 | 22.25 | PASS | 0.000% |
 | ★ | gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead | 0.0946 | 566/784 | 96.1 | 10,591 | 21.08 | PASS | 0.002% |
@@ -54,7 +55,7 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 | ★ | nvfp4-blockfit-all-lmhead-q4k | 0.0992 | 567/784 | 95.7 | 16,998 | 22.02 | PASS | 0.068% |
 | ★ | gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k | 0.1015 | 578/784 | 96.0 | 14,072 | 21.64 | PASS | 0.000% |
 |   | V3-gdn-fp8 | 0.1024 | 573/784 | 84.0 | 13,701 | 23.93 | PASS | 0.000% |
-| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,801 | 20.54 | PASS | 0.012% |
+| ★ | gdn-mlp-q4k-skip-layer0 | 0.1029 | 564/784 | 96.4 | 8,801 | 20.54 | PASS | 0.000% |
 |   | gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead | 0.1031 | 574/784 | 93.6 | 14,036 | 22.08 | PASS | 0.000% |
 |   | gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead | 0.1078 | 575/784 | 93.3 | 16,128 | 22.39 | PASS | 0.000% |
 |   | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 88.5 | 14,165 | 23.02 | PASS | 0.000% |

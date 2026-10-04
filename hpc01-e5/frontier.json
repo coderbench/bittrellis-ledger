@@ -196,7 +196,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 6.94018103326588e-05,
+   "frontier_gain": 6.940181033268655e-05,
    "dominated_by": []
   },
   {
@@ -303,7 +303,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.8717963481306175e-05,
+   "frontier_gain": 2.8603016797246195e-05,
    "dominated_by": []
   },
   {
@@ -500,7 +500,8 @@
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
-    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+    "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
    ]
   },
   {
@@ -529,7 +530,8 @@
     "gdn-attn-q4k-early3-mid28-blockfit-rest-lmhead",
     "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
     "gdn-q4k-fp8-mid24-35-mlp-q4k",
-    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+    "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
    ]
   },
   {
@@ -620,7 +622,8 @@
    "dominated_by": [
     "gdn-attn-q4k-early3-mid28-blockfit-rest-lmhead",
     "gdn-q4k-fp8-mid24-35-mlp-q4k",
-    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+    "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
    ]
   },
   {
@@ -644,7 +647,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0001300038884158583,
+   "frontier_gain": 0.00013000388841583055,
    "dominated_by": []
   },
   {
@@ -727,7 +730,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00011552301498568562,
+   "frontier_gain": 6.355779595679234e-07,
    "dominated_by": []
   },
   {
@@ -776,9 +779,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 5.3417872922095766e-05,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
+   ]
   },
   {
    "id": "56064f90e1725c29",
@@ -829,7 +834,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.188920027196284e-05,
+   "frontier_gain": 2.0272254979220028e-05,
    "dominated_by": []
   },
   {
@@ -880,7 +885,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 6.30622117164803e-07,
+   "frontier_gain": 6.306221171925586e-07,
    "dominated_by": []
   },
   {
@@ -1011,7 +1016,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003240482992175331,
+   "frontier_gain": 0.00032404829921756084,
    "dominated_by": []
   },
   {
@@ -1035,7 +1040,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00026722999824838056,
+   "frontier_gain": 0.0002672299982483528,
    "dominated_by": []
   },
   {
@@ -1083,7 +1088,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002193910903063867,
+   "frontier_gain": 0.00021373598443791275,
+   "dominated_by": []
+  },
+  {
+   "id": "9693d1b340ec014e",
+   "name": "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead",
+   "kind": "internal",
+   "rp_kl": 0.08994302609270981,
+   "rp_kl_raw": 0.10005827414230307,
+   "top1": 0.9260081391046985,
+   "decode_tps": 95.23305,
+   "decode_spread": 0.0005029766451877631,
+   "prefill_tps": 8710.16525,
+   "prefill_spread": 0.021607477538959252,
+   "peak_gpu_gib": 20.561,
+   "resident_after_load_gib": 19.1,
+   "peak_host_gib": 45.994,
+   "checkpoint_gib": 46.48491291701794,
+   "tasks_passed": 565,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0001322729590698124,
    "dominated_by": []
   }
  ],
@@ -1146,7 +1175,6 @@
   "gdn-attn-q4k-mlp-early8-mid24-skip0",
   "gdn-fp8-state-blockfit",
   "gdn-mlp-q4k-skip-layer0",
-  "gdn-q4k-fp8-mid24-35-mlp-q4k",
   "gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead",
   "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
   "gdn-zo-deep-mlp-skip0",
@@ -1154,6 +1182,7 @@
   "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
   "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
   "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
-  "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
+  "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+  "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
  ]
 }
