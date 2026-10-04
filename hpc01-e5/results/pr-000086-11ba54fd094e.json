@@ -1,0 +1,59 @@
+{
+ "author": "cleanjunc",
+ "candidate": "80a3c676132792be",
+ "first_seen": "2026-10-04T06:32:54.972247Z",
+ "gain": 0.0002193910903063867,
+ "head": "11ba54fd094e73208380baaf89a6b220b4ae5a83",
+ "kind": "manifest",
+ "name": "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+ "pr": 86,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 23.93277456983924,
+  "decode_spread": 0.0002576315458786923,
+  "decode_tps": 95.09705,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.0002193910903063867,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "80a3c676132792be",
+  "kind": "internal",
+  "name": "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+  "peak_gpu_gib": 21.67,
+  "peak_host_gib": 23.445,
+  "prefill_spread": 0.0010322472248393295,
+  "prefill_tps": 13627.355599999999,
+  "resident_after_load_gib": 20.3,
+  "rp_kl": 0.08583644823857176,
+  "rp_kl_raw": 0.09673654020637477,
+  "tasks_n": 784,
+  "tasks_passed": 569,
+  "top1": 0.9303089160192379,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.18105478750640042
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 22.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "XS"
+}

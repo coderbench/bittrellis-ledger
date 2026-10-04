@@ -144,7 +144,8 @@
     "nvfp4-blockfit-all-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -170,7 +171,8 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k"
+    "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -301,7 +303,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 8.90043328094503e-05,
+   "frontier_gain": 2.8717963481306175e-05,
    "dominated_by": []
   },
   {
@@ -409,7 +411,8 @@
     "nvfp4-blockfit-all-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -496,7 +499,8 @@
     "gdn-q4k-fp8-mid24-35-mlp-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -524,7 +528,8 @@
    "dominated_by": [
     "gdn-attn-q4k-early3-mid28-blockfit-rest-lmhead",
     "gdn-fp8-qkv-z-out-q4k-mlp-q4k",
-    "gdn-q4k-fp8-mid24-35-mlp-q4k"
+    "gdn-q4k-fp8-mid24-35-mlp-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -586,7 +591,8 @@
     "gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead",
     "gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead",
     "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -613,7 +619,8 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "gdn-attn-q4k-early3-mid28-blockfit-rest-lmhead",
-    "gdn-q4k-fp8-mid24-35-mlp-q4k"
+    "gdn-q4k-fp8-mid24-35-mlp-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -668,7 +675,8 @@
     "nvfp4-blockfit-all-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
-    "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k"
+    "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -769,7 +777,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 6.453893724323034e-05,
+   "frontier_gain": 5.3417872922095766e-05,
    "dominated_by": []
   },
   {
@@ -796,7 +804,8 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
-    "nvfp4-blockfit-all-lmhead-q4k"
+    "nvfp4-blockfit-all-lmhead-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -820,7 +829,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.188920027201835e-05,
+   "frontier_gain": 2.188920027196284e-05,
    "dominated_by": []
   },
   {
@@ -846,7 +855,8 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k"
+    "gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k",
+    "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -870,7 +880,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.842204081436207e-05,
+   "frontier_gain": 6.30622117164803e-07,
    "dominated_by": []
   },
   {
@@ -927,7 +937,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.567789890774776e-08,
+   "frontier_gain": 4.5677898879992185e-08,
    "dominated_by": []
   },
   {
@@ -977,7 +987,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0006800057756950473,
+   "frontier_gain": 0.0006783514150256187,
    "dominated_by": []
   },
   {
@@ -1001,7 +1011,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00035874990621376224,
+   "frontier_gain": 0.0003240482992175331,
    "dominated_by": []
   },
   {
@@ -1049,7 +1059,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 5.657631543731778e-05,
+   "frontier_gain": 1.2955410961135172e-05,
+   "dominated_by": []
+  },
+  {
+   "id": "80a3c676132792be",
+   "name": "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+   "kind": "internal",
+   "rp_kl": 0.08583644823857176,
+   "rp_kl_raw": 0.09673654020637477,
+   "top1": 0.9303089160192379,
+   "decode_tps": 95.09705,
+   "decode_spread": 0.0002576315458786923,
+   "prefill_tps": 13627.355599999999,
+   "prefill_spread": 0.0010322472248393295,
+   "peak_gpu_gib": 21.67,
+   "resident_after_load_gib": 20.3,
+   "peak_host_gib": 23.445,
+   "checkpoint_gib": 23.93277456983924,
+   "tasks_passed": 569,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0002193910903063867,
    "dominated_by": []
   }
  ],
@@ -1119,6 +1153,7 @@
   "nvfp4-blockfit-all-lmhead-q4k",
   "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
   "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
-  "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k"
+  "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
+  "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
  ]
 }
