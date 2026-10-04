@@ -144,6 +144,7 @@
     "nvfp4-blockfit-all-lmhead-q4k",
     "nvfp4-blockfit-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
@@ -282,7 +283,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 4.3998512108678334e-07,
+   "frontier_gain": 4.399851211145389e-07,
    "dominated_by": []
   },
   {
@@ -306,7 +307,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.8603016797246195e-05,
+   "frontier_gain": 2.860301679721844e-05,
    "dominated_by": []
   },
   {
@@ -414,6 +415,7 @@
     "nvfp4-blockfit-all-lmhead-q4k",
     "nvfp4-blockfit-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
@@ -503,6 +505,7 @@
     "gdn-q4k-fp8-mid24-35-mlp-q4k",
     "nvfp4-blockfit-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
@@ -656,7 +659,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0001300038884158583,
+   "frontier_gain": 2.8896994908239604e-05,
    "dominated_by": []
   },
   {
@@ -687,6 +690,7 @@
     "nvfp4-blockfit-all-lmhead-q4k",
     "nvfp4-blockfit-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+    "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k"
@@ -845,7 +849,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.0272254979220028e-05,
+   "frontier_gain": 2.0272254979247784e-05,
    "dominated_by": []
   },
   {
@@ -896,7 +900,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.536450582346639e-07,
+   "frontier_gain": 2.536450582069083e-07,
    "dominated_by": []
   },
   {
@@ -1004,7 +1008,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0005206515448518967,
+   "frontier_gain": 0.0005206515448519244,
    "dominated_by": []
   },
   {
@@ -1052,7 +1056,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 9.518891419210695e-05,
+   "frontier_gain": 9.51889141920792e-05,
+   "dominated_by": []
+  },
+  {
+   "id": "8c94e5bebe03a3d9",
+   "name": "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
+   "kind": "internal",
+   "rp_kl": 0.07429486638845738,
+   "rp_kl_raw": 0.0822921518345937,
+   "top1": 0.935488346281909,
+   "decode_tps": 89.3027,
+   "decode_spread": 0.00018140548941966784,
+   "prefill_tps": 13540.24445,
+   "prefill_spread": 0.003123230171815721,
+   "peak_gpu_gib": 22.68,
+   "resident_after_load_gib": 21.3,
+   "peak_host_gib": 21.15,
+   "checkpoint_gib": 21.638755451887846,
+   "tasks_passed": 570,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0001385014611515467,
    "dominated_by": []
   },
   {
@@ -1076,7 +1104,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002672299982483528,
+   "frontier_gain": 4.2517316576062836e-06,
    "dominated_by": []
   },
   {
@@ -1124,7 +1152,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00015619406155370497,
+   "frontier_gain": 0.0001561940615536772,
    "dominated_by": []
   },
   {
@@ -1216,6 +1244,7 @@
   "nvfp4-blockfit-all-lmhead-q4k",
   "nvfp4-blockfit-attn-q4k-lmhead-q4k",
   "nvfp4-blockfit-gdn-fp8-mid24-35-lmhead-q4k",
+  "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
   "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
   "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
   "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",

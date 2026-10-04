@@ -10,7 +10,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
-| **Closest to the original model** | `gdn-fp8-state-blockfit`<br>#32 by @cleanjunc ![eval:L](https://img.shields.io/badge/eval%3AL-2da44e?style=flat-square) | **0.0760 · 44.0% closer** | 14,682 tok/s · 11% slower | 23.39 GiB · 1.38 GiB more |
+| **Closest to the original model** | `nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k`<br>#93 by @kaivexa ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | **0.0743 · 45.3% closer** | 13,540 tok/s · 18% slower | 22.68 GiB · 0.66 GiB more |
 | **Fastest prompt reading** | `nvfp4-blockfit-all-lmhead-q4k`<br>#28 by @cleanjunc ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | 0.0992 · 26.9% closer | **16,998 tok/s · 3% faster** | 22.02 GiB · 0.00 GiB less |
 | **Least GPU memory** | `q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead`<br>#87 by @cleanjunc ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.0899 · 33.7% closer | 8,710 tok/s · 47% slower | **20.56 GiB · 1.45 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,571 tok/s | 22.02 GiB |
@@ -18,7 +18,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
-bittrellis build manifests/gdn-fp8-state-blockfit.yaml --out models/gdn-fp8-state-blockfit
+bittrellis build manifests/nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k
 bittrellis build manifests/nvfp4-blockfit-all-lmhead-q4k.yaml --out models/nvfp4-blockfit-all-lmhead-q4k
 bittrellis build manifests/q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead.yaml --out models/q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead
 ```
@@ -37,8 +37,9 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.8 | 14,682 | 23.39 | PASS | 0.013% |
-| ★ | nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k | 0.0782 | 575/784 | 89.5 | 14,151 | 22.84 | PASS | 0.027% |
+| ★ | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0743 | 570/784 | 89.3 | 13,540 | 22.68 | PASS | 0.014% |
+| ★ | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.8 | 14,682 | 23.39 | PASS | 0.003% |
+| ★ | nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k | 0.0782 | 575/784 | 89.5 | 14,151 | 22.84 | PASS | 0.000% |
 | ★ | nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k | 0.0849 | 573/784 | 91.3 | 15,061 | 22.65 | PASS | 0.001% |
 |   | gdn-fp8-mlp-q4k-zo-deep-q4k | 0.0850 | 568/784 | 87.1 | 8,735 | 22.16 | PASS | 0.000% |
 |   | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.2 | 8,715 | 22.82 | PASS | 0.000% |
