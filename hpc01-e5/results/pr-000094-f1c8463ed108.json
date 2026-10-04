@@ -1,0 +1,59 @@
+{
+ "author": "ShandyMaeCamingawan",
+ "candidate": "312a7a6cd5077560",
+ "first_seen": "2026-10-04T22:18:28.335746Z",
+ "gain": 4.910885781195251e-06,
+ "head": "f1c8463ed108897c0a3f3660175215b0ffbb3291",
+ "kind": "manifest",
+ "name": "nvfp4-blockfit-gdn-fp8-mid24-35-attn-q4k-lmhead-q4k",
+ "pr": 94,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 21.057167004793882,
+  "decode_spread": 3.2214107846391465e-05,
+  "decode_tps": 93.1269,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 4.910885781195251e-06,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "312a7a6cd5077560",
+  "kind": "internal",
+  "name": "nvfp4-blockfit-gdn-fp8-mid24-35-attn-q4k-lmhead-q4k",
+  "peak_gpu_gib": 22.221,
+  "peak_host_gib": 20.569,
+  "prefill_spread": 0.0052972965276601525,
+  "prefill_tps": 15001.8032,
+  "resident_after_load_gib": 20.9,
+  "rp_kl": 0.0860551739232323,
+  "rp_kl_raw": 0.09392929992080759,
+  "tasks_n": 784,
+  "tasks_passed": 563,
+  "top1": 0.9312800591934887,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.04055299539170507
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 23.19
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "none"
+}
