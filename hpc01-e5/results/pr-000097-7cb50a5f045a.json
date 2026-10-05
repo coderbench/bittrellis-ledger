@@ -1,0 +1,59 @@
+{
+ "author": "lourincedaging0-commits",
+ "candidate": "2756e84a111f42e7",
+ "first_seen": "2026-10-05T01:14:36.826136Z",
+ "gain": 9.080020094534569e-05,
+ "head": "7cb50a5f045a6e260346ac9711cfbf9887ccdfe7",
+ "kind": "manifest",
+ "name": "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-mlp-q4k-1-23-48-63-lmhead-q4k",
+ "pr": 97,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 35.599602311849594,
+  "decode_spread": 0.00045050419671427796,
+  "decode_tps": 89.6773,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 9.080020094534569e-05,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "2756e84a111f42e7",
+  "kind": "internal",
+  "name": "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-mlp-q4k-1-23-48-63-lmhead-q4k",
+  "peak_gpu_gib": 21.992,
+  "peak_host_gib": 35.11,
+  "prefill_spread": 0.006960272761650579,
+  "prefill_tps": 9975.111949999999,
+  "resident_after_load_gib": 20.6,
+  "rp_kl": 0.0763245996040792,
+  "rp_kl_raw": 0.08690016899030245,
+  "tasks_n": 784,
+  "tasks_passed": 577,
+  "top1": 0.9325286718460969,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.34695340501792116
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 23.77
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "XS"
+}
