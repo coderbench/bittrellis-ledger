@@ -1,7 +1,7 @@
 {
  "track": "HPC-01",
  "track_version": 2,
- "evaluator_epoch": "hpc01-e5",
+ "evaluator_epoch": "hpc01-e6",
  "frontier_gain_version": "FG-2",
  "objectives": {
   "rp_kl": "min",
