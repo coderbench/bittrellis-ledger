@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Frontier gain credited to merged pull requests: +1.57% from 26 merges, 69 pull requests scored">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Frontier gain credited to merged pull requests: +1.57% from 26 merges, 72 pull requests scored">
 <style>
 .bg{fill:#ffffff;stroke:#d0d7de}.t{fill:#1f2328}.m{fill:#59636e}.rule{stroke:#d0d7de}.ring{stroke:#ffffff}
 .acc{fill:#8b5cf6}.accl{stroke:#8b5cf6}.wash{fill:#8b5cf6;fill-opacity:.1}.gry{fill:#8c959f}.rej{fill:#d03b3b}.track{fill:#eaeef2}.tk{stroke:#1f2328}
@@ -16,7 +16,7 @@
 <text x="450.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Authors</text>
 <text x="450.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">10</text>
 <text x="663.0" y="88.0" class="m" font-size="12" font-weight="400" text-anchor="start">Pull requests scored</text>
-<text x="663.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">69</text>
+<text x="663.0" y="120.0" class="t" font-size="28" font-weight="600" text-anchor="start">72</text>
 <line class="rule" x1="24" x2="876" y1="140" y2="140" stroke-width="1"/>
 <text x="24.0" y="170.0" class="t" font-size="12" font-weight="600" text-anchor="start">Credited frontier gain over time</text>
 <text x="24.0" y="346.0" class="t" font-size="12" font-weight="600" text-anchor="start">Pull requests scored</text>
@@ -26,37 +26,39 @@
 <text x="56.0" y="261.0" class="m" font-size="11" font-weight="400" text-anchor="end">1%</text>
 <line class="rule" x1="64" x2="596" y1="196.0" y2="196.0" stroke-width="1"/>
 <text x="56.0" y="200.0" class="m" font-size="11" font-weight="400" text-anchor="end">2%</text>
-<polygon class="wash" points="64.0,318.0 68.3,318.0 68.3,310.3 161.7,310.3 161.7,284.2 169.1,284.2 169.1,262.8 210.0,262.8 210.0,262.5 214.7,262.5 214.7,259.6 225.4,259.6 225.4,256.1 249.8,256.1 249.8,255.2 261.8,255.2 261.8,254.2 277.7,254.2 277.7,253.3 297.2,253.3 297.2,247.7 306.6,247.7 306.6,244.3 319.1,244.3 319.1,240.8 330.2,240.8 330.2,239.0 330.2,239.0 330.2,237.7 344.6,237.7 344.6,231.2 344.6,231.2 344.6,230.8 383.7,230.8 383.7,228.2 392.2,228.2 392.2,227.4 396.3,227.4 396.3,227.1 399.0,227.1 399.0,226.5 464.7,226.5 464.7,225.2 467.9,225.2 467.9,224.4 491.3,224.4 491.3,224.1 500.7,224.1 500.7,223.2 514.6,223.2 514.6,222.5 523.9,222.5 523.9,222.0 596.0,222.0 596.0,318.0"/>
-<polyline class="accl" points="64.0,318.0 68.3,318.0 68.3,310.3 161.7,310.3 161.7,284.2 169.1,284.2 169.1,262.8 210.0,262.8 210.0,262.5 214.7,262.5 214.7,259.6 225.4,259.6 225.4,256.1 249.8,256.1 249.8,255.2 261.8,255.2 261.8,254.2 277.7,254.2 277.7,253.3 297.2,253.3 297.2,247.7 306.6,247.7 306.6,244.3 319.1,244.3 319.1,240.8 330.2,240.8 330.2,239.0 330.2,239.0 330.2,237.7 344.6,237.7 344.6,231.2 344.6,231.2 344.6,230.8 383.7,230.8 383.7,228.2 392.2,228.2 392.2,227.4 396.3,227.4 396.3,227.1 399.0,227.1 399.0,226.5 464.7,226.5 464.7,225.2 467.9,225.2 467.9,224.4 491.3,224.4 491.3,224.1 500.7,224.1 500.7,223.2 514.6,223.2 514.6,222.5 523.9,222.5 523.9,222.0 596.0,222.0" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
-<circle class="acc ring" cx="161.7" cy="284.2" r="4.5" stroke-width="2"/>
-<circle class="acc ring" cx="169.1" cy="262.8" r="4.5" stroke-width="2"/>
-<circle class="acc ring" cx="68.3" cy="310.3" r="4.5" stroke-width="2"/>
-<text x="161.7" y="273.2" class="t" font-size="11" font-weight="600" text-anchor="middle">#32 · L</text>
-<text x="68.3" y="299.3" class="t" font-size="11" font-weight="600" text-anchor="middle">#28 · M</text>
-<rect class="acc" x="90.0" y="409.7" width="24.0" height="2.3"/>
-<rect class="gry" x="90.0" y="405.2" width="24.0" height="2.5"/>
-<rect class="acc" x="166.0" y="402.9" width="24.0" height="9.1"/>
-<rect class="gry" x="166.0" y="398.4" width="24.0" height="2.5"/>
-<rect class="rej" x="166.0" y="393.8" width="24.0" height="2.5"/>
-<rect class="acc" x="242.0" y="393.8" width="24.0" height="18.2"/>
-<rect class="gry" x="242.0" y="368.8" width="24.0" height="23.0"/>
-<rect class="rej" x="242.0" y="362.0" width="24.0" height="4.8"/>
-<rect class="acc" x="318.0" y="396.1" width="24.0" height="15.9"/>
-<path class="gry" d="M318.0,394.1V381.9Q318.0,377.9 322.0,377.9H338.0Q342.0,377.9 342.0,381.9V394.1Z"/>
-<rect class="acc" x="394.0" y="400.6" width="24.0" height="11.4"/>
-<rect class="gry" x="394.0" y="393.8" width="24.0" height="4.8"/>
-<rect class="acc" x="470.0" y="400.6" width="24.0" height="11.4"/>
-<path class="gry" d="M470.0,398.6V391.0Q470.0,387.0 474.0,387.0H490.0Q494.0,387.0 494.0,391.0V398.6Z"/>
-<rect class="acc" x="546.0" y="409.7" width="24.0" height="2.3"/>
-<rect class="gry" x="546.0" y="407.5" width="24.0" height="0.3"/>
+<polygon class="wash" points="64.0,318.0 67.7,318.0 67.7,310.3 149.5,310.3 149.5,284.2 156.0,284.2 156.0,262.8 191.8,262.8 191.8,262.5 195.8,262.5 195.8,259.6 205.3,259.6 205.3,256.1 226.6,256.1 226.6,255.2 237.1,255.2 237.1,254.2 251.0,254.2 251.0,253.3 268.1,253.3 268.1,247.7 276.3,247.7 276.3,244.3 287.2,244.3 287.2,240.8 296.9,240.8 296.9,239.0 296.9,239.0 296.9,237.7 309.5,237.7 309.5,231.2 309.5,231.2 309.5,230.8 343.7,230.8 343.7,228.2 351.2,228.2 351.2,227.4 354.7,227.4 354.7,227.1 357.1,227.1 357.1,226.5 414.6,226.5 414.6,225.2 417.4,225.2 417.4,224.4 437.9,224.4 437.9,224.1 446.1,224.1 446.1,223.2 458.3,223.2 458.3,222.5 466.4,222.5 466.4,222.0 596.0,222.0 596.0,318.0"/>
+<polyline class="accl" points="64.0,318.0 67.7,318.0 67.7,310.3 149.5,310.3 149.5,284.2 156.0,284.2 156.0,262.8 191.8,262.8 191.8,262.5 195.8,262.5 195.8,259.6 205.3,259.6 205.3,256.1 226.6,256.1 226.6,255.2 237.1,255.2 237.1,254.2 251.0,254.2 251.0,253.3 268.1,253.3 268.1,247.7 276.3,247.7 276.3,244.3 287.2,244.3 287.2,240.8 296.9,240.8 296.9,239.0 296.9,239.0 296.9,237.7 309.5,237.7 309.5,231.2 309.5,231.2 309.5,230.8 343.7,230.8 343.7,228.2 351.2,228.2 351.2,227.4 354.7,227.4 354.7,227.1 357.1,227.1 357.1,226.5 414.6,226.5 414.6,225.2 417.4,225.2 417.4,224.4 437.9,224.4 437.9,224.1 446.1,224.1 446.1,223.2 458.3,223.2 458.3,222.5 466.4,222.5 466.4,222.0 596.0,222.0" fill="none" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle class="acc ring" cx="149.5" cy="284.2" r="4.5" stroke-width="2"/>
+<circle class="acc ring" cx="156.0" cy="262.8" r="4.5" stroke-width="2"/>
+<circle class="acc ring" cx="67.7" cy="310.3" r="4.5" stroke-width="2"/>
+<text x="149.5" y="273.2" class="t" font-size="11" font-weight="600" text-anchor="middle">#32 · L</text>
+<text x="67.7" y="299.3" class="t" font-size="11" font-weight="600" text-anchor="middle">#28 · M</text>
+<rect class="acc" x="85.2" y="409.7" width="24.0" height="2.3"/>
+<rect class="gry" x="85.2" y="405.2" width="24.0" height="2.5"/>
+<rect class="acc" x="151.8" y="402.9" width="24.0" height="9.1"/>
+<rect class="gry" x="151.8" y="398.4" width="24.0" height="2.5"/>
+<rect class="rej" x="151.8" y="393.8" width="24.0" height="2.5"/>
+<rect class="acc" x="218.2" y="393.8" width="24.0" height="18.2"/>
+<rect class="gry" x="218.2" y="368.8" width="24.0" height="23.0"/>
+<rect class="rej" x="218.2" y="362.0" width="24.0" height="4.8"/>
+<rect class="acc" x="284.8" y="396.1" width="24.0" height="15.9"/>
+<path class="gry" d="M284.8,394.1V381.9Q284.8,377.9 288.8,377.9H304.8Q308.8,377.9 308.8,381.9V394.1Z"/>
+<rect class="acc" x="351.2" y="400.6" width="24.0" height="11.4"/>
+<rect class="gry" x="351.2" y="393.8" width="24.0" height="4.8"/>
+<rect class="acc" x="417.8" y="400.6" width="24.0" height="11.4"/>
+<path class="gry" d="M417.8,398.6V391.0Q417.8,387.0 421.8,387.0H437.8Q441.8,387.0 441.8,391.0V398.6Z"/>
+<rect class="acc" x="484.2" y="409.7" width="24.0" height="2.3"/>
+<rect class="gry" x="484.2" y="407.5" width="24.0" height="0.3"/>
+<path class="gry" d="M550.8,412.0V409.2Q550.8,405.2 554.8,405.2H570.8Q574.8,405.2 574.8,409.2V412.0Z"/>
 <line class="rule" x1="64" x2="596" y1="412" y2="412" stroke-width="1"/>
 <text x="56.0" y="366.0" class="m" font-size="11" font-weight="400" text-anchor="end">22</text>
 <text x="56.0" y="412.0" class="m" font-size="11" font-weight="400" text-anchor="end">0</text>
 <text x="596.0" y="346.0" class="m" font-size="11" font-weight="400" text-anchor="end">per day</text>
 <text x="64.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Sep 29</text>
-<text x="216.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Oct 1</text>
-<text x="368.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Oct 3</text>
-<text x="520.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Oct 5</text>
+<text x="197.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Oct 1</text>
+<text x="330.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Oct 3</text>
+<text x="463.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Oct 5</text>
+<text x="596.0" y="429.0" class="m" font-size="11" font-weight="400" text-anchor="middle">Oct 7</text>
 <rect class="acc" x="64" y="446" width="10" height="10" rx="2"/>
 <text x="79.0" y="455.0" class="m" font-size="11" font-weight="400" text-anchor="start">merged or earning a tier</text>
 <rect class="gry" x="242.8" y="446" width="10" height="10" rx="2"/>
