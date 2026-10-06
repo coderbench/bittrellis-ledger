@@ -1,27 +1,6 @@
-# BitTrellis score records (hpc01-e5)
+# BitTrellis score records (hpc01-e6)
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
-
-## Which checkpoint to use
-
-Every merged recipe trades a little of one thing for another. Pick by what you need; each change is against today's shipped checkpoint (V0).
-
-![The trade-off each merged recipe makes: prompt speed against closeness to the original model, with peak GPU memory](tradeoffs.svg)
-
-| Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
-|---|---|---|---|---|
-| **Closest to the original model** | `nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k`<br>#93 by @kaivexa ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | **0.0743 · 45.3% closer** | 13,731 tok/s · 19% slower | 22.68 GiB · 0.66 GiB more |
-| **Fastest prompt reading** | `nvfp4-blockfit-all-lmhead-q4k`<br>#28 by @cleanjunc ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | 0.0992 · 26.9% closer | **16,893 tok/s · 0% slower** | 22.02 GiB · 0.00 GiB less |
-| **Least GPU memory** | `q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead`<br>#87 by @cleanjunc ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.0899 · 33.7% closer | 8,849 tok/s · 48% slower | **20.56 GiB · 1.45 GiB less** |
-| *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,895 tok/s | 22.02 GiB |
-
-Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
-
-```bash
-bittrellis build manifests/nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k
-bittrellis build manifests/nvfp4-blockfit-all-lmhead-q4k.yaml --out models/nvfp4-blockfit-all-lmhead-q4k
-bittrellis build manifests/q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead.yaml --out models/q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead
-```
 
 ## Progress
 
@@ -32,7 +11,7 @@ bittrellis build manifests/q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead.yaml --out 
 Written by the evaluator after each pass. Re-derive any score yourself:
 
 ```bash
-bittrellis frontier hpc01-e5/accepted <your artifact>
+bittrellis frontier hpc01-e6/accepted <your artifact>
 ```
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
@@ -84,6 +63,6 @@ bittrellis frontier hpc01-e5/accepted <your artifact>
 |   | V6-mlp-q4k | 0.1294 | 563/784 | 96.3 | 9,978 | 20.84 | PASS | 0.000% |
 |   | V0-baseline-rebuild | 0.1357 | 564/784 | 95.0 | 16,895 | 22.02 | — | 0.000% |
 
-Epoch `hpc01-e5` · rules: [bittrellis](https://github.com/coderbench/bittrellis) ([specification](https://github.com/coderbench/bittrellis/blob/main/docs/specification.md)).
+Epoch `hpc01-e6` · rules: [bittrellis](https://github.com/coderbench/bittrellis) ([specification](https://github.com/coderbench/bittrellis/blob/main/docs/specification.md)).
 
 `results/` holds one record per evaluated pull-request head -- never rewritten, with any re-measurement published beside it as `.remeasured-N` -- `observations/` the first-seen record that decides who submitted a recipe first, and `accepted/` the artifacts of merged results. The private holdout never appears here: records carry PASS or FAIL only.
