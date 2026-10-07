@@ -10,7 +10,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
-| **Closest to the original model** | `nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k`<br>#103 by @Tet-9 ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.0628 · 53.7% closer** | 13,022 tok/s · 23% slower | 23.78 GiB · 1.76 GiB more |
+| **Closest to the original model** | `nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k`<br>#107 by @kaivexa ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | **0.0663 · 51.1% closer** | 14,509 tok/s · 14% slower | 23.39 GiB · 1.38 GiB more |
 | **Fastest prompt reading** | `nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k`<br>#105 by @Tet-9 ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.0798 · 41.2% closer | **16,059 tok/s · 5% slower** | 22.39 GiB · 0.37 GiB more |
 | **Least GPU memory** | `nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k`<br>#104 by @kaivexa ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.0754 · 44.5% closer | 13,725 tok/s · 19% slower | **21.67 GiB · 0.35 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,895 tok/s | 22.02 GiB |
@@ -18,7 +18,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
-bittrellis build manifests/nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k
+bittrellis build manifests/nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k
 bittrellis build manifests/nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k
 bittrellis build manifests/nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k
 ```
@@ -37,8 +37,9 @@ bittrellis frontier hpc01-e6/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k | 0.0628 | 567/784 | 83.4 | 13,022 | 23.78 | PASS | 0.135% |
-| ★ | nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0688 | 561/784 | 88.7 | 13,599 | 22.68 | PASS | 0.044% |
+|   | nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k | 0.0628 | 567/784 | 83.4 | 13,022 | 23.78 | PASS | 0.000% |
+| ★ | nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k | 0.0663 | 561/784 | 86.1 | 14,509 | 23.39 | PASS | 0.016% |
+| ★ | nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0688 | 561/784 | 88.7 | 13,599 | 22.68 | PASS | 0.021% |
 |   | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0743 | 570/784 | 88.7 | 13,731 | 22.68 | PASS | 0.000% |
 | ★ | nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k | 0.0754 | 574/784 | 94.4 | 13,725 | 21.67 | PASS | 0.049% |
 |   | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.2 | 14,666 | 23.39 | PASS | 0.000% |
