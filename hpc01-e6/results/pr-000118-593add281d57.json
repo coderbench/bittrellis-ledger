@@ -1,0 +1,67 @@
+{
+ "author": "cleanjunc",
+ "candidate": "8dfddd87a08ae460",
+ "first_seen": "2026-10-07T14:57:32.759386Z",
+ "gain": 0.0,
+ "head": "593add281d57ae6abe4245eff3d4d16b17e84be6",
+ "kind": "manifest",
+ "name": "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
+ "pr": 118,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 20.18194306641817,
+  "decode_spread": 3.408397610031725e-05,
+  "decode_tps": 88.0179,
+  "dominated_by": [
+   "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
+   "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
+   "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
+   "nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k"
+  ],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "8dfddd87a08ae460",
+  "kind": "internal",
+  "name": "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
+  "peak_gpu_gib": 22.916,
+  "peak_host_gib": 19.693,
+  "prefill_spread": 0.008500703154947784,
+  "prefill_tps": 14006.159,
+  "resident_after_load_gib": 21.6,
+  "rp_kl": 0.07114615056834445,
+  "rp_kl_raw": 0.07977094135712329,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9379393266740659,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.05693804403481823
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 23.89
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
