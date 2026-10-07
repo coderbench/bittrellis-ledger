@@ -2,6 +2,23 @@
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
 
+## Which checkpoint to use
+
+Every merged recipe trades a little of one thing for another. Pick by what you need; each change is against today's shipped checkpoint (V0).
+
+![The trade-off each merged recipe makes: prompt speed against closeness to the original model, with peak GPU memory](tradeoffs.svg)
+
+| Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
+|---|---|---|---|---|
+| **Closest to the original model · Fastest prompt reading · Least GPU memory** | `nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k`<br>#102 by @kaivexa ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.0688 · 49.3% closer** | **13,599 tok/s · 20% slower** | **22.68 GiB · 0.66 GiB more** |
+| *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,895 tok/s | 22.02 GiB |
+
+Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
+
+```bash
+bittrellis build manifests/nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k
+```
+
 ## Progress
 
 ![Frontier gain credited to merged pull requests over time, pull requests scored per day by outcome, and the authors with the most credited gain.](progress.svg)
@@ -16,7 +33,8 @@ bittrellis frontier hpc01-e6/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0743 | 570/784 | 88.7 | 13,731 | 22.68 | PASS | 0.003% |
+| ★ | nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0688 | 561/784 | 88.7 | 13,599 | 22.68 | PASS | 0.171% |
+|   | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0743 | 570/784 | 88.7 | 13,731 | 22.68 | PASS | 0.000% |
 |   | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.2 | 14,666 | 23.39 | PASS | 0.000% |
 | ★ | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-mlp-q4k-1-23-48-63-lmhead-q4k | 0.0763 | 577/784 | 89.4 | 10,261 | 21.99 | PASS | 0.009% |
 |   | nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k | 0.0782 | 575/784 | 88.9 | 14,534 | 22.84 | PASS | 0.000% |
