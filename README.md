@@ -10,12 +10,14 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
-| **Closest to the original model · Fastest prompt reading · Least GPU memory** | `nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k`<br>#102 by @kaivexa ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.0688 · 49.3% closer** | **13,599 tok/s · 20% slower** | **22.68 GiB · 0.66 GiB more** |
+| **Closest to the original model** | `nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k`<br>#103 by @Tet-9 ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.0628 · 53.7% closer** | 13,022 tok/s · 23% slower | 23.78 GiB · 1.76 GiB more |
+| **Fastest prompt reading · Least GPU memory** | `nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k`<br>#102 by @kaivexa ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | 0.0688 · 49.3% closer | **13,599 tok/s · 20% slower** | **22.68 GiB · 0.66 GiB more** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,895 tok/s | 22.02 GiB |
 
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
+bittrellis build manifests/nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k
 bittrellis build manifests/nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k
 ```
 
@@ -33,7 +35,8 @@ bittrellis frontier hpc01-e6/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0688 | 561/784 | 88.7 | 13,599 | 22.68 | PASS | 0.171% |
+| ★ | nvfp4-gptq-mlp-gdn-fp8-all-attn-q4k-lmhead-q4k | 0.0628 | 567/784 | 83.4 | 13,022 | 23.78 | PASS | 0.135% |
+| ★ | nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0688 | 561/784 | 88.7 | 13,599 | 22.68 | PASS | 0.044% |
 |   | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0743 | 570/784 | 88.7 | 13,731 | 22.68 | PASS | 0.000% |
 |   | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.2 | 14,666 | 23.39 | PASS | 0.000% |
 | ★ | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-mlp-q4k-1-23-48-63-lmhead-q4k | 0.0763 | 577/784 | 89.4 | 10,261 | 21.99 | PASS | 0.009% |
