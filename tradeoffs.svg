@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Trade-offs of 2 merged recipes against the shipped checkpoint">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Trade-offs of 3 merged recipes against the shipped checkpoint">
 <style>
 .bg{fill:#ffffff;stroke:#d0d7de}.t{fill:#1f2328}.m{fill:#59636e}.rule{stroke:#d0d7de}.ring{stroke:#ffffff}
 .acc{fill:#8b5cf6}.accl{stroke:#8b5cf6}.wash{fill:#8b5cf6;fill-opacity:.1}.gry{fill:#8c959f}.rej{fill:#d03b3b}.track{fill:#eaeef2}.tk{stroke:#1f2328}
@@ -71,9 +71,11 @@
 <circle class="tk" cx="822.4" cy="364.7" r="5" fill="none" stroke-width="2"/>
 <circle class="acc ring" cx="518.0" cy="102.0" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="563.4" cy="123.8" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="573.3" cy="147.3" r="5.5" stroke-width="2"/>
 <text x="813.4" y="368.7" class="t" font-size="11" font-weight="600" text-anchor="end">V0 shipped · 22.0 GiB</text>
 <text x="527.0" y="106.0" class="t" font-size="11" font-weight="600" text-anchor="start">#103 · 23.8 GiB</text>
 <text x="572.4" y="127.8" class="t" font-size="11" font-weight="600" text-anchor="start">#102 · 22.7 GiB</text>
+<text x="582.3" y="151.3" class="t" font-size="11" font-weight="600" text-anchor="start">#104 · 21.7 GiB</text>
 <circle class="acc" cx="29" cy="450" r="5"/>
 <text x="39.0" y="454.0" class="m" font-size="11" font-weight="400" text-anchor="start">merged pull request</text>
 <circle class="tk" cx="199" cy="450" r="5" fill="none" stroke-width="2"/>
