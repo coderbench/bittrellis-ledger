@@ -82,7 +82,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00043080319868007977,
+   "frontier_gain": 0.00043080319868002426,
    "dominated_by": []
   },
   {
@@ -148,6 +148,7 @@
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k",
@@ -290,7 +291,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 5.073433264612959e-07,
+   "frontier_gain": 5.07343326516807e-07,
    "dominated_by": []
   },
   {
@@ -364,7 +365,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.4944977744810757e-09,
+   "frontier_gain": 3.4944978022366513e-09,
    "dominated_by": []
   },
   {
@@ -428,6 +429,7 @@
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k",
@@ -530,6 +532,7 @@
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k",
@@ -605,6 +608,7 @@
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
@@ -703,6 +707,7 @@
     "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv12-51-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k"
    ]
@@ -741,6 +746,7 @@
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k",
@@ -795,7 +801,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.804039782617785e-07,
+   "frontier_gain": 3.804039782895341e-07,
    "dominated_by": []
   },
   {
@@ -995,6 +1001,7 @@
     "nvfp4-blockfit-gdn-fp8-qkv12-51-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k"
    ]
@@ -1020,7 +1027,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 5.2044696025044246e-08,
+   "frontier_gain": 5.204469599728867e-08,
    "dominated_by": []
   },
   {
@@ -1070,7 +1077,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00039223184921663434,
+   "frontier_gain": 0.0003922318492166066,
    "dominated_by": []
   },
   {
@@ -1149,6 +1156,7 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k"
@@ -1206,6 +1214,7 @@
    "dominated_by": [
     "nvfp4-blockfit-gdn-fp8-qkv12-51-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k"
    ]
   },
@@ -1310,7 +1319,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00015288962430995423,
+   "frontier_gain": 0.00015288962430998199,
    "dominated_by": []
   },
   {
@@ -1364,6 +1373,30 @@
    ]
   },
   {
+   "id": "f80ae4fa9354c744",
+   "name": "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
+   "kind": "internal",
+   "rp_kl": 0.071079036187379,
+   "rp_kl_raw": 0.07895927023972882,
+   "top1": 0.9365057343692194,
+   "decode_tps": 90.72094999999999,
+   "decode_spread": 7.164827969727627e-05,
+   "prefill_tps": 14902.008399999999,
+   "prefill_spread": 0.0027465693818827185,
+   "peak_gpu_gib": 22.547,
+   "resident_after_load_gib": 21.2,
+   "peak_host_gib": 19.246,
+   "checkpoint_gib": 19.732937034219503,
+   "tasks_passed": 569,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 9.182272708080363e-05,
+   "dominated_by": []
+  },
+  {
    "id": "7c813fef4272d57c",
    "name": "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
    "kind": "internal",
@@ -1409,9 +1442,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.00020832676367765757,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre"
+   ]
   },
   {
    "id": "5d24bc3d043c364f",
@@ -1434,7 +1469,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00015602263487068946,
+   "frontier_gain": 7.801070313162572e-05,
    "dominated_by": []
   },
   {
@@ -1458,7 +1493,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00029997301458217773,
+   "frontier_gain": 0.00023450701381927397,
    "dominated_by": []
   },
   {
@@ -1549,7 +1584,7 @@
   "nvfp4-blockfit-all-lmhead-q4k",
   "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
   "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
-  "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
+  "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
   "nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k",
   "nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k",
   "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
