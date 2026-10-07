@@ -12,7 +12,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 |---|---|---|---|---|
 | **Closest to the original model** | `nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k`<br>#107 by @kaivexa ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | **0.0663 · 51.1% closer** | 14,509 tok/s · 14% slower | 23.39 GiB · 1.38 GiB more |
 | **Fastest prompt reading** | `nvfp4-gptq-mlp-attn-q4k-lmhead-q4k`<br>#106 by @kaivexa ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.0807 · 40.5% closer | **15,707 tok/s · 7% slower** | 21.85 GiB · 0.16 GiB less |
-| **Least GPU memory** | `nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k`<br>#104 by @kaivexa ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.0754 · 44.5% closer | 13,725 tok/s · 19% slower | **21.67 GiB · 0.35 GiB less** |
+| **Least GPU memory** | `nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k`<br>#112 by @cleanjunc ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.0818 · 39.7% closer | 10,251 tok/s · 39% slower | **20.98 GiB · 1.03 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.1357 | 16,895 tok/s | 22.02 GiB |
 
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
@@ -20,7 +20,7 @@ Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://gith
 ```bash
 bittrellis build manifests/nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k
 bittrellis build manifests/nvfp4-gptq-mlp-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-attn-q4k-lmhead-q4k
-bittrellis build manifests/nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k
+bittrellis build manifests/nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k.yaml --out models/nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k
 ```
 
 ## Progress
@@ -41,13 +41,14 @@ bittrellis frontier hpc01-e6/accepted <your artifact>
 | ★ | nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k | 0.0663 | 561/784 | 86.1 | 14,509 | 23.39 | PASS | 0.016% |
 | ★ | nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0688 | 561/784 | 88.7 | 13,599 | 22.68 | PASS | 0.021% |
 |   | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k | 0.0743 | 570/784 | 88.7 | 13,731 | 22.68 | PASS | 0.000% |
-| ★ | nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k | 0.0754 | 574/784 | 94.4 | 13,725 | 21.67 | PASS | 0.032% |
+| ★ | nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k | 0.0754 | 574/784 | 94.4 | 13,725 | 21.67 | PASS | 0.030% |
 |   | gdn-fp8-state-blockfit | 0.0760 | 572/784 | 86.2 | 14,666 | 23.39 | PASS | 0.000% |
 |   | nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-mlp-q4k-1-23-48-63-lmhead-q4k | 0.0763 | 577/784 | 89.4 | 10,261 | 21.99 | PASS | 0.000% |
 |   | nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k | 0.0782 | 575/784 | 88.9 | 14,534 | 22.84 | PASS | 0.000% |
 |   | nvfp4-blockfit-gdn-fp8-qkv12-51-attn-q4k-lmhead-q4k | 0.0796 | 563/784 | 90.8 | 14,433 | 22.38 | PASS | 0.000% |
 |   | nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k | 0.0798 | 568/784 | 92.5 | 16,059 | 22.39 | PASS | 0.000% |
 | ★ | nvfp4-gptq-mlp-attn-q4k-lmhead-q4k | 0.0807 | 573/784 | 94.9 | 15,707 | 21.85 | PASS | 0.006% |
+| ★ | nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k | 0.0818 | 567/784 | 94.7 | 10,251 | 20.98 | PASS | 0.015% |
 |   | nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k | 0.0849 | 573/784 | 90.6 | 15,407 | 22.65 | PASS | 0.000% |
 |   | gdn-fp8-mlp-q4k-zo-deep-q4k | 0.0850 | 568/784 | 86.9 | 8,897 | 22.16 | PASS | 0.000% |
 |   | gdn-fp8-mlp-q4k-skip0 | 0.0853 | 566/784 | 84.0 | 8,816 | 22.82 | PASS | 0.000% |
@@ -60,7 +61,7 @@ bittrellis frontier hpc01-e6/accepted <your artifact>
 |   | nvfp4-blockfit-attn-q4k-lmhead-q4k | 0.0909 | 563/784 | 94.9 | 15,813 | 21.85 | PASS | 0.000% |
 | ★ | gdn-attn-q4k-early3-mid28-blockfit-rest-lmhead | 0.0921 | 572/784 | 95.3 | 12,506 | 21.36 | PASS | 0.003% |
 |   | gdn-fp8-qkv-out-q4k-mlp-early8-mid55 | 0.0938 | 570/784 | 88.1 | 10,255 | 22.25 | PASS | 0.000% |
-| ★ | gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead | 0.0946 | 566/784 | 95.7 | 10,890 | 21.08 | PASS | 0.002% |
+| ★ | gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead | 0.0946 | 566/784 | 95.7 | 10,890 | 21.08 | PASS | 0.000% |
 |   | gdn-fp8-lmhead-q4k | 0.0967 | 576/784 | 83.4 | 13,842 | 23.93 | PASS | 0.000% |
 | ★ | nvfp4-blockfit-all-lmhead-q4k | 0.0992 | 567/784 | 95.0 | 16,893 | 22.02 | PASS | 0.039% |
 |   | gdn-q4k-skip0-nvfp4-blockfit-rest-lmhead-q4k | 0.1015 | 578/784 | 95.2 | 13,954 | 21.64 | PASS | 0.000% |
@@ -69,7 +70,7 @@ bittrellis frontier hpc01-e6/accepted <your artifact>
 |   | gdn-q4k-fp8-mid24-35-unsloth-mlp0-27-lmhead | 0.1031 | 574/784 | 92.8 | 13,984 | 22.08 | PASS | 0.000% |
 |   | gdn-fp8-mid24-35-unsloth-mlp0-27-lmhead | 0.1078 | 575/784 | 92.6 | 16,217 | 22.39 | PASS | 0.000% |
 |   | gdn-fp8-qkv-all-zo-split | 0.1083 | 568/784 | 87.8 | 14,229 | 23.02 | PASS | 0.000% |
-| ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 95.7 | 10,417 | 20.92 | PASS | 0.001% |
+| ★ | gdn-attn-q4k-mlp-early8-mid24-skip0 | 0.1091 | 572/784 | 95.7 | 10,417 | 20.92 | PASS | 0.000% |
 |   | gdn-state-fp8-skip0 | 0.1115 | 573/784 | 86.1 | 14,568 | 23.51 | PASS | 0.000% |
 |   | gdn-attn-q4k-mlp-early3-mid28-skip0 | 0.1134 | 560/784 | 95.4 | 12,472 | 21.36 | PASS | 0.000% |
 |   | gdn-attn-q4k-mlp-mid | 0.1136 | 566/784 | 95.5 | 10,997 | 21.06 | PASS | 0.000% |

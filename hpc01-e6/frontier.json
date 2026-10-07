@@ -82,7 +82,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.000430803198680052,
+   "frontier_gain": 0.00043080319868007977,
    "dominated_by": []
   },
   {
@@ -265,7 +265,8 @@
     "gdn-attn-q4k-mlp-mid",
     "gdn-mlp-deep-q4k",
     "gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead",
-    "mlp-q4k-skip-layer0"
+    "mlp-q4k-skip-layer0",
+    "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
   },
   {
@@ -313,7 +314,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.8395493813532235e-05,
+   "frontier_gain": 2.7663652308551612e-05,
    "dominated_by": []
   },
   {
@@ -363,7 +364,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 6.77188036266041e-06,
+   "frontier_gain": 3.4944977744810757e-09,
    "dominated_by": []
   },
   {
@@ -527,6 +528,7 @@
     "nvfp4-blockfit-gdn-fp8-qkv12-51-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv16-47-zo24-35-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-mid24-35-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
@@ -563,6 +565,7 @@
     "nvfp4-blockfit-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-mlp-q4k-1-23-48-63-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k",
     "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
@@ -636,6 +639,7 @@
     "nvfp4-blockfit-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-mlp-q4k-1-23-48-63-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k"
    ]
@@ -667,6 +671,7 @@
     "gdn-q4k-fp8-mid24-35-mlp-q4k",
     "nvfp4-blockfit-attn-q4k-lmhead-q4k",
     "nvfp4-blockfit-gdn-qkv-attn-q4k-lmhead-q4k",
+    "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
     "nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k",
     "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
@@ -790,7 +795,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.8040397831728967e-07,
+   "frontier_gain": 3.804039782617785e-07,
    "dominated_by": []
   },
   {
@@ -842,6 +847,7 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
     "q4k-qkv-attn-mlp-nvfp4-blockfit-zo-lmhead"
    ]
   },
@@ -897,7 +903,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.201254186534607e-05,
+   "frontier_gain": 4.876480286714058e-06,
    "dominated_by": []
   },
   {
@@ -1014,7 +1020,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 5.204469599728867e-08,
+   "frontier_gain": 5.2044696025044246e-08,
    "dominated_by": []
   },
   {
@@ -1284,6 +1290,30 @@
    ]
   },
   {
+   "id": "c88b573e9b6f4a70",
+   "name": "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
+   "kind": "internal",
+   "rp_kl": 0.08180849595588405,
+   "rp_kl_raw": 0.09348269443850603,
+   "top1": 0.9331298557158713,
+   "decode_tps": 94.72710000000001,
+   "decode_spread": 0.0006165078420007768,
+   "prefill_tps": 10250.6515,
+   "prefill_spread": 0.0055773820815194115,
+   "peak_gpu_gib": 20.982,
+   "resident_after_load_gib": 19.6,
+   "peak_host_gib": 37.403,
+   "checkpoint_gib": 37.8936220780015,
+   "tasks_passed": 567,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.00015288962430995423,
+   "dominated_by": []
+  },
+  {
    "id": "9c132e986bdadb9e",
    "name": "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
    "kind": "internal",
@@ -1380,7 +1410,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00020832676367760206,
+   "frontier_gain": 0.00020832676367765757,
    "dominated_by": []
   },
   {
@@ -1404,7 +1434,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0001560226348706617,
+   "frontier_gain": 0.00015602263487068946,
    "dominated_by": []
   },
   {
@@ -1428,7 +1458,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0003159647483944039,
+   "frontier_gain": 0.00029997301458217773,
    "dominated_by": []
   },
   {
@@ -1452,7 +1482,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00013471787316024497,
+   "frontier_gain": 0.0001337594755995708,
    "dominated_by": []
   }
  ],
@@ -1517,6 +1547,7 @@
   "gdn-q4k-mlp-early8-mid24-skip0-attn-blockfit-rest-lmhead",
   "gdn-zo-deep-mlp-skip0",
   "nvfp4-blockfit-all-lmhead-q4k",
+  "nvfp4-gptq-mlp-0-24-47-q4k-mlp-1-23-48-63-gdn-qkv-attn-q4k-lmhead-q4k",
   "nvfp4-gptq-mlp-attn-q4k-lmhead-q4k",
   "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
   "nvfp4-gptq-mlp-gdn-fp8-state-lmhead-q4k",
