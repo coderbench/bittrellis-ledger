@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Trade-offs of 0 merged recipes against the shipped checkpoint">
+<style>
+.bg{fill:#ffffff;stroke:#d0d7de}.t{fill:#1f2328}.m{fill:#59636e}.rule{stroke:#d0d7de}.ring{stroke:#ffffff}
+.acc{fill:#8b5cf6}.accl{stroke:#8b5cf6}.wash{fill:#8b5cf6;fill-opacity:.1}.gry{fill:#8c959f}.rej{fill:#d03b3b}.track{fill:#eaeef2}.tk{stroke:#1f2328}
+@media (prefers-color-scheme: dark){
+.bg{fill:#0d1117;stroke:#30363d}.t{fill:#e6edf3}.m{fill:#9198a1}.rule{stroke:#30363d}.ring{stroke:#0d1117}
+.acc{fill:#9a75f8}.accl{stroke:#9a75f8}.wash{fill:#9a75f8;fill-opacity:.14}.gry{fill:#9198a1}.rej{fill:#e5534b}.track{fill:#21262d}.tk{stroke:#e6edf3}}
+</style>
+<rect class="bg" x="0.5" y="0.5" width="899" height="469" rx="12"/>
+<text x="24.0" y="36.0" class="t" font-size="18" font-weight="600" text-anchor="start">Which trade-off each merged recipe makes</text>
+<text x="24.0" y="57.0" class="m" font-size="12" font-weight="400" text-anchor="start">Up is closer to the original model; right reads prompts faster. Labels give peak GPU memory.</text>
+<line class="rule" x1="84" x2="870" y1="92.0" y2="92.0" stroke-width="1"/>
+<text x="76.0" y="96.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.025</text>
+<line class="rule" x1="84" x2="870" y1="164.0" y2="164.0" stroke-width="1"/>
+<text x="76.0" y="168.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.050</text>
+<line class="rule" x1="84" x2="870" y1="236.0" y2="236.0" stroke-width="1"/>
+<text x="76.0" y="240.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.075</text>
+<line class="rule" x1="84" x2="870" y1="308.0" y2="308.0" stroke-width="1"/>
+<text x="76.0" y="312.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.100</text>
+<line class="rule" x1="84" x2="870" y1="380.0" y2="380.0" stroke-width="1"/>
+<text x="76.0" y="384.0" class="m" font-size="11" font-weight="400" text-anchor="end">0.125</text>
+<text x="84.0" y="398.0" class="m" font-size="11" font-weight="400" text-anchor="middle">36,000</text>
+<text x="241.2" y="398.0" class="m" font-size="11" font-weight="400" text-anchor="middle">37,000</text>
+<text x="398.4" y="398.0" class="m" font-size="11" font-weight="400" text-anchor="middle">38,000</text>
+<text x="555.6" y="398.0" class="m" font-size="11" font-weight="400" text-anchor="middle">39,000</text>
+<text x="712.8" y="398.0" class="m" font-size="11" font-weight="400" text-anchor="middle">40,000</text>
+<text x="870.0" y="398.0" class="m" font-size="11" font-weight="400" text-anchor="middle">41,000</text>
+<text x="477.0" y="420.0" class="m" font-size="12" font-weight="400" text-anchor="middle">Prompt reading speed, 4K prefill tok/s →</text>
+<text x="22" y="236.0" class="m" font-size="12" text-anchor="middle" transform="rotate(-90 22 236.0)">Drift from the original, RP-KL (closer ↑)</text>
+<text x="866.0" y="108.0" class="m" font-size="12" font-weight="600" text-anchor="end">better ↗</text>
+<circle class="gry" cx="608.0" cy="152.5" r="4" opacity=".55"/>
+<circle class="gry" cx="754.5" cy="367.7" r="4" opacity=".55"/>
+<circle class="gry" cx="240.6" cy="117.8" r="4" opacity=".55"/>
+<circle class="tk" cx="590.9" cy="149.7" r="5" fill="none" stroke-width="2"/>
+<text x="599.9" y="153.7" class="t" font-size="11" font-weight="600" text-anchor="start">V0 shipped · 25.5 GiB</text>
+<circle class="acc" cx="29" cy="450" r="5"/>
+<text x="39.0" y="454.0" class="m" font-size="11" font-weight="400" text-anchor="start">merged pull request</text>
+<circle class="tk" cx="199" cy="450" r="5" fill="none" stroke-width="2"/>
+<text x="209.0" y="454.0" class="m" font-size="11" font-weight="400" text-anchor="start">V0, the shipped checkpoint</text>
+<circle class="gry" cx="399" cy="450" r="4" opacity=".55"/>
+<text x="409.0" y="454.0" class="m" font-size="11" font-weight="400" text-anchor="start">other measured results</text>
+</svg>
