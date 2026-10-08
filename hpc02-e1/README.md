@@ -10,7 +10,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
-| **Closest to the original model** | `ud-lmhead-q4k-embed-q4k`<br>#124 by @cleanjunc ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.0459 · 1.9% further** | 39,071 tok/s · 0% slower | 25.12 GiB · 0.39 GiB less |
+| **Closest to the original model** | `ud-exps-gate-up-q5k`<br>#133 by @kaivexa ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | **0.0366 · 18.8% closer** | 37,387 tok/s · 5% slower | 28.01 GiB · 2.50 GiB more |
 | **Fastest prompt reading** | `ud-downs-q4k-lmhead-embed-q4k`<br>#126 by @cleanjunc ![eval:XL](https://img.shields.io/badge/eval%3AXL-0e8a16?style=flat-square) | 0.0493 · 9.4% further | **40,165 tok/s · 3% faster** | 23.96 GiB · 1.54 GiB less |
 | **Least GPU memory** | `pr129-recurrent-zo-q4k`<br>#130 by @cleanjunc ![eval:L](https://img.shields.io/badge/eval%3AL-2da44e?style=flat-square) | 0.0965 · 114.2% further | 39,890 tok/s · 2% faster | **23.50 GiB · 2.01 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.0450 | 39,151 tok/s | 25.51 GiB |
@@ -18,7 +18,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
-bittrellis build manifests/ud-lmhead-q4k-embed-q4k.yaml --out models/ud-lmhead-q4k-embed-q4k
+bittrellis build manifests/ud-exps-gate-up-q5k.yaml --out models/ud-exps-gate-up-q5k
 bittrellis build manifests/ud-downs-q4k-lmhead-embed-q4k.yaml --out models/ud-downs-q4k-lmhead-embed-q4k
 bittrellis build manifests/pr129-recurrent-zo-q4k.yaml --out models/pr129-recurrent-zo-q4k
 ```
@@ -37,7 +37,8 @@ bittrellis --track HPC-02 frontier hpc02-e1/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | V3-exps-q5k-down-q6k | 0.0340 | 564/784 | 383.6 | 37,001 | 29.24 | PASS | 0.368% |
+| ★ | V3-exps-q5k-down-q6k | 0.0340 | 564/784 | 383.6 | 37,001 | 29.24 | PASS | 0.024% |
+| ★ | ud-exps-gate-up-q5k | 0.0366 | 562/784 | 387.0 | 37,387 | 28.01 | PASS | 0.040% |
 |   | V0-unsloth-ud | 0.0450 | 570/784 | 398.5 | 39,151 | 25.51 | — | 0.000% |
 | ★ | ud-lmhead-q4k-embed-q4k | 0.0459 | 566/784 | 398.9 | 39,071 | 25.12 | PASS | 0.002% |
 |   | V1-kq-rtn-udmap | 0.0460 | 563/784 | 398.9 | 39,216 | 25.51 | PASS | 0.000% |
