@@ -27,65 +27,65 @@
 <text x="477.0" y="420.0" class="m" font-size="12" font-weight="400" text-anchor="middle">Prompt reading speed, 4K prefill tok/s →</text>
 <text x="22" y="236.0" class="m" font-size="12" text-anchor="middle" transform="rotate(-90 22 236.0)">Drift from the original, RP-KL (closer ↑)</text>
 <text x="866.0" y="108.0" class="m" font-size="12" font-weight="600" text-anchor="end">better ↗</text>
-<circle class="gry" cx="171.9" cy="287.3" r="4" opacity=".55"/>
-<circle class="gry" cx="576.1" cy="244.5" r="4" opacity=".55"/>
-<circle class="gry" cx="587.3" cy="331.4" r="4" opacity=".55"/>
-<circle class="gry" cx="733.2" cy="337.4" r="4" opacity=".55"/>
-<circle class="gry" cx="278.8" cy="341.9" r="4" opacity=".55"/>
-<circle class="gry" cx="264.3" cy="324.8" r="4" opacity=".55"/>
-<circle class="gry" cx="194.3" cy="300.4" r="4" opacity=".55"/>
-<circle class="gry" cx="477.5" cy="207.6" r="4" opacity=".55"/>
-<circle class="gry" cx="474.8" cy="284.3" r="4" opacity=".55"/>
-<circle class="gry" cx="313.3" cy="268.7" r="4" opacity=".55"/>
-<circle class="gry" cx="358.9" cy="285.0" r="4" opacity=".55"/>
-<circle class="gry" cx="582.5" cy="224.2" r="4" opacity=".55"/>
-<circle class="gry" cx="769.6" cy="296.2" r="4" opacity=".55"/>
-<circle class="gry" cx="769.2" cy="264.3" r="4" opacity=".55"/>
-<circle class="gry" cx="187.4" cy="182.9" r="4" opacity=".55"/>
-<circle class="gry" cx="193.8" cy="181.9" r="4" opacity=".55"/>
-<circle class="gry" cx="612.9" cy="266.0" r="4" opacity=".55"/>
-<circle class="gry" cx="300.5" cy="213.8" r="4" opacity=".55"/>
-<circle class="gry" cx="196.2" cy="190.0" r="4" opacity=".55"/>
-<circle class="gry" cx="647.2" cy="149.7" r="4" opacity=".55"/>
-<circle class="gry" cx="428.3" cy="197.1" r="4" opacity=".55"/>
-<circle class="gry" cx="410.4" cy="329.0" r="4" opacity=".55"/>
-<circle class="gry" cx="201.3" cy="246.5" r="4" opacity=".55"/>
-<circle class="gry" cx="197.3" cy="196.1" r="4" opacity=".55"/>
-<circle class="gry" cx="593.6" cy="247.1" r="4" opacity=".55"/>
-<circle class="gry" cx="350.5" cy="216.4" r="4" opacity=".55"/>
-<circle class="gry" cx="589.5" cy="311.5" r="4" opacity=".55"/>
-<circle class="gry" cx="591.3" cy="241.3" r="4" opacity=".55"/>
-<circle class="gry" cx="639.5" cy="277.3" r="4" opacity=".55"/>
-<circle class="gry" cx="237.2" cy="300.2" r="4" opacity=".55"/>
-<circle class="gry" cx="282.0" cy="325.5" r="4" opacity=".55"/>
-<circle class="gry" cx="822.3" cy="233.1" r="4" opacity=".55"/>
-<circle class="gry" cx="737.4" cy="203.4" r="4" opacity=".55"/>
-<circle class="gry" cx="767.7" cy="198.4" r="4" opacity=".55"/>
-<circle class="gry" cx="573.7" cy="143.5" r="4" opacity=".55"/>
-<circle class="gry" cx="301.0" cy="150.8" r="4" opacity=".55"/>
-<circle class="gry" cx="636.8" cy="157.7" r="4" opacity=".55"/>
-<circle class="gry" cx="629.0" cy="162.6" r="4" opacity=".55"/>
-<circle class="gry" cx="705.5" cy="181.8" r="4" opacity=".55"/>
-<circle class="gry" cx="580.2" cy="185.0" r="4" opacity=".55"/>
-<circle class="gry" cx="190.0" cy="199.8" r="4" opacity=".55"/>
-<circle class="tk" cx="822.4" cy="364.7" r="5" fill="none" stroke-width="2"/>
-<circle class="acc ring" cx="300.2" cy="170.5" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="729.1" cy="166.7" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="518.0" cy="102.0" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="665.8" cy="131.9" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="756.7" cy="163.3" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="563.4" cy="123.8" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="634.9" cy="114.8" r="5.5" stroke-width="2"/>
-<circle class="acc ring" cx="573.3" cy="147.3" r="5.5" stroke-width="2"/>
-<text x="813.4" y="368.7" class="t" font-size="11" font-weight="600" text-anchor="end">V0 shipped · 22.0 GiB</text>
-<text x="527.0" y="106.0" class="t" font-size="11" font-weight="600" text-anchor="start">#103 · 23.8 GiB</text>
-<text x="643.9" y="118.8" class="t" font-size="11" font-weight="600" text-anchor="start">#107 · 23.4 GiB</text>
-<text x="554.4" y="127.8" class="t" font-size="11" font-weight="600" text-anchor="end">#102 · 22.7 GiB</text>
-<text x="674.8" y="135.9" class="t" font-size="11" font-weight="600" text-anchor="start">#117 · 22.5 GiB</text>
-<text x="582.3" y="151.3" class="t" font-size="11" font-weight="600" text-anchor="start">#104 · 21.7 GiB</text>
-<text x="765.7" y="167.3" class="t" font-size="11" font-weight="600" text-anchor="start">#105 · 22.4 GiB</text>
-<text x="720.1" y="170.7" class="t" font-size="11" font-weight="600" text-anchor="end">#106 · 21.9 GiB</text>
-<text x="309.2" y="174.5" class="t" font-size="11" font-weight="600" text-anchor="start">#112 · 21.0 GiB</text>
+<circle class="gry" cx="154.6" cy="287.3" r="4" opacity=".55"/>
+<circle class="gry" cx="558.7" cy="244.5" r="4" opacity=".55"/>
+<circle class="gry" cx="570.2" cy="331.4" r="4" opacity=".55"/>
+<circle class="gry" cx="721.3" cy="337.4" r="4" opacity=".55"/>
+<circle class="gry" cx="268.7" cy="341.9" r="4" opacity=".55"/>
+<circle class="gry" cx="254.9" cy="324.8" r="4" opacity=".55"/>
+<circle class="gry" cx="172.9" cy="300.4" r="4" opacity=".55"/>
+<circle class="gry" cx="471.1" cy="207.6" r="4" opacity=".55"/>
+<circle class="gry" cx="467.5" cy="284.3" r="4" opacity=".55"/>
+<circle class="gry" cx="302.1" cy="268.7" r="4" opacity=".55"/>
+<circle class="gry" cx="350.7" cy="285.0" r="4" opacity=".55"/>
+<circle class="gry" cx="571.6" cy="224.2" r="4" opacity=".55"/>
+<circle class="gry" cx="748.8" cy="296.2" r="4" opacity=".55"/>
+<circle class="gry" cx="736.1" cy="264.3" r="4" opacity=".55"/>
+<circle class="gry" cx="181.9" cy="182.9" r="4" opacity=".55"/>
+<circle class="gry" cx="183.7" cy="181.9" r="4" opacity=".55"/>
+<circle class="gry" cx="603.8" cy="266.0" r="4" opacity=".55"/>
+<circle class="gry" cx="292.1" cy="213.8" r="4" opacity=".55"/>
+<circle class="gry" cx="180.1" cy="190.0" r="4" opacity=".55"/>
+<circle class="gry" cx="613.1" cy="149.7" r="4" opacity=".55"/>
+<circle class="gry" cx="426.3" cy="197.1" r="4" opacity=".55"/>
+<circle class="gry" cx="400.7" cy="329.0" r="4" opacity=".55"/>
+<circle class="gry" cx="189.6" cy="246.5" r="4" opacity=".55"/>
+<circle class="gry" cx="186.0" cy="196.1" r="4" opacity=".55"/>
+<circle class="gry" cx="588.7" cy="247.1" r="4" opacity=".55"/>
+<circle class="gry" cx="343.0" cy="216.4" r="4" opacity=".55"/>
+<circle class="gry" cx="581.1" cy="311.5" r="4" opacity=".55"/>
+<circle class="gry" cx="586.2" cy="241.3" r="4" opacity=".55"/>
+<circle class="gry" cx="626.2" cy="277.3" r="4" opacity=".55"/>
+<circle class="gry" cx="227.8" cy="300.2" r="4" opacity=".55"/>
+<circle class="gry" cx="277.6" cy="325.5" r="4" opacity=".55"/>
+<circle class="gry" cx="815.5" cy="233.1" r="4" opacity=".55"/>
+<circle class="gry" cx="732.5" cy="203.4" r="4" opacity=".55"/>
+<circle class="gry" cx="735.5" cy="198.4" r="4" opacity=".55"/>
+<circle class="gry" cx="564.4" cy="143.5" r="4" opacity=".55"/>
+<circle class="gry" cx="289.3" cy="150.8" r="4" opacity=".55"/>
+<circle class="gry" cx="627.3" cy="157.7" r="4" opacity=".55"/>
+<circle class="gry" cx="619.0" cy="162.6" r="4" opacity=".55"/>
+<circle class="gry" cx="700.9" cy="181.8" r="4" opacity=".55"/>
+<circle class="gry" cx="570.8" cy="185.0" r="4" opacity=".55"/>
+<circle class="gry" cx="185.5" cy="199.8" r="4" opacity=".55"/>
+<circle class="tk" cx="805.4" cy="364.7" r="5" fill="none" stroke-width="2"/>
+<circle class="acc ring" cx="294.2" cy="170.5" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="719.5" cy="166.7" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="493.5" cy="102.0" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="666.8" cy="131.9" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="759.5" cy="163.3" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="564.9" cy="123.8" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="637.1" cy="114.8" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="571.0" cy="147.3" r="5.5" stroke-width="2"/>
+<text x="796.4" y="368.7" class="t" font-size="11" font-weight="600" text-anchor="end">V0 shipped · 22.0 GiB</text>
+<text x="502.5" y="106.0" class="t" font-size="11" font-weight="600" text-anchor="start">#103 · 23.8 GiB</text>
+<text x="646.1" y="118.8" class="t" font-size="11" font-weight="600" text-anchor="start">#107 · 23.4 GiB</text>
+<text x="555.9" y="127.8" class="t" font-size="11" font-weight="600" text-anchor="end">#102 · 22.7 GiB</text>
+<text x="675.8" y="135.9" class="t" font-size="11" font-weight="600" text-anchor="start">#117 · 22.5 GiB</text>
+<text x="580.0" y="151.3" class="t" font-size="11" font-weight="600" text-anchor="start">#104 · 21.7 GiB</text>
+<text x="768.5" y="167.3" class="t" font-size="11" font-weight="600" text-anchor="start">#105 · 22.4 GiB</text>
+<text x="710.5" y="170.7" class="t" font-size="11" font-weight="600" text-anchor="end">#106 · 21.9 GiB</text>
+<text x="303.2" y="174.5" class="t" font-size="11" font-weight="600" text-anchor="start">#112 · 21.0 GiB</text>
 <circle class="acc" cx="29" cy="450" r="5"/>
 <text x="39.0" y="454.0" class="m" font-size="11" font-weight="400" text-anchor="start">merged pull request</text>
 <circle class="tk" cx="199" cy="450" r="5" fill="none" stroke-width="2"/>
