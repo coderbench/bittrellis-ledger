@@ -2,6 +2,8 @@
 
 > Every evaluated pull request, the frontier it was ranked against, and the artifacts behind both.
 
+Other tracks: [hpc02-e1](hpc02-e1/README.md)
+
 ## Which checkpoint to use
 
 Every merged recipe trades a little of one thing for another. Pick by what you need; each change is against today's shipped checkpoint (V0).
