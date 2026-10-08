@@ -1,0 +1,68 @@
+{
+ "author": "cleanjunc",
+ "candidate": "1cb1055429e7b128",
+ "first_seen": "2026-10-08T10:26:51.930778Z",
+ "gain": 0.0,
+ "head": "ad31c7767207df7fd5244df9758b6890271434bc",
+ "kind": "manifest",
+ "name": "pr118-attention-runtime-q4-k-3-7-11-15-19-23-27-31-recurrent-qkv-fp8-12-14-16-18-1cb10554",
+ "pr": 121,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 20.96806936711073,
+  "decode_spread": 3.067312165476226e-05,
+  "decode_tps": 88.02495,
+  "dominated_by": [
+   "nvfp4-blockfit-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
+   "nvfp4-blockfit-gdn-fp8-qkv-lmhead-q4k",
+   "nvfp4-gptq-mlp-gdn-fp8-mid24-35-attn-o-q4k-lmhead-q4k-recurrent-qkv-fp8-1-2-4-6-8-10-52-54-56-58-60-62-recurre",
+   "nvfp4-gptq-mlp-gdn-fp8-qkv-attn-q4k-lmhead-q4k",
+   "nvfp4-gptq-mlp-gdn-qkv-attn-q4k-lmhead-q4k"
+  ],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "1cb1055429e7b128",
+  "kind": "internal",
+  "name": "pr118-attention-runtime-q4-k-3-7-11-15-19-23-27-31-recurrent-qkv-fp8-12-14-16-18-1cb10554",
+  "peak_gpu_gib": 22.824,
+  "peak_host_gib": 20.481,
+  "prefill_spread": 0.0026990694277242004,
+  "prefill_tps": 13421.47765,
+  "resident_after_load_gib": 21.5,
+  "rp_kl": 0.07193364162547435,
+  "rp_kl_raw": 0.07646647448432024,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9389104698483167,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.03399897593445981
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 23.89
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
