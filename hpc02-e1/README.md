@@ -10,13 +10,15 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
-| **Closest to the original model · Fastest prompt reading · Least GPU memory** | `ud-lmhead-q4k-embed-q4k`<br>#124 by @cleanjunc ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.0459 · 1.9% further** | **39,265 tok/s · 0% faster** | **25.12 GiB · 0.39 GiB less** |
+| **Closest to the original model** | `ud-lmhead-q4k-embed-q4k`<br>#124 by @cleanjunc ![eval:M](https://img.shields.io/badge/eval%3AM-4ac26b?style=flat-square) | **0.0459 · 1.9% further** | 39,265 tok/s · 0% faster | 25.12 GiB · 0.39 GiB less |
+| **Fastest prompt reading · Least GPU memory** | `ud-downs-q4k-lmhead-embed-q4k`<br>#126 by @cleanjunc ![eval:XL](https://img.shields.io/badge/eval%3AXL-0e8a16?style=flat-square) | 0.0493 · 9.4% further | **40,279 tok/s · 3% faster** | **23.96 GiB · 1.54 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.0450 | 39,225 tok/s | 25.51 GiB |
 
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
 bittrellis build manifests/ud-lmhead-q4k-embed-q4k.yaml --out models/ud-lmhead-q4k-embed-q4k
+bittrellis build manifests/ud-downs-q4k-lmhead-embed-q4k.yaml --out models/ud-downs-q4k-lmhead-embed-q4k
 ```
 
 ## Progress
@@ -35,9 +37,10 @@ bittrellis --track HPC-02 frontier hpc02-e1/accepted <your artifact>
 |---|---|---:|---:|---:|---:|---:|---|---:|
 | ★ | V3-exps-q5k-down-q6k | 0.0340 | 564/784 | 382.3 | 36,996 | 29.24 | PASS | 0.364% |
 |   | V0-unsloth-ud | 0.0450 | 570/784 | 397.4 | 39,225 | 25.51 | — | 0.000% |
-| ★ | ud-lmhead-q4k-embed-q4k | 0.0459 | 566/784 | 397.7 | 39,265 | 25.12 | PASS | 0.131% |
+| ★ | ud-lmhead-q4k-embed-q4k | 0.0459 | 566/784 | 397.7 | 39,265 | 25.12 | PASS | 0.002% |
 |   | V1-kq-rtn-udmap | 0.0460 | 563/784 | 397.4 | 39,333 | 25.51 | PASS | 0.000% |
-| ★ | V2-all-q4k | 0.1207 | 573/784 | 466.3 | 40,265 | 23.25 | PASS | 9.032% |
+| ★ | ud-downs-q4k-lmhead-embed-q4k | 0.0493 | 570/784 | 403.1 | 40,279 | 23.96 | PASS | 0.536% |
+| ★ | V2-all-q4k | 0.1207 | 573/784 | 466.3 | 40,265 | 23.25 | PASS | 7.128% |
 
 Epoch `hpc02-e1` · rules: [bittrellis](https://github.com/coderbench/bittrellis) ([specification](https://github.com/coderbench/bittrellis/blob/main/docs/specification.md)).
 
