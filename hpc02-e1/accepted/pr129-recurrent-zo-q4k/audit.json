@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "errors": [],
+  "n_errors": 0,
+  "candidate_id": "6437d94728eaca17",
+  "lineage": {
+    "kq_rtn@v1": {
+      "lineage": "regenerable",
+      "units": 129,
+      "sampled": [
+        "L18.gdn.qkv",
+        "L22.gdn.z",
+        "L8.gdn.z",
+        "embed",
+        "lm_head"
+      ]
+    },
+    "unsloth_ud@v1": {
+      "lineage": "attested",
+      "units": 243,
+      "checked": 243
+    }
+  },
+  "checkpoint_files": {
+    "model.gguf": "cc0a073e1ba244e8b121606fb3b9438447a1a9ae5a0531cb23ecd32e26c2d7ad"
+  }
+}
