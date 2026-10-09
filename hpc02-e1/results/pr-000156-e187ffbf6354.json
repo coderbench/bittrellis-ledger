@@ -1,0 +1,69 @@
+{
+ "author": "DripMicro",
+ "candidate": "d12680c956e6545c",
+ "first_seen": "2026-10-09T20:47:14.893595Z",
+ "gain": 0.00013317443739230272,
+ "head": "e187ffbf6354310189a08a5573c8033eb2465f60",
+ "kind": "manifest",
+ "name": "pr147-shallow-zo-q5k-downs-q4k",
+ "pr": 156,
+ "references": [
+  "146-747f845d9d9f",
+  "148-416837e9700d",
+  "151-6fe4e5b11316",
+  "152-d7a1fde93a3c"
+ ],
+ "row": {
+  "checkpoint_gib": 18.372648924589157,
+  "decode_spread": 0.0003892592287226688,
+  "decode_tps": 474.2341,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.00013317443739230272,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "d12680c956e6545c",
+  "kind": "internal",
+  "name": "pr147-shallow-zo-q5k-downs-q4k",
+  "peak_gpu_gib": 23.208,
+  "peak_host_gib": 18.89,
+  "prefill_spread": 0.0004896421657725675,
+  "prefill_tps": 40201.39885,
+  "resident_after_load_gib": 22.0,
+  "rp_kl": 0.08755004224803288,
+  "rp_kl_raw": 0.08607641878937529,
+  "tasks_n": 784,
+  "tasks_passed": 562,
+  "top1": 0.9274879763226045,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": {
+    "author": "cleanjunc",
+    "first_seen": "2026-10-09T16:00:32.129158Z",
+    "pr": 153
+   },
+   "details": {
+    "earlier_near_copies_by_author": 1,
+    "share_different": 0.007266121707538601
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": "0.73% of weights differ from #153; credited only for what it adds"
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 24.12
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "XS"
+}
