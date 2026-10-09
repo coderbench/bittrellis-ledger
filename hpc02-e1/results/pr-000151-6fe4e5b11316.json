@@ -1,0 +1,63 @@
+{
+ "author": "ismayilovibadet802-svg",
+ "candidate": "7117b794c275d4a8",
+ "first_seen": "2026-10-09T08:55:15.571729Z",
+ "gain": 0.0003360316942225272,
+ "head": "6fe4e5b113160e72fd72c6188beee42b63d3d016",
+ "kind": "manifest",
+ "name": "ud-exps-gate-up-q5k-downs-gdn-qkv-q4k-kq-imat-lmhead-q8",
+ "pr": 151,
+ "references": [
+  "147-4a15dff285ed",
+  "148-416837e9700d",
+  "149-6ad34233921c"
+ ],
+ "row": {
+  "checkpoint_gib": 21.645109862089157,
+  "decode_spread": 4.737451734236317e-05,
+  "decode_tps": 420.05705,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.0003360316942225272,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "7117b794c275d4a8",
+  "kind": "internal",
+  "name": "ud-exps-gate-up-q5k-downs-gdn-qkv-q4k-kq-imat-lmhead-q8",
+  "peak_gpu_gib": 26.653,
+  "peak_host_gib": 22.163,
+  "prefill_spread": 0.0012105402899523642,
+  "prefill_tps": 38415.82175,
+  "resident_after_load_gib": 25.7,
+  "rp_kl": 0.051175521020894704,
+  "rp_kl_raw": 0.053296627955924915,
+  "tasks_n": 784,
+  "tasks_passed": 564,
+  "top1": 0.9421938586755457,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.33923705722070846
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 27.4
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "XS"
+}

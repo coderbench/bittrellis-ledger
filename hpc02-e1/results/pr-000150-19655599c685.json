@@ -1,0 +1,68 @@
+{
+ "author": "ismayilovibadet802-svg",
+ "candidate": "acf587d194ccadf2",
+ "first_seen": "2026-10-09T08:55:15.571662Z",
+ "gain": 0.0,
+ "head": "19655599c6850c4ec1d46134e529184f4356337c",
+ "kind": "manifest",
+ "name": "pr142-attention-qo-11-39-downs-kq-imat",
+ "pr": 150,
+ "references": [
+  "147-4a15dff285ed",
+  "148-416837e9700d",
+  "149-6ad34233921c"
+ ],
+ "row": {
+  "checkpoint_gib": 18.819464415311813,
+  "decode_spread": 0.0008840384956023762,
+  "decode_tps": 462.08395,
+  "dominated_by": [
+   "pr145-kq-imat"
+  ],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "acf587d194ccadf2",
+  "kind": "internal",
+  "name": "pr142-attention-qo-11-39-downs-kq-imat",
+  "peak_gpu_gib": 23.714,
+  "peak_host_gib": 19.337,
+  "prefill_spread": 0.005203329841885295,
+  "prefill_tps": 40136.452300000004,
+  "resident_after_load_gib": 22.6,
+  "rp_kl": 0.07946100184364459,
+  "rp_kl_raw": 0.07914201154297948,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9273029966703663,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.05697850438994853
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 24.57
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
