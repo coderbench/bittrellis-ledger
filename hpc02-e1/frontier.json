@@ -109,7 +109,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0007499459588514723,
+   "frontier_gain": 0.0007499459588514168,
    "dominated_by": []
   },
   {
@@ -133,7 +133,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00024065592171990113,
+   "frontier_gain": 0.00024065592171984562,
    "dominated_by": []
   },
   {
@@ -181,7 +181,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00013474269416680063,
+   "frontier_gain": 0.00013474269416691165,
    "dominated_by": []
   },
   {
@@ -229,7 +229,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0011921629609014106,
+   "frontier_gain": 0.001192162960901355,
    "dominated_by": []
   },
   {
@@ -257,6 +257,30 @@
    "dominated_by": []
   },
   {
+   "id": "ddc66bae7cac4a88",
+   "name": "ud-downs-q6k-imat-lmhead-q8",
+   "kind": "internal",
+   "rp_kl": 0.038448080553315854,
+   "rp_kl_raw": 0.041622392967664,
+   "top1": 0.9483444321124677,
+   "decode_tps": 393.7928,
+   "decode_spread": 5.637482452700506e-05,
+   "prefill_tps": 38180.61915,
+   "prefill_spread": 0.0012367400280882885,
+   "peak_gpu_gib": 26.966,
+   "resident_after_load_gib": 26.0,
+   "peak_host_gib": 22.475,
+   "checkpoint_gib": 21.957609862089157,
+   "tasks_passed": 566,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.00030329195578554513,
+   "dominated_by": []
+  },
+  {
    "id": "bffba4a1c97e6768",
    "name": "ud-exps-gate-up-q5k",
    "kind": "internal",
@@ -276,9 +300,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.0003963346458176198,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "ud-downs-q6k-imat-lmhead-q8"
+   ]
   },
   {
    "id": "12ab125a17c04fc7",
@@ -301,7 +327,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.441566879707313e-05,
+   "frontier_gain": 2.441566879701762e-05,
    "dominated_by": []
   }
  ],
@@ -314,7 +340,7 @@
   "pr130-attention-qo-11-39-q4k",
   "ud-downs-q4k-gdn-qkv-q4k-lmhead-embed-q4k",
   "ud-downs-q4k-lmhead-embed-q4k",
-  "ud-exps-gate-up-q5k",
+  "ud-downs-q6k-imat-lmhead-q8",
   "ud-lmhead-q4k-embed-q4k"
  ]
 }
