@@ -108,9 +108,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.0007499459588514723,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "pr142-attention-qo-11-39-kq-imat"
+   ]
   },
   {
    "id": "5696a77fe5becbe7",
@@ -133,7 +135,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002406559217197346,
+   "frontier_gain": 0.00024065592171984562,
    "dominated_by": []
   },
   {
@@ -156,9 +158,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.0009548728901142556,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "pr142-attention-qo-11-39-kq-imat"
+   ]
   },
   {
    "id": "6437d94728eaca17",
@@ -183,6 +187,7 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "pr142-attention-qo-11-39-kq-imat",
     "pr145-kq-imat"
    ]
   },
@@ -213,6 +218,30 @@
    ]
   },
   {
+   "id": "3ca6abfc70bfb058",
+   "name": "pr142-attention-qo-11-39-kq-imat",
+   "kind": "internal",
+   "rp_kl": 0.06341708623798938,
+   "rp_kl_raw": 0.06243324030271478,
+   "top1": 0.9364594894561599,
+   "decode_tps": 460.30494999999996,
+   "decode_spread": 0.0007888248866321652,
+   "prefill_tps": 40140.96715,
+   "prefill_spread": 0.0030838494632533372,
+   "peak_gpu_gib": 23.325,
+   "resident_after_load_gib": 22.1,
+   "peak_host_gib": 18.978,
+   "checkpoint_gib": 18.460539549589157,
+   "tasks_passed": 563,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.0017357088097847972,
+   "dominated_by": []
+  },
+  {
    "id": "14875e90bee42146",
    "name": "pr145-kq-imat",
    "kind": "internal",
@@ -233,7 +262,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.001591696411330279,
+   "frontier_gain": 0.0008209208254320588,
    "dominated_by": []
   },
   {
@@ -256,9 +285,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.0011921629609014106,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "pr142-attention-qo-11-39-kq-imat"
+   ]
   },
   {
    "id": "1f7830e50435a64c",
@@ -355,17 +386,15 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.441566879707313e-05,
+   "frontier_gain": 2.441566879701762e-05,
    "dominated_by": []
   }
  ],
  "external": [],
  "frontier": [
-  "V2-all-q4k",
   "V3-exps-q5k-down-q6k",
-  "pr129-recurrent-zo-deep-downs-q4k",
+  "pr142-attention-qo-11-39-kq-imat",
   "pr145-kq-imat",
-  "ud-downs-q4k-gdn-qkv-q4k-lmhead-embed-q4k",
   "ud-downs-q4k-lmhead-embed-q4k",
   "ud-downs-q6k-imat-lmhead-q8",
   "ud-lmhead-q4k-embed-q4k"
