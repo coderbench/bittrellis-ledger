@@ -1,0 +1,69 @@
+{
+ "author": "e11734937-beep",
+ "candidate": "ddc66bae7cac4a88",
+ "first_seen": "2026-10-08T19:59:59.147811Z",
+ "gain": 0.00030329195578560064,
+ "head": "0c788ee12e72b1e2de653664e2c38d89996a248f",
+ "kind": "code",
+ "name": "ud-downs-q6k-imat-lmhead-q8",
+ "pr": 138,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 21.957609862089157,
+  "decode_spread": 5.637482452700506e-05,
+  "decode_tps": 393.7928,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.00030329195578560064,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "ddc66bae7cac4a88",
+  "kind": "internal",
+  "name": "ud-downs-q6k-imat-lmhead-q8",
+  "peak_gpu_gib": 26.966,
+  "peak_host_gib": 22.475,
+  "prefill_spread": 0.0012367400280882885,
+  "prefill_tps": 38180.61915,
+  "resident_after_load_gib": 26.0,
+  "rp_kl": 0.038448080553315854,
+  "rp_kl_raw": 0.041622392967664,
+  "tasks_n": 784,
+  "tasks_passed": 566,
+  "top1": 0.9483444321124677,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.33938843475628216
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 27.71
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "quantizers": {
+   "derivative_of": null,
+   "details": {},
+   "new": [
+    "kq_imat@v1"
+   ],
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "XS"
+}
