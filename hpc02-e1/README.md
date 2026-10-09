@@ -44,7 +44,8 @@ bittrellis --track HPC-02 frontier hpc02-e1/accepted <your artifact>
 |   | V0-unsloth-ud | 0.0450 | 570/784 | 398.5 | 39,151 | 25.51 | — | 0.000% |
 | ★ | ud-lmhead-q4k-embed-q4k | 0.0459 | 566/784 | 398.9 | 39,071 | 25.12 | PASS | 0.002% |
 |   | V1-kq-rtn-udmap | 0.0460 | 563/784 | 398.9 | 39,216 | 25.51 | PASS | 0.000% |
-| ★ | ud-downs-q4k-lmhead-embed-q4k | 0.0493 | 570/784 | 404.4 | 40,165 | 23.96 | PASS | 0.078% |
+| ★ | ud-downs-q4k-lmhead-embed-q4k | 0.0493 | 570/784 | 404.4 | 40,165 | 23.96 | PASS | 0.071% |
+| ★ | ud-exps-gate-up-q5k-downs-gdn-qkv-q4k-kq-imat-lmhead-q8 | 0.0512 | 564/784 | 420.1 | 38,416 | 26.65 | PASS | 0.041% |
 |   | ud-downs-q4k-gdn-qkv-q4k-lmhead-embed-q4k | 0.0612 | 565/784 | 432.1 | 40,151 | 23.73 | PASS | 0.000% |
 | ★ | pr142-attention-qo-11-39-kq-imat | 0.0634 | 563/784 | 460.3 | 40,141 | 23.32 | PASS | 0.174% |
 |   | pr129-recurrent-zo-deep-downs-q4k | 0.0713 | 565/784 | 447.0 | 39,424 | 23.42 | PASS | 0.000% |

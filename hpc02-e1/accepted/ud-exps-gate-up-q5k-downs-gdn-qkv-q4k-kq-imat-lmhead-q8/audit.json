@@ -1,0 +1,39 @@
+{
+  "ok": true,
+  "errors": [],
+  "n_errors": 0,
+  "candidate_id": "7117b794c275d4a8",
+  "lineage": {
+    "kq_imat@v1": {
+      "lineage": "regenerable",
+      "units": 120,
+      "sampled": [
+        "L0.exps.gate",
+        "L19.exps.down",
+        "L3.exps.down",
+        "L35.exps.gate",
+        "L39.exps.down",
+        "L5.exps.gate"
+      ]
+    },
+    "kq_rtn@v1": {
+      "lineage": "regenerable",
+      "units": 31,
+      "sampled": [
+        "L0.gdn.qkv",
+        "L24.gdn.qkv",
+        "L33.gdn.qkv",
+        "L34.gdn.qkv",
+        "lm_head"
+      ]
+    },
+    "unsloth_ud@v1": {
+      "lineage": "attested",
+      "units": 221,
+      "checked": 221
+    }
+  },
+  "checkpoint_files": {
+    "model.gguf": "8c39b029aa5797d0e108bdf147de471c08255f4c83ab701abb7a61da45f2541e"
+  }
+}
