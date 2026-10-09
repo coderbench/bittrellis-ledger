@@ -1,0 +1,74 @@
+{
+ "author": "gold-tree-tech",
+ "candidate": "1379de3b0e43bb49",
+ "first_seen": "2026-10-09T16:00:32.128772Z",
+ "gain": 0.00023002119622966832,
+ "head": "747f845d9d9fc67ddd0aaab6cde768e34531de2e",
+ "kind": "code",
+ "name": "pr129-kq-imatrix-downs-gdn-qkv",
+ "pr": 146,
+ "references": [
+  "147-4a15dff285ed",
+  "148-416837e9700d",
+  "151-6fe4e5b11316",
+  "152-d7a1fde93a3c"
+ ],
+ "row": {
+  "checkpoint_gib": 18.864836424589157,
+  "decode_spread": 0.00028345734592223767,
+  "decode_tps": 431.81100000000004,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.00023002119622966832,
+  "gate_failures": [],
+  "holdout": "PASS",
+  "id": "1379de3b0e43bb49",
+  "kind": "internal",
+  "name": "pr129-kq-imatrix-downs-gdn-qkv",
+  "peak_gpu_gib": 23.729,
+  "peak_host_gib": 19.382,
+  "prefill_spread": 0.0006460210972644474,
+  "prefill_tps": 39947.302200000006,
+  "resident_after_load_gib": 22.6,
+  "rp_kl": 0.05470094245461986,
+  "rp_kl_raw": 0.05461700012444812,
+  "tasks_n": 784,
+  "tasks_passed": 561,
+  "top1": 0.9413614502404736,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.301301846805934
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 24.62
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "quantizers": {
+   "derivative_of": null,
+   "details": {},
+   "new": [
+    "kq_imatrix@v1"
+   ],
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "frontier",
+ "tier": "XS"
+}

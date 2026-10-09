@@ -109,7 +109,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0007499459588514168,
+   "frontier_gain": 0.0007499459588514723,
    "dominated_by": []
   },
   {
@@ -133,7 +133,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00024065592171984562,
+   "frontier_gain": 0.0002406559217197346,
    "dominated_by": []
   },
   {
@@ -157,7 +157,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.001819171061201108,
+   "frontier_gain": 0.0009548728901142556,
    "dominated_by": []
   },
   {
@@ -180,9 +180,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.00013474269416691165,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "pr145-kq-imat"
+   ]
   },
   {
    "id": "27bd3384ed1ac5e3",
@@ -204,8 +206,34 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "pr145-kq-imat"
+   ]
+  },
+  {
+   "id": "14875e90bee42146",
+   "name": "pr145-kq-imat",
+   "kind": "internal",
+   "rp_kl": 0.0854589030065459,
+   "rp_kl_raw": 0.08563831503561264,
+   "top1": 0.9311875693673696,
+   "decode_tps": 474.63475,
+   "decode_spread": 0.0008454922442994155,
+   "prefill_tps": 39962.6952,
+   "prefill_spread": 0.003727686514997565,
+   "peak_gpu_gib": 23.401,
+   "resident_after_load_gib": 22.2,
+   "peak_host_gib": 19.054,
+   "checkpoint_gib": 18.536711424589157,
+   "tasks_passed": 567,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.012732471082773866,
+   "frontier_gain": 0.001591696411330279,
    "dominated_by": []
   },
   {
@@ -229,7 +257,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.001192162960901355,
+   "frontier_gain": 0.0011921629609014106,
    "dominated_by": []
   },
   {
@@ -277,7 +305,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00030329195578554513,
+   "frontier_gain": 0.00030329195578560064,
    "dominated_by": []
   },
   {
@@ -327,7 +355,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.441566879701762e-05,
+   "frontier_gain": 2.441566879707313e-05,
    "dominated_by": []
   }
  ],
@@ -336,8 +364,7 @@
   "V2-all-q4k",
   "V3-exps-q5k-down-q6k",
   "pr129-recurrent-zo-deep-downs-q4k",
-  "pr129-recurrent-zo-q4k",
-  "pr130-attention-qo-11-39-q4k",
+  "pr145-kq-imat",
   "ud-downs-q4k-gdn-qkv-q4k-lmhead-embed-q4k",
   "ud-downs-q4k-lmhead-embed-q4k",
   "ud-downs-q6k-imat-lmhead-q8",
