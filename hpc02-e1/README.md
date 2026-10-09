@@ -10,7 +10,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
-| **Closest to the original model** | `ud-downs-q6k-imat-lmhead-q8`<br>#138 by @e11734937-beep ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | **0.0384 · 14.6% closer** | 38,181 tok/s · 2% slower | 26.97 GiB · 1.46 GiB more |
+| **Closest to the original model** | `ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8`<br>#152 by @e11734937-beep ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | **0.0304 · 32.6% closer** | 36,808 tok/s · 6% slower | 29.47 GiB · 3.96 GiB more |
 | **Fastest prompt reading** | `ud-downs-q4k-lmhead-embed-q4k`<br>#126 by @cleanjunc ![eval:XL](https://img.shields.io/badge/eval%3AXL-0e8a16?style=flat-square) | 0.0493 · 9.4% further | **40,165 tok/s · 3% faster** | 23.96 GiB · 1.54 GiB less |
 | **Least GPU memory** | `pr142-attention-qo-11-39-kq-imat`<br>#153 by @cleanjunc ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.0634 · 40.8% further | 40,141 tok/s · 3% faster | **23.32 GiB · 2.18 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.0450 | 39,151 tok/s | 25.51 GiB |
@@ -18,7 +18,7 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
-bittrellis build manifests/ud-downs-q6k-imat-lmhead-q8.yaml --out models/ud-downs-q6k-imat-lmhead-q8
+bittrellis build manifests/ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8.yaml --out models/ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8
 bittrellis build manifests/ud-downs-q4k-lmhead-embed-q4k.yaml --out models/ud-downs-q4k-lmhead-embed-q4k
 bittrellis build manifests/pr142-attention-qo-11-39-kq-imat.yaml --out models/pr142-attention-qo-11-39-kq-imat
 ```
@@ -37,7 +37,8 @@ bittrellis --track HPC-02 frontier hpc02-e1/accepted <your artifact>
 
 | | Checkpoint | RP-KL ↓ | tasks ↑ | decode tok/s ↑ | prefill 4K tok/s ↑ | peak GPU GiB ↓ | holdout | FG-2 |
 |---|---|---:|---:|---:|---:|---:|---|---:|
-| ★ | V3-exps-q5k-down-q6k | 0.0340 | 564/784 | 383.6 | 37,001 | 29.24 | PASS | 0.024% |
+| ★ | ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8 | 0.0304 | 565/784 | 383.6 | 36,808 | 29.47 | PASS | 0.062% |
+| ★ | V3-exps-q5k-down-q6k | 0.0340 | 564/784 | 383.6 | 37,001 | 29.24 | PASS | 0.000% |
 |   | ud-exps-gate-up-q5k | 0.0366 | 562/784 | 387.0 | 37,387 | 28.01 | PASS | 0.000% |
 | ★ | ud-downs-q6k-imat-lmhead-q8 | 0.0384 | 566/784 | 393.8 | 38,181 | 26.97 | PASS | 0.030% |
 |   | V0-unsloth-ud | 0.0450 | 570/784 | 398.5 | 39,151 | 25.51 | — | 0.000% |

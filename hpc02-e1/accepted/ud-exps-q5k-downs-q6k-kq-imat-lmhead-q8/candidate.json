@@ -1,0 +1,62 @@
+{
+  "id": "d5a3492ed2ffb5af",
+  "name": "ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8",
+  "kind": "internal",
+  "track": "HPC-02",
+  "manifest": {
+    "schema": "bittrellis/manifest@2",
+    "track": "HPC-02",
+    "authors": [
+      "e11734937-beep"
+    ],
+    "name": "ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8",
+    "description": "#138 (unsloth UD-Q4_K_M with every routed down on Q6_K by kq_imat and the output head on Q8_0: RP-KL 0.0384, 26.97 GiB) with the routed expert gate/up raised to Q5_K, also rounded by kq_imat from each expert's pinned channel energies. The routed experts then sit at V3's formats (gate/up Q5_K, downs Q6_K) while every dense projection keeps unsloth's Q8_0 bytes and the shared experts stay Q8_0; kq_imat replaces kq_rtn's per-block rounding on all 120 expert tensors. Aimed below V3's drift (0.0340) at V3's speed and about V3's memory.\n",
+    "default": "Q8_0",
+    "encoders": {
+      "Q4_K": "unsloth_ud",
+      "Q5_K": "unsloth_ud",
+      "Q6_K": "unsloth_ud",
+      "Q8_0": "unsloth_ud"
+    },
+    "rules": [
+      {
+        "match": "L*.exps.gate",
+        "format": "Q5_K",
+        "encoder": "kq_imat"
+      },
+      {
+        "match": "L*.exps.up",
+        "format": "Q5_K",
+        "encoder": "kq_imat"
+      },
+      {
+        "match": "L*.exps.down",
+        "format": "Q6_K",
+        "encoder": "kq_imat"
+      }
+    ],
+    "modules": {
+      "lm_head": {
+        "format": "Q8_0",
+        "encoder": "kq_rtn"
+      }
+    }
+  },
+  "build": {
+    "candidate_id": "d5a3492ed2ffb5af",
+    "name": "ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8",
+    "track": "HPC-02",
+    "summary": {
+      "Q8_0@unsloth_ud@v1": 251,
+      "Q5_K@kq_imat@v1": 80,
+      "Q6_K@kq_imat@v1": 40,
+      "Q8_0@kq_rtn@v1": 1
+    },
+    "tensors": 733,
+    "encoded": 432,
+    "bytes": 26261158624,
+    "sha256": "986e0aa52f59366fd16a31cdab700c2238b714076f45e7786fa5c57502d7e8f0"
+  },
+  "audit_ok": true,
+  "checkpoint_bytes": 26261158624
+}
