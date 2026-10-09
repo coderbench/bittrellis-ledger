@@ -1,0 +1,71 @@
+{
+ "author": "kaivexa",
+ "candidate": "89bd6b5397018ebd",
+ "first_seen": "2026-10-08T18:12:45.208317Z",
+ "gain": 0.0,
+ "head": "7bb772975ac1cbea2f6f62420bc0018ee427616c",
+ "kind": "code",
+ "name": "all-q4k-kq-gptq",
+ "pr": 135,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 18.251555174589157,
+  "decode_spread": 0.000696465166970629,
+  "decode_tps": 468.22155,
+  "dominated_by": [],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [
+   "task guard overall: lost 33, gained 16 vs incumbent (p=0.0106 < 0.05)"
+  ],
+  "holdout": "PASS",
+  "id": "89bd6b5397018ebd",
+  "kind": "internal",
+  "name": "all-q4k-kq-gptq",
+  "peak_gpu_gib": 23.253,
+  "peak_host_gib": 18.77,
+  "prefill_spread": 0.0034007701548424024,
+  "prefill_tps": 39981.972850000006,
+  "resident_after_load_gib": 22.1,
+  "rp_kl": 0.08321825111809703,
+  "rp_kl_raw": 0.08445747715406501,
+  "tasks_n": 784,
+  "tasks_passed": 553,
+  "top1": 0.9262856085830559,
+  "valid": false
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 1.0
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 24.0
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "quantizers": {
+   "derivative_of": null,
+   "details": {},
+   "new": [
+    "kq_gptq@v1"
+   ],
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [],
+ "status": "gate",
+ "tier": "REJECT"
+}
