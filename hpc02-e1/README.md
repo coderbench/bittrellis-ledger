@@ -11,16 +11,14 @@ Every merged recipe trades a little of one thing for another. Pick by what you n
 | Best for | Recipe | Closeness to the original (RP-KL) | Prompt reading, 4K | Peak GPU memory |
 |---|---|---|---|---|
 | **Closest to the original model** | `ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8`<br>#152 by @e11734937-beep ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | **0.0304 · 32.6% closer** | 36,808 tok/s · 6% slower | 29.47 GiB · 3.96 GiB more |
-| **Fastest prompt reading** | `ud-downs-q4k-lmhead-embed-q4k`<br>#126 by @cleanjunc ![eval:XL](https://img.shields.io/badge/eval%3AXL-0e8a16?style=flat-square) | 0.0493 · 9.4% further | **40,165 tok/s · 3% faster** | 23.96 GiB · 1.54 GiB less |
-| **Least GPU memory** | `pr142-attention-qo-11-39-kq-imat`<br>#153 by @cleanjunc ![eval:S](https://img.shields.io/badge/eval%3AS-8ddb8c?style=flat-square) | 0.0634 · 40.8% further | 40,141 tok/s · 3% faster | **23.32 GiB · 2.18 GiB less** |
+| **Fastest prompt reading · Least GPU memory** | `pr147-shallow-zo-q5k-downs-q4k`<br>#156 by @DripMicro ![eval:XS](https://img.shields.io/badge/eval%3AXS-c6efce?style=flat-square) | 0.0876 · 94.4% further | **40,201 tok/s · 3% faster** | **23.21 GiB · 2.30 GiB less** |
 | *for reference* | V0, today's shipped checkpoint | 0.0450 | 39,151 tok/s | 25.51 GiB |
 
 Build one yourself (after `scripts/setup_models.sh` in [bittrellis](https://github.com/coderbench/bittrellis)):
 
 ```bash
 bittrellis build manifests/ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8.yaml --out models/ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8
-bittrellis build manifests/ud-downs-q4k-lmhead-embed-q4k.yaml --out models/ud-downs-q4k-lmhead-embed-q4k
-bittrellis build manifests/pr142-attention-qo-11-39-kq-imat.yaml --out models/pr142-attention-qo-11-39-kq-imat
+bittrellis build manifests/pr147-shallow-zo-q5k-downs-q4k.yaml --out models/pr147-shallow-zo-q5k-downs-q4k
 ```
 
 ## Progress
@@ -50,7 +48,8 @@ bittrellis --track HPC-02 frontier hpc02-e1/accepted <your artifact>
 |   | ud-downs-q4k-gdn-qkv-q4k-lmhead-embed-q4k | 0.0612 | 565/784 | 432.1 | 40,151 | 23.73 | PASS | 0.000% |
 | ★ | pr142-attention-qo-11-39-kq-imat | 0.0634 | 563/784 | 460.3 | 40,141 | 23.32 | PASS | 0.174% |
 |   | pr129-recurrent-zo-deep-downs-q4k | 0.0713 | 565/784 | 447.0 | 39,424 | 23.42 | PASS | 0.000% |
-| ★ | pr145-kq-imat | 0.0855 | 567/784 | 474.6 | 39,963 | 23.40 | PASS | 0.082% |
+|   | pr145-kq-imat | 0.0855 | 567/784 | 474.6 | 39,963 | 23.40 | PASS | 0.000% |
+| ★ | pr147-shallow-zo-q5k-downs-q4k | 0.0876 | 562/784 | 474.2 | 40,201 | 23.21 | PASS | 0.013% |
 |   | pr129-recurrent-zo-q4k | 0.0965 | 570/784 | 458.7 | 39,890 | 23.50 | PASS | 0.000% |
 |   | pr130-attention-qo-11-39-q4k | 0.1016 | 566/784 | 474.3 | 39,885 | 23.40 | PASS | 0.000% |
 |   | V2-all-q4k | 0.1207 | 573/784 | 457.9 | 39,346 | 23.25 | PASS | 0.000% |
