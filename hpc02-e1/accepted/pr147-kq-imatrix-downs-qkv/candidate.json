@@ -1,0 +1,92 @@
+{
+  "id": "8e33fc2064babc7e",
+  "name": "pr147-kq-imatrix-downs-qkv",
+  "kind": "internal",
+  "track": "HPC-02",
+  "manifest": {
+    "schema": "bittrellis/manifest@2",
+    "track": "HPC-02",
+    "name": "pr147-kq-imatrix-downs-qkv",
+    "description": "#147 (#145's map with kq_imat: RP-KL 0.0855, decode 474.6, 23.40 GiB) with the routed expert downs and the recurrent qkv encoded by kq_imatrix (#146): per-expert importance weights for the downs and GPTQ on the pinned x xT for the recurrent qkv, falling back per block to kq_rtn bytes when those have the lower weighted error. Formats, kernels, speed and memory are #147's; everything else keeps kq_imat.\n",
+    "default": "Q8_0",
+    "encoders": {
+      "Q4_K": "unsloth_ud",
+      "Q5_K": "unsloth_ud",
+      "Q6_K": "unsloth_ud",
+      "Q8_0": "unsloth_ud"
+    },
+    "rules": [
+      {
+        "match": "L*.exps.gate",
+        "format": "Q4_K"
+      },
+      {
+        "match": "L*.exps.up",
+        "format": "Q4_K"
+      },
+      {
+        "match": "L*.exps.down",
+        "format": "Q4_K",
+        "encoder": "kq_imatrix"
+      },
+      {
+        "match": "L*.gdn.qkv",
+        "format": "Q4_K",
+        "encoder": "kq_imatrix"
+      },
+      {
+        "match": "L*.gdn.z",
+        "format": "Q4_K",
+        "encoder": "kq_imat"
+      },
+      {
+        "match": "L*.gdn.out",
+        "format": "Q4_K",
+        "encoder": "kq_imat"
+      },
+      {
+        "match": "L*.attn.q",
+        "layers": "11-39",
+        "format": "Q4_K",
+        "encoder": "kq_imat"
+      },
+      {
+        "match": "L*.attn.o",
+        "layers": "11-39",
+        "format": "Q4_K",
+        "encoder": "kq_imat"
+      }
+    ],
+    "modules": {
+      "L34.exps.down": "Q6_K",
+      "L38.exps.down": "Q6_K",
+      "L39.exps.down": "Q6_K",
+      "lm_head": {
+        "format": "Q4_K",
+        "encoder": "kq_imat"
+      },
+      "embed": {
+        "format": "Q4_K",
+        "encoder": "kq_imat"
+      }
+    }
+  },
+  "build": {
+    "candidate_id": "8e33fc2064babc7e",
+    "name": "pr147-kq-imatrix-downs-qkv",
+    "track": "HPC-02",
+    "summary": {
+      "Q4_K@kq_imat@v1": 78,
+      "Q4_K@unsloth_ud@v1": 80,
+      "Q4_K@kq_imatrix@v1": 67,
+      "Q8_0@unsloth_ud@v1": 144,
+      "Q6_K@unsloth_ud@v1": 3
+    },
+    "tensors": 733,
+    "encoded": 432,
+    "bytes": 19903642336,
+    "sha256": "4cb0472236d64d46f3b8e2e05a35652b472566c8fd9e40dcbdbdfced0a310123"
+  },
+  "audit_ok": true,
+  "checkpoint_bytes": 19903642336
+}

@@ -215,6 +215,7 @@
    "dominated_by": [
     "pr142-attention-qo-11-39-kq-imat",
     "pr145-kq-imat",
+    "pr147-kq-imatrix-downs-qkv",
     "pr147-shallow-zo-q5k-downs-q4k"
    ]
   },
@@ -242,6 +243,7 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "pr145-kq-imat",
+    "pr147-kq-imatrix-downs-qkv",
     "pr147-shallow-zo-q5k-downs-q4k"
    ]
   },
@@ -266,7 +268,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0010392233266492412,
+   "frontier_gain": 0.0007912557317004687,
    "dominated_by": []
   },
   {
@@ -316,8 +318,33 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "pr147-kq-imatrix-downs-qkv",
     "pr147-shallow-zo-q5k-downs-q4k"
    ]
+  },
+  {
+   "id": "8e33fc2064babc7e",
+   "name": "pr147-kq-imatrix-downs-qkv",
+   "kind": "internal",
+   "rp_kl": 0.08067675370806286,
+   "rp_kl_raw": 0.08002254119120018,
+   "top1": 0.9301701812800592,
+   "decode_tps": 474.71545000000003,
+   "decode_spread": 4.613289919259308e-05,
+   "prefill_tps": 39992.96265,
+   "prefill_spread": 0.00032317435727665983,
+   "peak_gpu_gib": 23.401,
+   "resident_after_load_gib": 22.2,
+   "peak_host_gib": 19.055,
+   "checkpoint_gib": 18.536711424589157,
+   "tasks_passed": 563,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.00016245679511278643,
+   "dominated_by": []
   },
   {
    "id": "d12680c956e6545c",
@@ -340,7 +367,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00013317443739230272,
+   "frontier_gain": 0.00013317443739235824,
    "dominated_by": []
   },
   {
@@ -416,7 +443,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00030329195578554513,
+   "frontier_gain": 0.00030329195578560064,
    "dominated_by": []
   },
   {
@@ -516,7 +543,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 2.441566879707313e-05,
+   "frontier_gain": 2.441566879701762e-05,
    "dominated_by": []
   }
  ],
@@ -526,6 +553,7 @@
   "pr129-kq-imatrix-downs-gdn-qkv",
   "pr142-attention-qo-11-39-kq-imat",
   "pr142-kq-imat",
+  "pr147-kq-imatrix-downs-qkv",
   "pr147-shallow-zo-q5k-downs-q4k",
   "ud-downs-q4k-lmhead-embed-q4k",
   "ud-downs-q6k-imat-lmhead-q8",

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Trade-offs of 15 merged recipes against the shipped checkpoint">
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" role="img" aria-label="Trade-offs of 16 merged recipes against the shipped checkpoint">
 <style>
 .bg{fill:#ffffff;stroke:#d0d7de}.t{fill:#1f2328}.m{fill:#59636e}.rule{stroke:#d0d7de}.ring{stroke:#ffffff}
 .acc{fill:#8b5cf6}.accl{stroke:#8b5cf6}.wash{fill:#8b5cf6;fill-opacity:.1}.gry{fill:#8c959f}.rej{fill:#d03b3b}.track{fill:#eaeef2}.tk{stroke:#1f2328}
@@ -39,6 +39,7 @@
 <circle class="acc ring" cx="735.0" cy="202.6" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="738.5" cy="192.3" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="706.9" cy="266.1" r="5.5" stroke-width="2"/>
+<circle class="acc ring" cx="711.7" cy="252.3" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="744.5" cy="272.1" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="736.6" cy="196.3" r="5.5" stroke-width="2"/>
 <circle class="acc ring" cx="738.8" cy="161.9" r="5.5" stroke-width="2"/>
@@ -59,9 +60,9 @@
 <text x="727.6" y="200.3" class="t" font-size="11" font-weight="600" text-anchor="end">#129 · 23.7 GiB</text>
 <text x="735.0" y="221.6" class="t" font-size="11" font-weight="600" text-anchor="middle">#153 · 23.3 GiB</text>
 <text x="613.3" y="229.3" class="t" font-size="11" font-weight="600" text-anchor="end">#142 · 23.4 GiB</text>
+<text x="720.7" y="256.3" class="t" font-size="11" font-weight="600" text-anchor="start">#158 · 23.4 GiB</text>
 <text x="697.9" y="270.1" class="t" font-size="11" font-weight="600" text-anchor="end">#147 · 23.4 GiB</text>
 <text x="753.5" y="276.1" class="t" font-size="11" font-weight="600" text-anchor="start">#156 · 23.2 GiB</text>
-<text x="704.5" y="301.9" class="t" font-size="11" font-weight="600" text-anchor="start">#130 · 23.5 GiB</text>
 <circle class="acc" cx="29" cy="450" r="5"/>
 <text x="39.0" y="454.0" class="m" font-size="11" font-weight="400" text-anchor="start">merged pull request</text>
 <circle class="tk" cx="199" cy="450" r="5" fill="none" stroke-width="2"/>
