@@ -136,7 +136,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.99904855108435e-06,
+   "frontier_gain": 3.999048551028839e-06,
    "dominated_by": []
   },
   {
@@ -160,7 +160,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.00033211616360756535,
+   "frontier_gain": 0.00023002119622966832,
    "dominated_by": []
   },
   {
@@ -186,7 +186,8 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
-    "pr142-attention-qo-11-39-kq-imat"
+    "pr142-attention-qo-11-39-kq-imat",
+    "pr142-kq-imat"
    ]
   },
   {
@@ -265,7 +266,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0017357088097847972,
+   "frontier_gain": 0.0010392233266492412,
+   "dominated_by": []
+  },
+  {
+   "id": "fede63463944b46d",
+   "name": "pr142-kq-imat",
+   "kind": "internal",
+   "rp_kl": 0.05983946253787831,
+   "rp_kl_raw": 0.0599798839686013,
+   "top1": 0.9384017758046614,
+   "decode_tps": 447.20495,
+   "decode_spread": 0.0006053153034196815,
+   "prefill_tps": 40163.34665,
+   "prefill_spread": 0.002935056707979739,
+   "peak_gpu_gib": 23.419,
+   "resident_after_load_gib": 22.2,
+   "peak_host_gib": 19.071,
+   "checkpoint_gib": 18.554289549589157,
+   "tasks_passed": 567,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.00012807158871697144,
    "dominated_by": []
   },
   {
@@ -342,7 +367,8 @@
    "frontier_gain": 0.0,
    "dominated_by": [
     "pr129-kq-imatrix-downs-gdn-qkv",
-    "pr142-attention-qo-11-39-kq-imat"
+    "pr142-attention-qo-11-39-kq-imat",
+    "pr142-kq-imat"
    ]
   },
   {
@@ -366,7 +392,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0002450486840158139,
+   "frontier_gain": 0.00024504868401586943,
    "dominated_by": []
   },
   {
@@ -499,6 +525,7 @@
   "V3-exps-q5k-down-q6k",
   "pr129-kq-imatrix-downs-gdn-qkv",
   "pr142-attention-qo-11-39-kq-imat",
+  "pr142-kq-imat",
   "pr147-shallow-zo-q5k-downs-q4k",
   "ud-downs-q4k-lmhead-embed-q4k",
   "ud-downs-q6k-imat-lmhead-q8",

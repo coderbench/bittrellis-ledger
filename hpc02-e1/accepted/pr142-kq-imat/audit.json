@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "errors": [],
+  "n_errors": 0,
+  "candidate_id": "fede63463944b46d",
+  "lineage": {
+    "kq_imat@v1": {
+      "lineage": "regenerable",
+      "units": 102,
+      "sampled": [
+        "L17.exps.down",
+        "L28.exps.down",
+        "L30.gdn.z",
+        "L37.gdn.out",
+        "embed",
+        "lm_head"
+      ]
+    },
+    "unsloth_ud@v1": {
+      "lineage": "attested",
+      "units": 270,
+      "checked": 270
+    }
+  },
+  "checkpoint_files": {
+    "model.gguf": "e78a02ffd95b45662ddb2d6a5f70982072f87aed44449c2a59f7c03e332d0693"
+  }
+}
