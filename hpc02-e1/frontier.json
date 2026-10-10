@@ -135,7 +135,31 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 3.999048551028839e-06,
+   "frontier_gain": 3.9990485509733276e-06,
+   "dominated_by": []
+  },
+  {
+   "id": "1379de3b0e43bb49",
+   "name": "pr129-kq-imatrix-downs-gdn-qkv",
+   "kind": "internal",
+   "rp_kl": 0.05470094245461986,
+   "rp_kl_raw": 0.05461700012444812,
+   "top1": 0.9413614502404736,
+   "decode_tps": 431.81100000000004,
+   "decode_spread": 0.00028345734592223767,
+   "prefill_tps": 39947.302200000006,
+   "prefill_spread": 0.0006460210972644474,
+   "peak_gpu_gib": 23.729,
+   "resident_after_load_gib": 22.6,
+   "peak_host_gib": 19.382,
+   "checkpoint_gib": 18.864836424589157,
+   "tasks_passed": 561,
+   "tasks_n": 784,
+   "holdout": "PASS",
+   "valid": true,
+   "gate_failures": [],
+   "frontier": true,
+   "frontier_gain": 0.00033211616360756535,
    "dominated_by": []
   },
   {
@@ -288,6 +312,7 @@
    "frontier": false,
    "frontier_gain": 0.0,
    "dominated_by": [
+    "pr129-kq-imatrix-downs-gdn-qkv",
     "pr142-attention-qo-11-39-kq-imat"
    ]
   },
@@ -312,7 +337,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0007115400207199363,
+   "frontier_gain": 0.0002450486840158139,
    "dominated_by": []
   },
   {
@@ -385,9 +410,11 @@
    "holdout": "PASS",
    "valid": true,
    "gate_failures": [],
-   "frontier": true,
-   "frontier_gain": 0.000406275891453034,
-   "dominated_by": []
+   "frontier": false,
+   "frontier_gain": 0.0,
+   "dominated_by": [
+    "pr129-kq-imatrix-downs-gdn-qkv"
+   ]
   },
   {
    "id": "d5a3492ed2ffb5af",
@@ -410,7 +437,7 @@
    "valid": true,
    "gate_failures": [],
    "frontier": true,
-   "frontier_gain": 0.0006233047234425193,
+   "frontier_gain": 0.0006233047234424638,
    "dominated_by": []
   },
   {
@@ -441,11 +468,11 @@
  "external": [],
  "frontier": [
   "V3-exps-q5k-down-q6k",
+  "pr129-kq-imatrix-downs-gdn-qkv",
   "pr142-attention-qo-11-39-kq-imat",
   "pr145-kq-imat",
   "ud-downs-q4k-lmhead-embed-q4k",
   "ud-downs-q6k-imat-lmhead-q8",
-  "ud-exps-gate-up-q5k-downs-gdn-qkv-q4k-kq-imat-lmhead-q8",
   "ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8",
   "ud-lmhead-q4k-embed-q4k"
  ]

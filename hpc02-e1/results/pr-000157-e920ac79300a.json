@@ -1,0 +1,68 @@
+{
+ "author": "e11734937-beep",
+ "candidate": "4e794fbd1784fdb2",
+ "first_seen": "2026-10-09T22:51:40.153507Z",
+ "gain": 0.0,
+ "head": "e920ac79300aff6120637e11be6436e7319d8bf8",
+ "kind": "manifest",
+ "name": "ud-exps-q5k-downs-q4k-q6k-gdn-qkv-q4k-kq-imat-lmhead-q8",
+ "pr": 157,
+ "references": [
+  "146-747f845d9d9f",
+  "148-416837e9700d",
+  "154-6bc41fa43ad1",
+  "156-e187ffbf6354"
+ ],
+ "row": {
+  "checkpoint_gib": 22.934172362089157,
+  "decode_spread": 0.0007083772852164998,
+  "decode_tps": 414.4684,
+  "dominated_by": [],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [
+   "private holdout FAIL"
+  ],
+  "holdout": "FAIL",
+  "id": "4e794fbd1784fdb2",
+  "kind": "internal",
+  "name": "ud-exps-q5k-downs-q4k-q6k-gdn-qkv-q4k-kq-imat-lmhead-q8",
+  "peak_gpu_gib": 27.941,
+  "peak_host_gib": 23.452,
+  "prefill_spread": 0.0028670383144193817,
+  "prefill_tps": 37575.221600000004,
+  "resident_after_load_gib": 27.1,
+  "rp_kl": 0.041825735508995134,
+  "rp_kl_raw": 0.04503191635002769,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9476507584165742,
+  "valid": false
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.16954283984256735
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 28.68
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks"
+ ],
+ "status": "gate",
+ "tier": "REJECT"
+}
