@@ -38,7 +38,8 @@ bittrellis --track HPC-02 frontier hpc02-e1/accepted <your artifact>
 | ★ | ud-exps-q5k-downs-q6k-kq-imat-lmhead-q8 | 0.0304 | 565/784 | 383.6 | 36,808 | 29.47 | PASS | 0.062% |
 | ★ | V3-exps-q5k-down-q6k | 0.0340 | 564/784 | 383.6 | 37,001 | 29.24 | PASS | 0.000% |
 |   | ud-exps-gate-up-q5k | 0.0366 | 562/784 | 387.0 | 37,387 | 28.01 | PASS | 0.000% |
-| ★ | ud-downs-q6k-imat-lmhead-q8 | 0.0384 | 566/784 | 393.8 | 38,181 | 26.97 | PASS | 0.030% |
+| ★ | ud-downs-q6k-imat-lmhead-q8 | 0.0384 | 566/784 | 393.8 | 38,181 | 26.97 | PASS | 0.027% |
+| ★ | pr151-kq-imatrix-downs-qkv | 0.0445 | 570/784 | 419.8 | 38,230 | 26.65 | PASS | 0.029% |
 |   | V0-unsloth-ud | 0.0450 | 570/784 | 398.5 | 39,151 | 25.51 | — | 0.000% |
 | ★ | ud-lmhead-q4k-embed-q4k | 0.0459 | 566/784 | 398.9 | 39,071 | 25.12 | PASS | 0.002% |
 |   | V1-kq-rtn-udmap | 0.0460 | 563/784 | 398.9 | 39,216 | 25.51 | PASS | 0.000% |
