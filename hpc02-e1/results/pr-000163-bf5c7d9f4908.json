@@ -1,0 +1,68 @@
+{
+ "author": "ms911112",
+ "candidate": "e3565d5e6e5d0acc",
+ "first_seen": "2026-10-10T16:50:34.806274Z",
+ "gain": 0.0,
+ "head": "bf5c7d9f49089ec54ab9e0e4dcc74259e6c3275f",
+ "kind": "manifest",
+ "name": "pr152-qkv-q4k-kq-imatrix",
+ "pr": 163,
+ "references": [],
+ "row": {
+  "checkpoint_gib": 24.223234862089157,
+  "decode_spread": 0.0008636647669304197,
+  "decode_tps": 408.72339999999997,
+  "dominated_by": [],
+  "frontier": false,
+  "frontier_gain": 0.0,
+  "gate_failures": [
+   "private holdout FAIL"
+  ],
+  "holdout": "FAIL",
+  "id": "e3565d5e6e5d0acc",
+  "kind": "internal",
+  "name": "pr152-qkv-q4k-kq-imatrix",
+  "peak_gpu_gib": 29.23,
+  "peak_host_gib": 24.741,
+  "prefill_spread": 0.002806869845257188,
+  "prefill_tps": 36832.23865,
+  "resident_after_load_gib": 28.5,
+  "rp_kl": 0.03582497709574814,
+  "rp_kl_raw": 0.04050929255520143,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.948205697373289,
+  "valid": false
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": {
+    "author": "e11734937-beep",
+    "first_seen": "2026-10-09T08:55:15.571773Z",
+    "pr": 152
+   },
+   "details": {
+    "earlier_near_copies_by_author": 0,
+    "share_different": 0.014532243415077202
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": "1.45% of weights differ from #152; credited only for what it adds"
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 29.97
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks"
+ ],
+ "status": "gate",
+ "tier": "REJECT"
+}
