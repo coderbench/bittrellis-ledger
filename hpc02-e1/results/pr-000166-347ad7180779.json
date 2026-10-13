@@ -1,0 +1,70 @@
+{
+ "author": "Tet-9",
+ "candidate": "121818dbb4b9a0aa",
+ "first_seen": "2026-10-12T22:57:44.200111Z",
+ "gain": 0.0,
+ "head": "347ad71807799e9768a55722fd3e6759569875cb",
+ "kind": "manifest",
+ "name": "pr148-kq-imatrix-downs-qkv",
+ "pr": 166,
+ "references": [
+  "164-71633c6d682c",
+  "165-cc655302751f"
+ ],
+ "row": {
+  "checkpoint_gib": 18.554289549589157,
+  "decode_spread": 2.5887153879239498e-05,
+  "decode_tps": 448.0987,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "121818dbb4b9a0aa",
+  "kind": "internal",
+  "name": "pr148-kq-imatrix-downs-qkv",
+  "peak_gpu_gib": 23.418,
+  "peak_host_gib": 19.071,
+  "prefill_spread": 0.0006373906409719786,
+  "prefill_tps": 40190.73759999999,
+  "resident_after_load_gib": 21.9,
+  "rp_kl": 0.05822627004987219,
+  "rp_kl_raw": 0.05931130357590164,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9398816130225676,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": {
+    "author": "ms911112",
+    "first_seen": "2026-10-12T22:57:44.199888Z",
+    "pr": 164
+   },
+   "details": {
+    "earlier_near_copies_by_author": 0,
+    "share_different": 0.005812897366030881
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": "0.58% of weights differ from #164; credited only for what it adds"
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 24.3
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}

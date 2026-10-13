@@ -1,0 +1,10 @@
+{
+  "machine": {
+    "gpu": "NVIDIA GeForce RTX 5090, 32607 MiB, 595.91.07",
+    "cuda": "Build cuda_13.0.r13.0/compiler.36424714_0",
+    "cpu": "Intel(R) Core(TM) i7-14700",
+    "sparkinfer_commit": "f61355088ddd58549ad8db03675b4543785e1b53"
+  },
+  "measured_utc": "2026-10-12T22:45:17Z",
+  "calibrated_utc": "2026-10-12T22:45:17Z"
+}
