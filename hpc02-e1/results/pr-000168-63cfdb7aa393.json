@@ -1,0 +1,64 @@
+{
+ "author": "nexrobin",
+ "candidate": "3d24bb40f03e50b7",
+ "first_seen": "2026-10-13T01:40:18.006122Z",
+ "gain": 0.0,
+ "head": "63cfdb7aa393fb8bcd75ed8ece7fd9e59e88c5d9",
+ "kind": "manifest",
+ "name": "pr152-kq-imatrix-experts",
+ "pr": 168,
+ "references": [
+  "167-a9164c3807b6"
+ ],
+ "row": {
+  "checkpoint_gib": 24.457609862089157,
+  "decode_spread": 0.0007126336155518525,
+  "decode_tps": 384.4893,
+  "dominated_by": [],
+  "frontier": true,
+  "frontier_gain": 0.0,
+  "gate_failures": [],
+  "holdout": null,
+  "id": "3d24bb40f03e50b7",
+  "kind": "internal",
+  "name": "pr152-kq-imatrix-experts",
+  "peak_gpu_gib": 29.465,
+  "peak_host_gib": 24.975,
+  "prefill_spread": 0.005573802090934648,
+  "prefill_tps": 37017.51455,
+  "resident_after_load_gib": 28.4,
+  "rp_kl": 0.030780231130435515,
+  "rp_kl_raw": 0.03475484466976643,
+  "tasks_n": null,
+  "tasks_passed": null,
+  "top1": 0.9549112097669257,
+  "valid": true
+ },
+ "screen": {
+  "manifest": {
+   "derivative_of": null,
+   "details": {
+    "closest_share": 0.9300635785649409
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  },
+  "memory": {
+   "derivative_of": null,
+   "details": {
+    "limit_gib": 31.5,
+    "predicted_peak_gib": 30.21
+   },
+   "original": null,
+   "outcome": "pass",
+   "reason": ""
+  }
+ },
+ "skipped": [
+  "tasks",
+  "holdout"
+ ],
+ "status": "dominated",
+ "tier": "none"
+}
